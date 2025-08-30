@@ -1,0 +1,39 @@
+/* About Page Responsive Styles */
+
+@media (max-width: 768px) {
+  /* Hero Section */
+  .hero-title {
+    font-size: 2.5rem !important;
+  }
+
+  /* About Content Section */
+  .about-container {
+    flex-direction: column !important;
+    gap: 40px !important;
+  }
+
+  .about-title {
+    font-size: 2rem !important;
+    text-align: center !important;
+  }
+
+  .about-subtitle {
+    font-size: 1.1rem !important;
+    text-align: center !important;
+  }
+
+  /* Why Choose Section */
+  .why-choose-title {
+    font-size: 2rem !important;
+  }
+
+  .cards-grid {
+    grid-template-columns: 1fr !important;
+    gap: 20px !important;
+  }
+
+  .card {
+    height: auto !important;
+    padding: 25px 20px !important;
+  }
+}
