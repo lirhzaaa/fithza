@@ -1,4 +1,4 @@
-const HeroSection = () => {
+const HeroSection: React.FC = () => {
   const isMobile = typeof window !== 'undefined' && window.innerWidth <= 768;
 
   return (

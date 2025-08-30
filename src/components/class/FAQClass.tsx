@@ -73,7 +73,6 @@ const FAQClass: React.FC = () => {
                     FAQ Kelas di FitHza Indonesia
                 </h2>
                 <div style={{ marginBottom: '40px' }}>
-                    {/* Empty text block */}
                 </div>
                 <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '20px' }}>
                     <div>

@@ -1,10 +1,10 @@
-import MemberHero from '../components/MemberHero';
-import MemberBenefits from '../components/MemberBenefits';
-import MemberPackages from '../components/MemberPackages';
-import MemberContact from '../components/MemberContact';
-import MemberFAQ from '../components/MemberFAQ';
+import MemberHero from '../components/member/MemberHero';
+import MemberBenefits from '../components/member/MemberBenefits';
+import MemberPackages from '../components/member/MemberPackages';
+import MemberContact from '../components/member/MemberContact';
+import MemberFAQ from '../components/member/MemberFAQ';
 
-const Member = () => {
+const Member: React.FC = () => {
   return (
     <div style={{
       minHeight: '100vh',

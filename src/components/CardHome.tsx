@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 
-const CardHome = () => {
+const CardHome: React.FC = () => {
     const cards = [
         {
             title: "Tentang Kami",

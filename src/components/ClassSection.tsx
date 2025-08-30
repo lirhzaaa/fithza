@@ -1,6 +1,15 @@
 import { useState, useRef } from 'react';
 
-const ClassSection = () => {
+interface ClassItem {
+  name: string;
+  difficulty: string;
+  duration: string;
+  category: string;
+  image: string;
+  color: string;
+}
+
+const ClassSection: React.FC = () => {
   const [activeClassTab, setActiveClassTab] = useState(0);
   const [isLoadingCards, setIsLoadingCards] = useState(false);
   const carouselRef = useRef<HTMLDivElement | null>(null);
@@ -119,7 +128,7 @@ const ClassSection = () => {
               </div>
             ))
           ) : (
-            classData[classCategories[activeClassTab] as keyof typeof classData]?.map((classItem: any, index: number) => (
+            classData[classCategories[activeClassTab] as keyof typeof classData]?.map((classItem: ClassItem, index: number) => (
               <div key={index} style={{ background: 'white', borderRadius: '16px', overflow: 'hidden', transition: 'transform 0.3s ease', flex: '0 0 calc((100vw - 10vw - 80px) / 4)', width: 'calc((100vw - 10vw - 80px) / 4)', minWidth: '280px', scrollSnapAlign: 'start' }}>
                 <div style={{ position: 'relative', height: '200px', overflow: 'hidden' }}>
                   <img src={classItem.image} alt={classItem.name} style={{ width: '100%', height: '100%', objectFit: 'cover', transition: 'transform 0.3s ease' }} />

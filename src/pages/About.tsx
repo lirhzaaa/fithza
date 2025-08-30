@@ -1,11 +1,13 @@
-import HeroSection from '../components/HeroSection';
-import WhyChooseSection from '../components/WhyChooseSection';
+import HeroSection from '../components/shared/HeroSection';
+import WhyChooseSection from '../components/shared/WhyChooseSection';
 
-export default function AboutPage() {
+const About: React.FC = () => {
   return (
     <>
       <HeroSection />
       <WhyChooseSection />
     </>
   );
-}
+};
+
+export default About;

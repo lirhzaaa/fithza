@@ -1,6 +1,6 @@
 import { useState } from 'react';
 
-const MemberFAQ = () => {
+const MemberFAQ: React.FC = () => {
   const [openItems, setOpenItems] = useState<number[]>([]);
 
   const toggleItem = (index: number) => {

@@ -1,4 +1,4 @@
-const MemberBenefits = () => {
+const MemberBenefits: React.FC = () => {
   const benefits = [
     {
       icon: "🏋️",

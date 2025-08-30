@@ -17,17 +17,49 @@ A modern, responsive React application for FitHza Indonesia fitness center built
 ```
 src/
 ├── components/          # Reusable UI components
-│   ├── Navbar.tsx      # Navigation component
-│   ├── Footer.tsx      # Footer component
-│   ├── MemberHero.tsx  # Member page hero section
-│   ├── MemberBenefits.tsx # Benefits grid
-│   ├── MemberPackages.tsx # Membership packages
-│   ├── MemberContact.tsx  # Contact section
-│   ├── MemberFAQ.tsx     # FAQ accordion
-│   ├── RegistrationModal.tsx # Registration form modal
-│   └── Notification.tsx  # Toast notifications
-├── pages/              # Page components
-│   ├── Home.tsx        # Home page
+│   ├── member/         # Member page specific components
+│   │   ├── MemberBenefits.tsx
+│   │   ├── MemberContact.tsx
+│   │   ├── MemberFAQ.tsx
+│   │   ├── MemberHero.tsx
+│   │   └── MemberPackages.tsx
+│   ├── class/          # Class page specific components
+│   │   ├── AllClass.tsx
+│   │   ├── BannerClass.tsx
+│   │   ├── CardClass.tsx
+│   │   ├── CTAClass.tsx
+│   │   └── FAQClass.tsx
+│   ├── shared/         # Shared components used across pages
+│   │   ├── Footer.tsx
+│   │   ├── HeroSection.tsx
+│   │   ├── Navbar.tsx
+│   │   ├── Notification.tsx
+│   │   ├── PrivacyPolicy.tsx
+│   │   ├── RegistrationModal.tsx
+│   │   └── WhyChooseSection.tsx
+│   ├── Banner.tsx      # Home page banner
+│   ├── CardHome.tsx    # Home page cards
+│   ├── ClassSection.tsx # Home page class section
+│   ├── FaqSection.tsx  # Home page FAQ section
+│   ├── MembershipSection.tsx # Home page membership section
+│   └── PersonalTrainerSection.tsx # Home page trainer section
+├── pages/              # Page components (routes)
+│   ├── Home.tsx        # Landing page
+│   ├── About.tsx       # About page
+│   ├── Member.tsx      # Membership page
+│   ├── PersonalTrainer.tsx # Personal trainer page
+│   ├── Class.tsx       # Class overview page
+│   ├── StrengthClass.tsx # Strength class detail page
+│   ├── CardioClass.tsx # Cardio class detail page
+│   ├── DanceClass.tsx  # Dance class detail page
+│   ├── MindBodyClass.tsx # Mind & body class detail page
+│   ├── CyclingClass.tsx # Cycling class detail page
+│   └── DataPrivacy.tsx # Data privacy page
+├── App.tsx             # Main app component with routing
+├── main.tsx            # App entry point
+├── index.css           # Global styles
+└── App.css             # App-specific styles
+```
 │   ├── About.tsx       # About page
 │   └── Member.tsx      # Member/Membership page
 ├── assets/             # Static assets

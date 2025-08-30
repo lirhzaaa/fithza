@@ -1,6 +1,6 @@
 import PersonalTrainerSection from '../components/PersonalTrainerSection';
 
-const PersonalTrainer = () => {
+const PersonalTrainer: React.FC = () => {
   return (
     <div>
       <PersonalTrainerSection />

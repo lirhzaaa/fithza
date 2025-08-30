@@ -1,8 +1,8 @@
 import { useState } from 'react';
-import RegistrationModal from './RegistrationModal';
-import Notification from './Notification';
+import RegistrationModal from '../shared/RegistrationModal';
+import Notification from '../shared/Notification';
 
-const MemberPackages = () => {
+const MemberPackages: React.FC = () => {
   const [showRegistrationModal, setShowRegistrationModal] = useState(false);
   const [notification, setNotification] = useState<{
     show: boolean;

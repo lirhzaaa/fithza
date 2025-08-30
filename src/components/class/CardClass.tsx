@@ -1,6 +1,6 @@
 import type { CSSProperties } from 'react';
 
-const CardClass = () => {
+const CardClass: React.FC = () => {
     const styles: { [key: string]: CSSProperties } = {
         section: { padding: '60px 0', backgroundColor: '#f9f9f9' },
         container: { maxWidth: '1400px', margin: '0 auto', padding: '0 20px' },

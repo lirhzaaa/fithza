@@ -1,4 +1,4 @@
-const MemberBanner = () => {
+const MemberBanner: React.FC = () => {
     return (
         <section style={{ position: 'relative', width: '100%', height: '80vh', overflow: 'hidden', display: 'flex', alignItems: 'center', justifyContent: 'flex-start', marginTop: '4rem' }}>
             <video autoPlay muted loop style={{ position: 'absolute', top: '0', left: '0', width: '100%', height: '100%', objectFit: 'cover', objectPosition: 'center top' }}>

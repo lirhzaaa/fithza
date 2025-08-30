@@ -20,19 +20,16 @@ const CardioClass: React.FC = () => {
     };
 
     const styles: { [key: string]: CSSProperties } = {
-        // Banner styles
         banner: { height: '400px', backgroundSize: 'cover', backgroundPosition: 'center', display: 'flex', alignItems: 'center', justifyContent: 'center', color: 'white', textAlign: 'center' },
         bannerOverlay: { backgroundColor: 'rgba(0, 0, 0, 0.5)', width: '100%', height: '100%', display: 'flex', alignItems: 'center', justifyContent: 'center' },
         bannerTitle: { fontSize: '3rem', fontWeight: 'bold', margin: '0' },
 
-        // Description section
         descSection: { padding: '60px 0', backgroundColor: '#fff' },
         descContainer: { maxWidth: '1400px', margin: '0 auto', padding: '0 20px', display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '40px', alignItems: 'center' },
         descTitle: { fontSize: '2.5rem', color: '#000', marginBottom: '20px' },
         descText: { fontSize: '1.1rem', color: '#666', lineHeight: '1.6' },
         descImage: { width: '100%', height: '400px', objectFit: 'cover', borderRadius: '15px' },
 
-        // Classes section
         section: { padding: '60px 0', backgroundColor: '#2b4593ff' },
         container: { maxWidth: '1400px', margin: '0 auto', padding: '0 20px' },
         title: { textAlign: 'left', fontSize: '2.5rem', marginBottom: '40px', color: 'white' },
@@ -45,7 +42,6 @@ const CardioClass: React.FC = () => {
         durationText: { fontSize: '0.8rem', color: '#fff' },
         caloriesText: { fontSize: '0.8rem', color: '#fff', marginTop: '5px' },
 
-        // Other classes section
         otherSection: { padding: '60px 0', backgroundColor: '#2b4593ff' },
         otherTitle: { textAlign: 'center', fontSize: '2.5rem', marginBottom: '40px', color: 'white' },
         otherWrapper: { display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '30px' },
@@ -54,7 +50,6 @@ const CardioClass: React.FC = () => {
         otherCardContent: { position: 'absolute', bottom: '0', left: '0', right: '0', background: 'linear-gradient(to top, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.6))', color: 'white', padding: '20px', textAlign: 'center' },
         otherCardTitle: { fontSize: '1.4rem', margin: '0', fontWeight: 'bold' },
 
-        // FAQ section
         faqSection: { padding: '60px 20px', backgroundColor: '#fff' },
         faqContainer: { maxWidth: '1400px', margin: '0 auto' },
         faqTitle: { fontSize: '2.5rem', textAlign: 'center', marginBottom: '40px', color: '#000' },
@@ -115,14 +110,12 @@ const CardioClass: React.FC = () => {
 
     return (
         <div>
-            {/* Banner */}
             <div style={{...styles.banner, backgroundImage: 'url(https://photo-fhad-fithub.s3.ap-southeast-1.amazonaws.com/BODYCOMBAT_2089700eff.JPG)'}}>
                 <div style={styles.bannerOverlay}>
                     <h1 style={styles.bannerTitle}>Cardio Class</h1>
                 </div>
             </div>
 
-            {/* Description Section */}
             <div style={styles.descSection}>
                 <div style={styles.descContainer}>
                     <div>
@@ -144,7 +137,6 @@ const CardioClass: React.FC = () => {
                 </div>
             </div>
 
-            {/* Cardio Classes */}
             <div style={styles.section}>
                 <div style={styles.container}>
                     <h2 style={styles.title}>Eksplor Kelas Cardio</h2>
@@ -167,7 +159,6 @@ const CardioClass: React.FC = () => {
                 </div>
             </div>
 
-            {/* Other Classes */}
             <div style={styles.otherSection}>
                 <div style={styles.container}>
                     <h2 style={styles.otherTitle}>Jelajahi Kelas Lain</h2>
@@ -184,7 +175,6 @@ const CardioClass: React.FC = () => {
                 </div>
             </div>
 
-            {/* FAQ */}
             <div style={styles.faqSection}>
                 <div style={styles.faqContainer}>
                     <h2 style={styles.faqTitle}>FAQ Cardio Class</h2>

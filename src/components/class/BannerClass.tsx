@@ -1,4 +1,4 @@
-const BannerClass = () => {
+const BannerClass: React.FC = () => {
     return (
         <section style={{ position: 'relative', width: '100%', height: '80vh', overflow: 'hidden', display: 'flex', alignItems: 'center', justifyContent: 'center', marginTop: '4rem' }}>
             <div style={{ position: 'absolute', top: '0', left: '0', width: '100%', height: '100%', backgroundImage: 'url(/img/class-gym/banner.jpg)', backgroundSize: 'cover', backgroundPosition: 'center top' }}></div>

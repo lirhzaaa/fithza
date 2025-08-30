@@ -1,8 +1,8 @@
-import AllClass from '../components/AllClass';
-import BannerClass from '../components/BannerClass';
-import CardClass from '../components/CardClass';
-import CTAClass from '../components/CTAClass';
-import FAQClass from '../components/FAQClass';
+import AllClass from '../components/class/AllClass';
+import BannerClass from '../components/class/BannerClass';
+import CardClass from '../components/class/CardClass';
+import CTAClass from '../components/class/CTAClass';
+import FAQClass from '../components/class/FAQClass';
 
 const Class: React.FC = () => {
     return (
