@@ -1,5 +1,5 @@
-import HeroSection from '../components/shared/HeroSection';
-import WhyChooseSection from '../components/shared/WhyChooseSection';
+import HeroSection from '../components/shared/AboutHero';
+import WhyChooseSection from '../components/shared/AboutWHY';
 
 const About: React.FC = () => {
   return (

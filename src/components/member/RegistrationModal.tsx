@@ -138,7 +138,7 @@ const RegistrationModal: React.FC<RegistrationModalProps> = ({ isOpen, onClose, 
             borderRadius: '16px',
             maxWidth: '480px',
             width: '100%',
-            maxHeight: '85vh',
+            maxHeight: '90vh',
             overflow: 'hidden',
             display: 'flex',
             flexDirection: 'column',
@@ -149,7 +149,7 @@ const RegistrationModal: React.FC<RegistrationModalProps> = ({ isOpen, onClose, 
           onClick={(e) => e.stopPropagation()}
         >
           <div style={{
-            padding: '24px 24px 20px 24px',
+            padding: '30px 24px',
             borderBottom: '1px solid #e5e7eb',
             position: 'relative',
             background: 'white',
@@ -168,28 +168,26 @@ const RegistrationModal: React.FC<RegistrationModalProps> = ({ isOpen, onClose, 
             <button
               style={{
                 position: 'absolute',
-                top: '20px',
-                right: '20px',
-                background: '#f3f4f6',
+                top: '10px',
+                right: '10px',
+                background: 'transparent',
                 border: 'none',
                 fontSize: '1.5rem',
                 color: '#6b7280',
                 cursor: 'pointer',
                 transition: 'all 0.3s ease',
-                padding: '8px',
-                width: '32px',
-                height: '32px',
+                padding: '4px',
+                width: '24px',
+                height: '24px',
                 display: 'flex',
                 alignItems: 'center',
                 justifyContent: 'center',
                 borderRadius: '50%'
               }}
               onMouseEnter={(e) => {
-                e.currentTarget.style.background = '#e5e7eb';
                 e.currentTarget.style.color = '#374151';
               }}
               onMouseLeave={(e) => {
-                e.currentTarget.style.background = '#f3f4f6';
                 e.currentTarget.style.color = '#6b7280';
               }}
               onClick={onClose}

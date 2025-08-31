@@ -1,7 +1,6 @@
 import MemberHero from '../components/member/MemberHero';
-import MemberBenefits from '../components/member/MemberBenefits';
+import MemberBenefits from '../components/member/CTATrainer';
 import MemberPackages from '../components/member/MemberPackages';
-import MemberContact from '../components/member/MemberContact';
 import MemberFAQ from '../components/member/MemberFAQ';
 
 const Member: React.FC = () => {
@@ -13,7 +12,6 @@ const Member: React.FC = () => {
       <MemberHero />
       <MemberBenefits />
       <MemberPackages />
-      <MemberContact />
       <MemberFAQ />
     </div>
   );

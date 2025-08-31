@@ -1,6 +1,6 @@
 import { useState } from 'react';
-import RegistrationModal from '../shared/RegistrationModal';
-import Notification from '../shared/Notification';
+import RegistrationModal from './RegistrationModal';
+import Notification from './Notification';
 
 const MemberPackages: React.FC = () => {
   const [showRegistrationModal, setShowRegistrationModal] = useState(false);
@@ -19,50 +19,50 @@ const MemberPackages: React.FC = () => {
   const membershipPackages = [
     {
       duration: 3,
-      pricePerMonth: "Rp385.000",
-      originalPrice: "Rp1.443.750",
-      discountPrice: "Rp1.155.000",
+      pricePerMonth: "Rp209.000",
+      originalPrice: "Rp870.000",
+      discountPrice: "Rp696.000",
       bonus: null,
       tags: []
     },
     {
       duration: 6,
-      pricePerMonth: "Rp325.000",
-      originalPrice: "Rp2.437.500",
-      discountPrice: "Rp1.950.000",
+      pricePerMonth: "Rp204.000",
+      originalPrice: "Rp1.699.000",
+      discountPrice: "Rp1.359.000",
       bonus: "Bonus 1 sesi Personal Trainer gratis",
       tags: []
     },
     {
       duration: 12,
-      pricePerMonth: "Rp275.000",
-      originalPrice: "Rp4.852.941",
-      discountPrice: "Rp3.300.000",
+      pricePerMonth: "Rp193.000",
+      originalPrice: "Rp3.214.000",
+      discountPrice: "Rp2.571.000",
       bonus: "Bonus 2 sesi Personal Trainer gratis",
       tags: []
     },
     {
       duration: 18,
-      pricePerMonth: "Rp259.000",
-      originalPrice: "Rp7.284.375",
-      discountPrice: "Rp4.662.000",
+      pricePerMonth: "Rp182.000",
+      originalPrice: "Rp4.546.000",
+      discountPrice: "Rp3.637.000",
       bonus: "Bonus 2 sesi Personal Trainer gratis",
       tags: []
     },
     {
       duration: 24,
-      pricePerMonth: "Rp249.000",
-      originalPrice: "Rp9.638.710",
-      discountPrice: "Rp5.976.000",
+      pricePerMonth: "Rp171.000",
+      originalPrice: "Rp5.695.000",
+      discountPrice: "Rp4.556.000",
       bonus: "Bonus 2 sesi Personal Trainer gratis",
       tags: []
     },
     {
-      duration: 36,
-      pricePerMonth: "Rp235.000",
-      originalPrice: "Rp14.115.000",
-      discountPrice: "Rp8.460.000",
-      bonus: "Bonus 3 sesi Personal Trainer gratis",
+      duration: "Corporate Membership",
+      pricePerMonth: "",
+      originalPrice: "",
+      discountPrice: "",
+      bonus: "Fasilitas sehat untuk karyawan perusahaan",
       tags: []
     }
   ];
@@ -153,69 +153,92 @@ const MemberPackages: React.FC = () => {
                   flex: 1,
                   background: 'white'
                 }}>
-                  <div style={{
-                    display: 'flex',
-                    alignItems: 'center',
-                    justifyContent: 'space-between',
-                    gap: '16px'
-                  }}>
+                  {typeof pkg.duration === 'number' ? (
                     <div style={{
                       display: 'flex',
-                      flexDirection: 'column',
                       alignItems: 'center',
-                      flex: '0 0 60px'
+                      justifyContent: 'space-between',
+                      gap: '16px'
                     }}>
-                      <span style={{
-                        fontSize: '1.5rem',
-                        fontWeight: 700,
-                        color: '#333',
-                        lineHeight: 1
-                      }}>{pkg.duration}</span>
-                      <span style={{
-                        fontSize: '0.85rem',
-                        color: '#666',
-                        marginTop: '2px'
-                      }}>bulan</span>
+                      <div style={{
+                        display: 'flex',
+                        flexDirection: 'column',
+                        alignItems: 'center',
+                        flex: '0 0 60px'
+                      }}>
+                        <span style={{
+                          fontSize: '1.5rem',
+                          fontWeight: 700,
+                          color: '#333',
+                          lineHeight: 1
+                        }}>{pkg.duration}</span>
+                        <span style={{
+                          fontSize: '0.85rem',
+                          color: '#666',
+                          marginTop: '2px'
+                        }}>bulan</span>
+                      </div>
+                      <div style={{
+                        display: 'flex',
+                        flexDirection: 'column',
+                        alignItems: 'center',
+                        flex: 1
+                      }}>
+                        <span style={{
+                          fontSize: '1.1rem',
+                          fontWeight: 700,
+                          color: '#333',
+                          lineHeight: 1
+                        }}>{pkg.pricePerMonth}</span>
+                        <span style={{
+                          fontSize: '0.85rem',
+                          color: '#666',
+                          marginTop: '2px'
+                        }}>per bulan</span>
+                      </div>
+                      <div style={{
+                        display: 'flex',
+                        flexDirection: 'column',
+                        alignItems: 'flex-end',
+                        textAlign: 'right',
+                        flex: '0 0 auto'
+                      }}>
+                        {pkg.originalPrice && (
+                          <>
+                            <span style={{
+                              fontSize: '0.85rem',
+                              color: '#999',
+                              textDecoration: 'line-through',
+                              lineHeight: 1
+                            }}>{pkg.originalPrice}</span>
+                            <span style={{
+                              fontSize: '1.1rem',
+                              fontWeight: 700,
+                              color: '#333',
+                              marginTop: '2px'
+                            }}>{pkg.discountPrice}</span>
+                          </>
+                        )}
+                      </div>
                     </div>
+                  ) : (
                     <div style={{
                       display: 'flex',
-                      flexDirection: 'column',
                       alignItems: 'center',
-                      flex: 1
+                      justifyContent: 'center'
                     }}>
-                      <span style={{
-                        fontSize: '1.1rem',
-                        fontWeight: 700,
-                        color: '#333',
-                        lineHeight: 1
-                      }}>{pkg.pricePerMonth}</span>
-                      <span style={{
-                        fontSize: '0.85rem',
-                        color: '#666',
-                        marginTop: '2px'
-                      }}>per bulan</span>
+                      <div style={{
+                        textAlign: 'center'
+                      }}>
+                        <span style={{
+                          fontSize: '1.5rem',
+                          fontWeight: 700,
+                          color: '#333',
+                          lineHeight: 1
+                        }}>{pkg.duration}</span>
+                      </div>
                     </div>
-                    <div style={{
-                      display: 'flex',
-                      flexDirection: 'column',
-                      alignItems: 'flex-end',
-                      textAlign: 'right',
-                      flex: '0 0 auto'
-                    }}>
-                      <span style={{
-                        fontSize: '0.85rem',
-                        color: '#999',
-                        textDecoration: 'line-through',
-                        lineHeight: 1
-                      }}>{pkg.originalPrice}</span>
-                      <span style={{
-                        fontSize: '1.1rem',
-                        fontWeight: 700,
-                        color: '#333',
-                        marginTop: '2px'
-                      }}>{pkg.discountPrice}</span>
-                    </div>
-                  </div>
+                  )}
                 </div>
                 <hr style={{
                   border: 'none',
@@ -237,12 +260,19 @@ const MemberPackages: React.FC = () => {
                         fontSize: '0.9rem',
                         color: '#666',
                         margin: 0,
-                        lineHeight: '1.4'
+                        lineHeight: '1.4',
+                        textAlign: typeof pkg.duration === 'number' ? 'left' : 'center'
                       }}>
-                        <span style={{
-                          fontWeight: 700,
-                          color: '#333'
-                        }}>{pkg.bonus.split(' ').slice(0, 3).join(' ')}</span> {pkg.bonus.split(' ').slice(3).join(' ')}
+                        {typeof pkg.duration === 'number' ? (
+                          <>
+                            <span style={{
+                              fontWeight: 700,
+                              color: '#333'
+                            }}>{pkg.bonus.split(' ').slice(0, 3).join(' ')}</span> {pkg.bonus.split(' ').slice(3).join(' ')}
+                          </>
+                        ) : (
+                          pkg.bonus
+                        )}
                       </p>
                     )}
                   </div>
@@ -274,7 +304,7 @@ const MemberPackages: React.FC = () => {
                     }}
                     onClick={openRegistrationModal}
                   >
-                    Daftar
+                    {typeof pkg.duration === 'number' ? 'Daftar' : 'Kontak Sales'}
                   </button>
                 </div>
               </div>
@@ -287,7 +317,7 @@ const MemberPackages: React.FC = () => {
             textAlign: 'left',
             marginTop: '24px',
             fontStyle: 'italic'
-          }}>*Harga sudah termasuk pajak PB 1</p>
+          }}>*Harga sudah termasuk PPN 11%</p>
         </div>
       </section>
 
