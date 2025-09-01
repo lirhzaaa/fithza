@@ -1,9 +1,10 @@
-import Banner from '../components/Banner';
-import ClassSection from '../components/ClassSection';
-import MembershipSection from '../components/MembershipSection';
-import PersonalTrainerSection from '../components/PersonalTrainerSection';
-import FaqSection from '../components/FaqSection';
-import CardHome from '../components/CardHome';
+import Banner from '../components/home/Banner';
+import ClassSection from '../components/home/ClassSection';
+import MembershipSection from '../components/home/MembershipSection';
+import PersonalTrainerSection from '../components/home/PersonalTrainerSection';
+import FaqHome from '../components/home/FaqHome';
+import CardHome from '../components/home/CardHome';
+import FreeTrail from '../components/FreeTrail';
 
 const Home: React.FC = () => {
   return (
@@ -13,7 +14,8 @@ const Home: React.FC = () => {
       <ClassSection />
       <MembershipSection />
       <PersonalTrainerSection />
-      <FaqSection />
+      <FreeTrail />
+      <FaqHome />
     </section>
   );
 };

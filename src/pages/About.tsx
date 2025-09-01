@@ -1,10 +1,12 @@
-import HeroSection from '../components/shared/AboutHero';
-import WhyChooseSection from '../components/shared/AboutWHY';
+import AboutFithza from '../components/about/AboutFithza';
+import AboutHero from '../components/about/AboutHero';
+import WhyChooseSection from '../components/about/AboutWHY';
 
 const About: React.FC = () => {
   return (
     <>
-      <HeroSection />
+      <AboutHero />
+      <AboutFithza />
       <WhyChooseSection />
     </>
   );

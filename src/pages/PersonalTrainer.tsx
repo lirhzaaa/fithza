@@ -1,4 +1,4 @@
-import PersonalTrainerSection from '../components/PersonalTrainerSection';
+import PersonalTrainerSection from '../components/home/PersonalTrainerSection';
 
 const PersonalTrainer: React.FC = () => {
   return (

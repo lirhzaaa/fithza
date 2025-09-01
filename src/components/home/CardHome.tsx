@@ -11,7 +11,7 @@ const CardHome: React.FC = () => {
         {
             title: "Personal Trainer",
             description: "Temukan trainer pribadi yang sesuai dengan kebutuhan Anda.",
-            link: "/personal-trainer",
+            link: "/trainer",
             image: "/img/home-card/trainer.jpg"
         },
         {
@@ -34,7 +34,7 @@ const CardHome: React.FC = () => {
             {cards.map((card, index) => (
                 <Link key={index} to={card.link} style={{ textDecoration: 'none', color: 'inherit' }}>
                     <div style={{
-                        width: '350px',
+                        width: 'min(350px, 90vw)', // Responsif: max 350px atau 90% viewport width
                         height: '300px',
                         backgroundImage: `url(${card.image})`,
                         backgroundSize: 'cover',

@@ -36,12 +36,11 @@ const CTAClass: React.FC = () => {
                             style={{ 
                                 display: 'inline-block', 
                                 padding: '12px 24px', 
-                                border: '2px solid #000', 
-                                borderRadius: '25px', 
-                                color: '#000', 
+                                borderRadius: '10px',
+                                backgroundColor: '#2b4593ff', 
+                                color: '#ffffffff', 
                                 textDecoration: 'none', 
                                 fontWeight: 'bold', 
-                                backgroundColor: 'transparent' 
                             }}
                         >
                             Daftar Sekarang

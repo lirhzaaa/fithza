@@ -1,4 +1,4 @@
-import PrivacyPolicy from '../components/member/PrivacyPolicy';
+import PrivacyPolicy from '../components/PrivacyPolicy';
 
 const DataPrivacy: React.FC = () => {
   return <PrivacyPolicy />;
