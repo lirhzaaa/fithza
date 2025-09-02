@@ -1,10 +1,14 @@
-import PersonalTrainerSection from '../components/home/PersonalTrainerSection';
+import Content from "../components/trainer/Content";
+import HeroSection from "../components/trainer/Hero";
+import Focus from "../components/trainer/Focus";
 
-const PersonalTrainer: React.FC = () => {
+const PersonalTrainer = () => {
   return (
-    <div>
-      <PersonalTrainerSection />
-    </div>
+    <section>
+      <HeroSection />
+      <Content />
+      <Focus />
+    </section>
   );
 };
 

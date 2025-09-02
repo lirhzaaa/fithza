@@ -6,7 +6,7 @@ import FaqHome from '../components/home/FaqHome';
 import CardHome from '../components/home/CardHome';
 import FreeTrail from '../components/FreeTrail';
 
-const Home: React.FC = () => {
+const Home = () => {
   return (
     <section>
       <Banner />

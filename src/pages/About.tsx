@@ -1,6 +1,8 @@
+import AboutContent from '../components/about/Content';
 import AboutFithza from '../components/about/AboutFithza';
-import AboutHero from '../components/about/AboutHero';
-import WhyChooseSection from '../components/about/AboutWHY';
+import AboutHero from '../components/about/HeroSection';
+import WhyChooseSection from '../components/about/WhySection';
+import CTAAbout from '../components/about/CTA';
 
 const About: React.FC = () => {
   return (
@@ -8,6 +10,8 @@ const About: React.FC = () => {
       <AboutHero />
       <AboutFithza />
       <WhyChooseSection />
+      <AboutContent />
+      <CTAAbout />
     </>
   );
 };

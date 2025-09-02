@@ -33,7 +33,7 @@ const Navbar: React.FC = () => {
       <nav style={{maxWidth: '1200px', margin: '0 auto', padding: '0 clamp(1rem, 3vw, 2rem)'}}>
         <div style={{display: 'flex', justifyContent: 'space-between', alignItems: 'center', padding: '1rem 0'}}>
           <div>
-            <a href="/" style={{textDecoration: 'none'}}><h1 style={{color: '#2b4593ff', margin: '0', fontSize: 'clamp(1.2rem, 4vw, 1.5rem)', fontWeight: '700'}}>FitHza Indonesia</h1></a>
+            <a href="/" style={{textDecoration: 'none'}}><h1 style={{color: '#2b4593ff', margin: '0', fontSize: 'clamp(1.2rem, 4vw, 1.5rem)', fontWeight: '700'}}>Fithza Indonesia</h1></a>
           </div>
           
           <div style={{display: isMobile ? 'none' : 'block'}}>
