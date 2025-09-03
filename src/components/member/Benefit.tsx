@@ -1,28 +1,33 @@
-const TrainerBenefits = () => {
+const MemberBenefits = () => {
   const benefits = [
     {
       icon: "/id/id/-/media/project/evolution-wellness/fitness-first/indonesia/personal-training/icon/yoga_red-(1).png?extension=webp",
-      title: "POSTURE",
+      title: "Bebas Akses Ke Semua Fasilitas Kami",
       description: "Postur yang baik dapat mengurangi beban tubuh, bikin gerak lebih bebas, dan tubuh terasa lebih segar."
     },
     {
       icon: "/id/id/-/media/project/evolution-wellness/fitness-first/shared/base/5-key-pillars-icon/mobility.svg?extension=webp",
-      title: "MOBILITY",
+      title: "Memiliki banyak Kelas Eksklusif",
       description: "Mobilitas yang baik membuat sendi dan otot bisa bergerak dengan efisien dalam rentang geraknya secara penuh."
     },
     {
       icon: "/id/id/-/media/project/evolution-wellness/fitness-first/shared/base/5-key-pillars-icon/core.svg?extension=webp",
-      title: "CORE",
+      title: "Fasilitas Lengkap & Modern",
       description: "Otot core berperan di hampir setiap gerakan tubuh. Core yang kuat bantu jaga stabilitas, lindungi tulang belakang, dan bikin gerakan jadi lebih terkendali, lebih kuat, dan lebih efisien."
     },
     {
       icon: "/id/id/-/media/project/evolution-wellness/fitness-first/shared/base/5-key-pillars-icon/strength.svg?extension=webp",
-      title: "STRENGTH",
+      title: "Akses 24 Jam Setiap Hari",
       description: "Latihan kekuatan bantu tulang jadi lebih kuat, berat badan lebih terkontrol, dan aktivitas sehari-hari terasa lebih ringan."
     },
     {
       icon: "/id/id/-/media/project/evolution-wellness/fitness-first/shared/base/5-key-pillars-icon/cardio.svg?extension=webp",
-      title: "CARDIO",
+      title: "Tersedia Personal Trainer Profesional",
+      description: "Latihan kardio yang konsisten bikin stamina makin kuat dan daya tahan meningkat. Hasilnya? Bisa latihan lebih lama dan bakar lebih banyak kalori."
+    },
+    {
+      icon: "/id/id/-/media/project/evolution-wellness/fitness-first/shared/base/5-key-pillars-icon/cardio.svg?extension=webp",
+      title: "Tersedia Peminjaman Handuk Gratis",
       description: "Latihan kardio yang konsisten bikin stamina makin kuat dan daya tahan meningkat. Hasilnya? Bisa latihan lebih lama dan bakar lebih banyak kalori."
     }
   ];
@@ -53,22 +58,24 @@ const TrainerBenefits = () => {
               textAlign: 'left'
             }}>
             <h2 style={{
-              fontSize: '3.2rem',
+              fontSize: '3rem',
               fontWeight: 700,
               color: '#333',
               marginBottom: '24px',
               lineHeight: '1.2'
             }}>
-              5 Fokus Utama Personal Trainer Kami
+              KEUNTUNGAN <span style={{
+                color: '#4D55CC'
+              }}>JOIN MEMBERSHIP</span>
             </h2>
             <p style={{
-              fontSize: '1.3rem',
+              fontSize: '1.1rem',
               color: '#666',
               fontWeight: 400,
               marginBottom: 0,
               lineHeight: '1.5'
             }}>
-              Pelajari fokus utama yang menjadi prioritas personal trainer kami dalam membantu Anda mencapai tujuan fitness.
+              Nikmati akses penuh ke semua fasilitas dan kelas eksklusif kami, serta dapatkan bimbingan dari pelatih profesional untuk mencapai tujuan kebugaran Anda.
             </p>
           </div>
 
@@ -86,7 +93,6 @@ const TrainerBenefits = () => {
             {benefits.map((benefit, index) => (
               <div
                 data-aos="fade-up"
-                data-aos-duration="1000"
                 key={index}
                 style={{
                   display: 'flex',
@@ -104,7 +110,7 @@ const TrainerBenefits = () => {
                 <img src={benefit.icon} alt={benefit.title} style={{
                   width: '48px',
                   height: '48px',
-                  flexShrink: 0
+                  flexShrink: 0,
                 }} />
                 <div style={{
                   flex: 1,
@@ -136,4 +142,4 @@ const TrainerBenefits = () => {
   );
 };
 
-export default TrainerBenefits;
+export default MemberBenefits;

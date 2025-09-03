@@ -1,7 +1,7 @@
 import { useState, useRef } from 'react';
 import { useNavigate } from 'react-router-dom';
 
-interface ClassItem {
+type ClassItem = {
   name: string;
   difficulty: string;
   duration: string;
@@ -10,20 +10,19 @@ interface ClassItem {
   color: string;
 }
 
-const ClassSection: React.FC = () => {
+const ClassSection = () => {
   const [activeClassTab, setActiveClassTab] = useState(0);
   const [isLoadingCards, setIsLoadingCards] = useState(false);
   const carouselRef = useRef<HTMLDivElement | null>(null);
   const navigate = useNavigate();
 
-  const classCategories = ["Strength Class", "Cardio Class", "Dance Class", "Mind & Body Class", "Cycling Class"];
+  const classCategories = ["Strength Class", "Cardio Class", "Dance Class", "Mind & Body Class"];
 
   const categoryColors: { [key: string]: string } = {
     'Strength Class': '#FF5638',
     'Cardio Class': '#FFD100',
     'Dance Class': '#158F40',
     'Mind & Body Class': '#1ECAD3',
-    'Cycling Class': '#4D55CC'
   };
 
   const categoryBackgrounds: { [key: string]: string } = {
@@ -31,7 +30,6 @@ const ClassSection: React.FC = () => {
     'Cardio Class': 'https://photo-fhad-fithub-staging.s3.ap-southeast-1.amazonaws.com/imgonline_com_ua_resize_nl_AW_3_YM_Ii_Wb3m9_20e2afae1e.jpg',
     'Dance Class': 'https://photo-fhad-fithub-staging.s3.ap-southeast-1.amazonaws.com/imgonline_com_ua_resize_KU_8_Nvn0li4_27a3176199.jpg',
     'Mind & Body Class': 'https://photo-fhad-fithub-staging.s3.ap-southeast-1.amazonaws.com/imgonline_com_ua_resize_2_T_Ue22_EWPLG_Ce_I_c8f42f08ae.jpg',
-    'Cycling Class': 'https://photo-fhad-fithub-staging.s3.ap-southeast-1.amazonaws.com/Sunter_600x400_2_cd28c4532d.png'
   };
 
   const classes: ClassItem[] = [
@@ -77,16 +75,6 @@ const ClassSection: React.FC = () => {
     { name: 'PILATES', category: 'Mind & Body Class', duration: '60 MIN', difficulty: 'Medium', image: categoryBackgrounds['Mind & Body Class'], color: categoryColors['Mind & Body Class'] },
     { name: 'QI GONG', category: 'Mind & Body Class', duration: '60 MIN', difficulty: 'Medium', image: categoryBackgrounds['Mind & Body Class'], color: categoryColors['Mind & Body Class'] },
     { name: 'REIKI', category: 'Mind & Body Class', duration: '60 MIN', difficulty: 'Medium', image: categoryBackgrounds['Mind & Body Class'], color: categoryColors['Mind & Body Class'] },
-    { name: 'SPINNING', category: 'Cycling Class', duration: '60 MIN', difficulty: 'Medium', image: categoryBackgrounds['Cycling Class'], color: categoryColors['Cycling Class'] },
-    { name: 'INDOOR CYCLING', category: 'Cycling Class', duration: '60 MIN', difficulty: 'Medium', image: categoryBackgrounds['Cycling Class'], color: categoryColors['Cycling Class'] },
-    { name: 'ROAD CYCLING', category: 'Cycling Class', duration: '60 MIN', difficulty: 'Medium', image: categoryBackgrounds['Cycling Class'], color: categoryColors['Cycling Class'] },
-    { name: 'MOUNTAIN BIKING', category: 'Cycling Class', duration: '60 MIN', difficulty: 'Medium', image: categoryBackgrounds['Cycling Class'], color: categoryColors['Cycling Class'] },
-    { name: 'BMX', category: 'Cycling Class', duration: '60 MIN', difficulty: 'Medium', image: categoryBackgrounds['Cycling Class'], color: categoryColors['Cycling Class'] },
-    { name: 'TRACK CYCLING', category: 'Cycling Class', duration: '60 MIN', difficulty: 'Medium', image: categoryBackgrounds['Cycling Class'], color: categoryColors['Cycling Class'] },
-    { name: 'CYCLING TOUR', category: 'Cycling Class', duration: '60 MIN', difficulty: 'Medium', image: categoryBackgrounds['Cycling Class'], color: categoryColors['Cycling Class'] },
-    { name: 'INTERVAL CYCLING', category: 'Cycling Class', duration: '60 MIN', difficulty: 'Medium', image: categoryBackgrounds['Cycling Class'], color: categoryColors['Cycling Class'] },
-    { name: 'ENDURANCE CYCLING', category: 'Cycling Class', duration: '60 MIN', difficulty: 'Medium', image: categoryBackgrounds['Cycling Class'], color: categoryColors['Cycling Class'] },
-    { name: 'HILL CLIMBING', category: 'Cycling Class', duration: '60 MIN', difficulty: 'Medium', image: categoryBackgrounds['Cycling Class'], color: categoryColors['Cycling Class'] }
   ];
 
   const classData = {
@@ -94,7 +82,6 @@ const ClassSection: React.FC = () => {
     "Cardio Class": classes.filter(c => c.category === "Cardio Class"),
     "Dance Class": classes.filter(c => c.category === "Dance Class"),
     "Mind & Body Class": classes.filter(c => c.category === "Mind & Body Class"),
-    "Cycling Class": classes.filter(c => c.category === "Cycling Class")
   };
 
   const scrollLeft = () => {
@@ -128,7 +115,10 @@ const ClassSection: React.FC = () => {
   };
 
   return (
-    <div style={{ padding: '80px 0', maxWidth: 'none', margin: '0', backgroundColor: '#f8f9fa' }}>
+    <div
+      data-aos="fade-down"
+      data-aos-duration="1000"
+      style={{ padding: '80px 0', maxWidth: 'none', margin: '0' }}>
       <div style={{ textAlign: 'center', marginBottom: '60px', padding: '0 clamp(1rem, 5vw, 5rem)' }}>
         <h2 style={{ fontSize: 'clamp(2rem, 5vw, 2.5rem)', fontWeight: '700', color: '#333', marginBottom: '16px', lineHeight: '1.2' }}>Ikuti 50+ variasi kelas sepuasnya</h2>
         <p style={{ fontSize: 'clamp(1rem, 2.5vw, 1.1rem)', color: '#666', fontWeight: '400', marginBottom: '0' }}>Dibimbing oleh instruktur berpengalaman dan bersertifikasi internasional.</p>
@@ -185,7 +175,7 @@ const ClassSection: React.FC = () => {
             classData[classCategories[activeClassTab] as keyof typeof classData]?.map((classItem: ClassItem, index: number) => (
               <div key={index} style={{ background: 'white', borderRadius: '16px', overflow: 'hidden', transition: 'transform 0.3s ease', flex: `0 0 ${window.innerWidth < 768 ? '90vw' : 'calc((100vw - 10vw - 80px) / 4)'}`, width: `${window.innerWidth < 768 ? '90vw' : 'calc((100vw - 10vw - 80px) / 4)'}`, minWidth: '280px', scrollSnapAlign: 'start' }}>
                 <div style={{ position: 'relative', height: '200px', overflow: 'hidden' }}>
-                  <img src={classItem.image} alt={classItem.name} style={{ width: '100%', height: '100%', objectFit: 'cover', transition: 'transform 0.3s ease' }} />
+                  <img src={classItem.image} alt={classItem.name} style={{ width: '100%', height: '100%', objectFit: 'cover', transition: 'transform 0.3s ease' }} onError={(e) => { e.currentTarget.src = 'https://via.placeholder.com/300x200?text=Image+Not+Available'; }} />
                   <div style={{ position: 'absolute', top: '16px', left: '16px', padding: '6px 12px', borderRadius: '20px', fontSize: '0.8rem', fontWeight: '600', color: 'white', display: 'flex', alignItems: 'center', gap: '6px', backgroundColor: classItem.color }}>
                     <span>{classItem.category}</span>
                   </div>

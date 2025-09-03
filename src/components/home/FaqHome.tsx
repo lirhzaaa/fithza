@@ -1,11 +1,11 @@
 import React, { useState } from 'react';
 
-interface FAQItem {
+type FAQItem = {
     title: string;
     content: string;
 }
 
-const FaqHome: React.FC = () => {
+const FaqHome = () => {
     const [openIndex, setOpenIndex] = useState<number | null>(null);
 
     const toggleAccordion = (index: number): void => {
@@ -36,11 +36,13 @@ const FaqHome: React.FC = () => {
     ];
 
     return (
-        <section style={{
-            padding: '80px 0',
-            backgroundColor: 'white'
-        }}>
-            <div style={{maxWidth: '1400px', margin: '0 auto', padding: '0 clamp(1rem, 5vw, 2rem)'}}>
+        <section
+            data-aos="fade-up"
+            data-aos-duration="1000"
+            style={{
+                padding: '80px 40px',
+            }}>
+            <div style={{ maxWidth: '1400px', margin: '0 auto', padding: '0 clamp(1rem, 5vw, 2rem)' }}>
                 <h2 style={{
                     fontSize: 'clamp(2rem, 5vw, 2.5rem)',
                     textAlign: 'center',
@@ -60,15 +62,18 @@ const FaqHome: React.FC = () => {
                 </p>
                 <div style={{ marginBottom: '40px' }}>
                     {faqItems.map((item: FAQItem, index: number) => (
-                        <div key={index} style={{ marginBottom: '10px', border: '1px solid #ddd', borderRadius: '8px' }}>
-                            <div 
-                                style={{ 
-                                    padding: '20px', 
-                                    cursor: 'pointer', 
-                                    display: 'flex', 
-                                    justifyContent: 'space-between', 
+                        <div
+                            data-aos="fade-up"
+                            data-aos-duration="500"
+                            key={index} style={{ marginBottom: '20px', border: '1px solid #ddd', borderRadius: '8px' }}>
+                            <div
+                                style={{
+                                    padding: '20px',
+                                    cursor: 'pointer',
+                                    display: 'flex',
+                                    justifyContent: 'space-between',
                                     alignItems: 'center',
-                                    backgroundColor: '#f9f9f9'
+                                    backgroundColor: '#f9f9f9',
                                 }}
                                 onClick={() => toggleAccordion(index)}
                             >
@@ -76,9 +81,9 @@ const FaqHome: React.FC = () => {
                                 <span style={{ fontSize: '1.5rem' }}>{openIndex === index ? '-' : '+'}</span>
                             </div>
                             {openIndex === index && (
-                                <div 
-                                    style={{ 
-                                        padding: '20px', 
+                                <div
+                                    style={{
+                                        padding: '20px',
                                         borderTop: '1px solid #ddd',
                                         backgroundColor: '#fff'
                                     }}
@@ -88,13 +93,17 @@ const FaqHome: React.FC = () => {
                         </div>
                     ))}
                 </div>
-                <div style={{
-                    textAlign: 'center',
-                    padding: '30px',
-                    backgroundColor: '#f8f9fa',
-                    borderRadius: '10px',
-                    marginTop: '40px'
-                }}>
+                <div
+                    data-aos="fade-down"
+                    data-aos-duration="1000"
+                    style={{
+                        textAlign: 'center',
+                        padding: '30px',
+                        border: '1px solid #ddd',
+                        backgroundColor: '#ffffffff',
+                        borderRadius: '10px',
+                        marginTop: '40px'
+                    }}>
                     <h3 style={{
                         fontSize: '1.5rem',
                         marginBottom: '15px',
@@ -120,8 +129,8 @@ const FaqHome: React.FC = () => {
                         cursor: 'pointer',
                         transition: 'background-color 0.3s'
                     }}
-                    onMouseOver={(e) => e.currentTarget.style.backgroundColor = '#2757e4ff'}
-                    onMouseOut={(e) => e.currentTarget.style.backgroundColor = '#2b4593ff'}
+                        onMouseOver={(e) => e.currentTarget.style.backgroundColor = '#2757e4ff'}
+                        onMouseOut={(e) => e.currentTarget.style.backgroundColor = '#2b4593ff'}
                     >
                         Hubungi Kami
                     </button>

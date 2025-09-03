@@ -1,6 +1,6 @@
 import { useState } from 'react';
 
-const MemberFAQ: React.FC = () => {
+const MemberFAQ = () => {
   const [openItems, setOpenItems] = useState<number[]>([]);
 
   const toggleItem = (index: number) => {
@@ -17,16 +17,8 @@ const MemberFAQ: React.FC = () => {
       answer: "Ya, dengan membership FitHza Indonesia Anda dapat mengakses semua lokasi gym kami di Jakarta, Bogor, dan Bandung tanpa biaya tambahan."
     },
     {
-      question: "Berapa lama masa berlaku membership?",
-      answer: "Membership FitHza Indonesia tersedia dalam berbagai durasi mulai dari 3 bulan hingga 36 bulan. Semakin lama durasi yang Anda pilih, semakin hemat biayanya per bulan."
-    },
-    {
       question: "Apakah ada biaya pendaftaran atau biaya lainnya?",
       answer: "Tidak ada biaya pendaftaran! Harga yang tertera sudah termasuk semua biaya termasuk pajak. Anda hanya perlu membayar biaya membership sesuai paket yang dipilih."
-    },
-    {
-      question: "Bagaimana cara membatalkan membership?",
-      answer: "Anda dapat membatalkan membership kapan saja melalui aplikasi FitHza Indonesia atau menghubungi customer service kami. Kebijakan pembatalan kami sangat fleksibel."
     },
     {
       question: "Apakah tersedia layanan personal trainer?",
@@ -35,14 +27,6 @@ const MemberFAQ: React.FC = () => {
     {
       question: "Apakah gym buka 24 jam?",
       answer: "Ya, semua lokasi FitHza Indonesia buka 24 jam setiap hari, sehingga Anda dapat berolahraga sesuai jadwal yang paling nyaman untuk Anda."
-    },
-    {
-      question: "Apakah ada program khusus untuk pemula?",
-      answer: "Tentu! Kami memiliki program khusus untuk pemula dengan bimbingan trainer yang akan membantu Anda memulai perjalanan fitness dengan aman dan efektif."
-    },
-    {
-      question: "Bagaimana cara mendapatkan diskon membership?",
-      answer: "Diskon otomatis diberikan berdasarkan durasi membership yang Anda pilih. Semakin lama durasi, semakin besar diskon yang Anda dapatkan."
     }
   ];
 
@@ -50,9 +34,11 @@ const MemberFAQ: React.FC = () => {
 
   return (
     <section
+      data-aos="fade-up"
+      data-aos-delay="300"
       data-section="faq"
       style={{
-        padding: '80px 0',
+        padding: '20px 0 80px 0',
         background: '#f8f9fa',
         maxWidth: 'none',
         margin: 0
@@ -86,13 +72,16 @@ const MemberFAQ: React.FC = () => {
           </p>
         </div>
 
-        <div style={{
-          display: 'flex',
-          flexDirection: 'column',
-          gap: '16px'
-        }}>
+        <div
+          style={{
+            display: 'flex',
+            flexDirection: 'column',
+            gap: '16px'
+          }}>
           {faqData.map((faq, index) => (
             <div
+              data-aos="fade-up"
+              data-aos-delay="500"
               key={index}
               style={{
                 background: 'white',
@@ -162,105 +151,6 @@ const MemberFAQ: React.FC = () => {
               </div>
             </div>
           ))}
-        </div>
-
-        <div style={{
-          textAlign: 'center',
-          marginTop: '48px',
-          padding: '32px 20px',
-          background: 'white',
-          borderRadius: '16px',
-          border: '1px solid #e5e7eb',
-          boxShadow: '0 4px 12px rgba(0, 0, 0, 0.05)'
-        }}>
-          <h3 style={{
-            fontSize: '1.25rem',
-            fontWeight: 600,
-            color: '#1f2937',
-            margin: '0 0 12px 0'
-          }}>
-            Masih ada pertanyaan?
-          </h3>
-          <p style={{
-            fontSize: '1rem',
-            color: '#6b7280',
-            margin: '0 0 20px 0',
-            lineHeight: 1.5
-          }}>
-            Tim customer service kami siap membantu Anda
-          </p>
-          <div style={{
-            display: 'flex',
-            flexDirection: isMobile ? 'column' : 'row',
-            gap: '12px',
-            alignItems: 'center',
-            justifyContent: 'center'
-          }}>
-            <button
-              style={{
-                padding: '12px 24px',
-                background: '#4D55CC',
-                color: 'white',
-                border: 'none',
-                borderRadius: '8px',
-                fontSize: '0.95rem',
-                fontWeight: 600,
-                cursor: 'pointer',
-                transition: 'all 0.3s ease',
-                textTransform: 'none',
-                letterSpacing: 'normal',
-                boxShadow: '0 2px 8px rgba(77, 85, 204, 0.2)',
-                minWidth: isMobile ? '200px' : 'auto'
-              }}
-              onMouseEnter={(e) => {
-                e.currentTarget.style.background = '#363c92';
-                e.currentTarget.style.transform = 'translateY(-2px)';
-                e.currentTarget.style.boxShadow = '0 4px 15px rgba(77, 85, 204, 0.3)';
-              }}
-              onMouseLeave={(e) => {
-                e.currentTarget.style.background = '#4D55CC';
-                e.currentTarget.style.transform = 'translateY(0)';
-                e.currentTarget.style.boxShadow = '0 2px 8px rgba(77, 85, 204, 0.2)';
-              }}
-              onClick={() => {
-                window.location.href = 'tel:+62211234567';
-              }}
-            >
-              📞 Hubungi CS
-            </button>
-
-            <button
-              style={{
-                padding: '12px 24px',
-                background: 'transparent',
-                color: '#4D55CC',
-                border: '2px solid #4D55CC',
-                borderRadius: '8px',
-                fontSize: '0.95rem',
-                fontWeight: 600,
-                cursor: 'pointer',
-                transition: 'all 0.3s ease',
-                textTransform: 'none',
-                letterSpacing: 'normal',
-                minWidth: isMobile ? '200px' : 'auto'
-              }}
-              onMouseEnter={(e) => {
-                e.currentTarget.style.background = '#4D55CC';
-                e.currentTarget.style.color = 'white';
-                e.currentTarget.style.transform = 'translateY(-2px)';
-              }}
-              onMouseLeave={(e) => {
-                e.currentTarget.style.background = 'transparent';
-                e.currentTarget.style.color = '#4D55CC';
-                e.currentTarget.style.transform = 'translateY(0)';
-              }}
-              onClick={() => {
-                window.location.href = 'mailto:info@FitHza Indonesia.com';
-              }}
-            >
-              ✉️ Email Kami
-            </button>
-          </div>
         </div>
       </div>
     </section>

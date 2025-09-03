@@ -77,7 +77,6 @@ const MindBodyClass: React.FC = () => {
         { name: 'Strength Class', image: 'https://photo-fhad-fithub.s3.ap-southeast-1.amazonaws.com/BOOTCAMP_afcff062bc.JPG', link: '/class/class-strength' },
         { name: 'Cardio Class', image: 'https://photo-fhad-fithub.s3.ap-southeast-1.amazonaws.com/BODYCOMBAT_2089700eff.JPG', link: '/class/class-cardio' },
         { name: 'Dance Class', image: 'https://photo-fhad-fithub.s3.ap-southeast-1.amazonaws.com/K_POP_DANCE_8511b475b2.JPG', link: '/class/dance-class' },
-        { name: 'Cycling Class', image: 'https://photo-fhad-fithub.s3.ap-southeast-1.amazonaws.com/CYCLING_CLASS_123456789.JPG', link: '/class/class-cycling' }
     ];
 
     const faqItems: FAQItem[] = [

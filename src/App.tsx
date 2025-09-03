@@ -1,4 +1,7 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { useEffect } from 'react';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 import ScrollToTop from './components/ScrollToTop'; // Tambahkan import ini
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
@@ -12,10 +15,13 @@ import StrengthClass from './pages/StrengthClass';
 import CardioClass from './pages/CardioClass';
 import DanceClass from './pages/DanceClass';
 import MindBodyClass from './pages/MindBodyClass';
-import CyclingClass from './pages/CyclingClass';
 import FreeTrail from './components/FreeTrail';
 
 const App: React.FC = () => {
+  useEffect(() => {
+    AOS.init();
+  }, []);
+
   return (
     <Router>
       <ScrollToTop /> {/* Tambahkan ini di sini */}
@@ -33,7 +39,6 @@ const App: React.FC = () => {
             <Route path="/class/class-cardio" element={<CardioClass />} />
             <Route path="/class/dance-class" element={<DanceClass />} />
             <Route path="/class/class-mind-body" element={<MindBodyClass />} />
-            <Route path="/class/class-cycling" element={<CyclingClass />} />
             <Route path="/free-trail" element={<FreeTrail />} />
           </Routes>
         </main>

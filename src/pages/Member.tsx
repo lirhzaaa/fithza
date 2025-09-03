@@ -1,5 +1,5 @@
 import MemberHero from '../components/member/MemberHero';
-import MemberBenefits from '../components/member/CTATrainer';
+import MemberBenefits from '../components/member/Benefit';
 import MemberPackages from '../components/member/MemberPackages';
 import MemberFAQ from '../components/member/MemberFAQ';
 

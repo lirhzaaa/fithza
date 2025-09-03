@@ -1,4 +1,4 @@
-interface Reason {
+type Reason = {
     title: string;
     description: string;
 }
@@ -40,16 +40,19 @@ const WhyChooseSection = () => {
     const reasonsBottom = reasons.slice(3);
 
     return (
-        <section style={{
-            padding: '20px 0 50PX',
-            backgroundColor: 'white'
-        }}>
+        <section
+            data-aos="fade-up"
+            data-aos-duration="1000"
+            style={{
+                padding: '5px 0 50PX',
+                backgroundColor: 'white'
+            }}>
             <div style={{ maxWidth: '100%', margin: '0 6rem', padding: '0 20px' }}>
                 <h2 style={{
                     fontSize: '2.5rem',
                     textAlign: 'center',
                     marginBottom: '20px',
-                    color: '#293a6aff',
+                    color: '#333',
                     fontWeight: 'bold'
                 }}>
                     Kenapa FitHza Indonesia Terbaik Untuk Kamu?
@@ -68,7 +71,10 @@ const WhyChooseSection = () => {
                     gridTemplateColumns: 'repeat(3, 1fr)',
                     gap: '30px',
                     marginBottom: '20px'
-                }}>
+                }}
+                    data-aos="fade-up"
+                    data-aos-duration="1000"
+                >
                     {reasonsTop.map((reason, index) => (
                         <div key={index} style={{
                             backgroundColor: '#eaeef2ff',
@@ -82,7 +88,7 @@ const WhyChooseSection = () => {
                             <h3 style={{
                                 fontSize: '1.8rem',
                                 marginBottom: '10px',
-                                color: '#2b4593ff',
+                                color: '#333',
                                 fontWeight: 'bold'
                             }}>
                                 {reason.title}
@@ -100,7 +106,10 @@ const WhyChooseSection = () => {
                     display: 'grid',
                     gridTemplateColumns: 'repeat(4, 1fr)',
                     gap: '30px'
-                }}>
+                }}
+                    data-aos="fade-down"
+                    data-aos-duration="1000"
+                >
                     {reasonsBottom.map((reason, index) => (
                         <div key={index} style={{
                             backgroundColor: '#eaeef2ff',
@@ -114,7 +123,7 @@ const WhyChooseSection = () => {
                             <h3 style={{
                                 fontSize: '1.8rem',
                                 marginBottom: '10px',
-                                color: '#2b4593ff',
+                                color: '#333',
                                 fontWeight: 'bold'
                             }}>
                                 {reason.title}

@@ -8,22 +8,28 @@ const MembershipSection = () => {
                 backgroundColor: '#2b4593ff',
                 justifyContent: "space-between",
                 display: 'flex',
-                flexDirection: window.innerWidth < 768 ? 'column' : 'row', // Responsif: column di mobile
-                height: 'auto', // Ubah dari 50vh ke auto untuk responsivitas
+                flexDirection: window.innerWidth < 768 ? 'column' : 'row',
+                height: 'auto',
                 minHeight: '50vh',
                 alignItems: 'center',
-                padding: '2rem clamp(1rem, 5vw, 5rem)', // Responsif padding
+                padding: '2rem clamp(1rem, 5vw, 5rem)',
                 color: 'white',
             }}>
-                <div style={{ flex: 1, marginBottom: window.innerWidth < 768 ? '2rem' : '0' }}>
+                <div
+                    data-aos="fade-right"
+                    data-aos-duration="1000"
+                    style={{ flex: 1, marginBottom: window.innerWidth < 768 ? '2rem' : '0' }}>
                     <h2 style={{
                         fontSize: 'clamp(2rem, 5vw, 3rem)',
                         fontWeight: '700',
                     }}>Membership mulai dari Rp149.000/bulan</h2>
                 </div>
-                <div style={{
-                    flex: 1,
-                }}>
+                <div
+                    data-aos="fade-left"
+                    data-aos-duration="1000"
+                    style={{
+                        flex: 1,
+                    }}>
                     <p style={{
                         margin: '15px 0 30px 0',
                         fontSize: 'clamp(1rem, 2.5vw, 1.2rem)',

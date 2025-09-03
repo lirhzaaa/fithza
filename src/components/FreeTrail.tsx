@@ -263,7 +263,7 @@ const FreeTrail = () => {
     return (
         <section style={{
             padding: '100px 0 50px',
-            backgroundColor: '#f8f9fa'
+            overflowX: 'hidden'
         }}>
             <div style={{ maxWidth: '1400px', margin: '0 auto', padding: '0 clamp(1rem, 5vw, 2rem)' }}>
                 <div style={{
@@ -272,11 +272,14 @@ const FreeTrail = () => {
                     flexWrap: 'wrap',
                     flexDirection: window.innerWidth < 768 ? 'column' : 'row'
                 }}>
-                    <div style={{
-                        flex: '1 1 50%',
-                        padding: '0 clamp(1rem, 2vw, 2rem)',
-                        marginBottom: '30px'
-                    }}>
+                    <div
+                        data-aos="fade-right"
+                        data-aos-duration="1000"
+                        style={{
+                            flex: '1 1 50%',
+                            padding: '0 clamp(1rem, 2vw, 2rem)',
+                            marginBottom: '30px'
+                        }}>
                         <div style={{
                             textAlign: 'left'
                         }}>
@@ -324,10 +327,13 @@ const FreeTrail = () => {
                         </div>
                     </div>
 
-                    <div style={{
-                        flex: '1 1 50%',
-                        padding: '0 clamp(1rem, 2vw, 2rem)'
-                    }}>
+                    <div
+                        data-aos="fade-left"
+                        data-aos-duration="1000"
+                        style={{
+                            flex: '1 1 50%',
+                            padding: '0 clamp(1rem, 2vw, 2rem)'
+                        }}>
                         <div style={{
                             backgroundColor: 'white',
                             padding: 'clamp(1.5rem, 4vw, 2.5rem)',

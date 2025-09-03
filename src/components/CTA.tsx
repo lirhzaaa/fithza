@@ -5,7 +5,7 @@ const CTAAbout = () => {
     return (
         <>
             <div style={{
-                padding: '5rem 0 3rem'
+                padding: '2rem 0 3rem'
             }}>
                 <div style={{
                     maxWidth: '1200px',
@@ -41,16 +41,21 @@ const CTAAbout = () => {
                             <h2 style={{
                                 color: 'white',
                                 marginBottom: '20px',
-                                fontSize: '2.5rem',
+                                fontSize: '2rem',
                                 fontWeight: '650',
-                            }}>Bergabung Sekarang bersama Fithza Indonesia</h2>
+                            }}
+                                data-aos="fade-down"
+                                data-aos-duration="1000"
+                            >Bergabung Sekarang Bersama Fithza Indonesia</h2>
                             <button
+                                data-aos="fade-right"
+                                data-aos-duration="1000"
                                 role="button"
                                 aria-label="button start"
                                 style={{
                                     display: 'inline-flex',
                                     alignItems: 'center',
-                                    padding: '10px 20px',
+                                    padding: '7px 15px',
                                     backgroundColor: 'white',
                                     color: '#4D55CC',
                                     borderRadius: '7px',

@@ -53,7 +53,6 @@ src/
 │   ├── CardioClass.tsx # Cardio class detail page
 │   ├── DanceClass.tsx  # Dance class detail page
 │   ├── MindBodyClass.tsx # Mind & body class detail page
-│   ├── CyclingClass.tsx # Cycling class detail page
 │   └── DataPrivacy.tsx # Data privacy page
 ├── App.tsx             # Main app component with routing
 ├── main.tsx            # App entry point

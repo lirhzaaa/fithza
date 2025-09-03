@@ -19,41 +19,41 @@ const MemberPackages: React.FC = () => {
   const membershipPackages = [
     {
       duration: 3,
-      pricePerMonth: "Rp209.000",
-      originalPrice: "Rp870.000",
-      discountPrice: "Rp696.000",
+      pricePerMonth: "Rp149.000",
+      originalPrice: "Rp447.000",
+      discountPrice: "Rp447.000",
       bonus: null,
       tags: []
     },
     {
       duration: 6,
-      pricePerMonth: "Rp204.000",
-      originalPrice: "Rp1.699.000",
-      discountPrice: "Rp1.359.000",
+      pricePerMonth: "Rp139.000",
+      originalPrice: "Rp834.000",
+      discountPrice: "Rp834.000",
       bonus: "Bonus 1 sesi Personal Trainer gratis",
       tags: []
     },
     {
       duration: 12,
-      pricePerMonth: "Rp193.000",
-      originalPrice: "Rp3.214.000",
-      discountPrice: "Rp2.571.000",
+      pricePerMonth: "Rp129.000",
+      originalPrice: "Rp1.548.000",
+      discountPrice: "Rp1.548.000",
       bonus: "Bonus 2 sesi Personal Trainer gratis",
       tags: []
     },
     {
       duration: 18,
-      pricePerMonth: "Rp182.000",
-      originalPrice: "Rp4.546.000",
-      discountPrice: "Rp3.637.000",
+      pricePerMonth: "Rp119.000",
+      originalPrice: "Rp2.142.000",
+      discountPrice: "Rp2.142.000",
       bonus: "Bonus 2 sesi Personal Trainer gratis",
       tags: []
     },
     {
       duration: 24,
-      pricePerMonth: "Rp171.000",
-      originalPrice: "Rp5.695.000",
-      discountPrice: "Rp4.556.000",
+      pricePerMonth: "Rp109.000",
+      originalPrice: "Rp2.616.000",
+      discountPrice: "Rp2.616.000",
       bonus: "Bonus 2 sesi Personal Trainer gratis",
       tags: []
     },
@@ -98,7 +98,6 @@ const MemberPackages: React.FC = () => {
   return (
     <>
       <section
-        data-section="packages"
         style={{
           padding: '80px 0',
           maxWidth: 'none',
@@ -111,13 +110,27 @@ const MemberPackages: React.FC = () => {
           margin: '0 auto',
           padding: '0 20px'
         }}>
-          <div style={{
-            display: 'grid',
-            gridTemplateColumns: isMobile ? 'repeat(auto-fit, minmax(280px, 320px))' : 'repeat(auto-fit, 350px)',
-            gap: isMobile ? '16px' : '24px',
-            marginBottom: '32px',
-            justifyContent: 'center'
-          }}>
+          <h1
+            data-aos="fade-up"
+            data-aos-duration="500"
+            style={{
+              fontSize: isMobile ? '2rem' : '2.5rem',
+              fontWeight: 700,
+              color: '#2b4593ff',
+              textAlign: 'center',
+              marginBottom: '40px'
+            }}>Member</h1>
+          <div
+            data-aos="fade-down"
+            data-aos-duration="1000"
+            data-aos-delay="100"
+            style={{
+              display: 'grid',
+              gridTemplateColumns: isMobile ? 'repeat(auto-fit, minmax(280px, 320px))' : 'repeat(auto-fit, 350px)',
+              gap: isMobile ? '16px' : '24px',
+              marginBottom: '32px',
+              justifyContent: 'center'
+            }}>
             {membershipPackages.map((pkg, index) => (
               <div
                 key={index}

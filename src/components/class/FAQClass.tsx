@@ -1,11 +1,11 @@
 import { useState } from 'react';
 
-interface FAQItem {
+type FAQItem = {
     title: string;
     content: string;
 }
 
-const FAQClass: React.FC = () => {
+const FAQClass = () => {
     const [openIndex, setOpenIndex] = useState<number | null>(null);
 
     const toggleAccordion = (index: number): void => {
@@ -15,11 +15,11 @@ const FAQClass: React.FC = () => {
     const faqItems: FAQItem[] = [
         {
             title: "Apa itu kelas di FitHza Indonesia?",
-            content: "<p>Kelas di FitHza Indonesia adalah program latihan terstruktur yang dirancang untuk membantu anggota mencapai tujuan kebugaran mereka. Kami menawarkan berbagai jenis kelas seperti Strength, Cardio, Dance, Mind & Body, dan Cycling, masing-masing dengan fokus yang berbeda untuk memenuhi kebutuhan individu.</p>"
+            content: "<p>Kelas di FitHza Indonesia adalah program latihan terstruktur yang dirancang untuk membantu anggota mencapai tujuan kebugaran mereka. Kami menawarkan berbagai jenis kelas seperti Strength, Cardio, Dance, dan Mind & Body, masing-masing dengan fokus yang berbeda untuk memenuhi kebutuhan individu.</p>"
         },
         {
             title: "Berapa jenis kelas yang tersedia?",
-            content: "<p>Kami menyediakan 5 kategori utama kelas: Strength Class (fokus pada kekuatan otot), Cardio Class (meningkatkan daya tahan jantung), Dance Class (kombinasi gerakan dan musik), Mind & Body Class (relaksasi dan keseimbangan), dan Cycling Class (latihan sepeda indoor). Setiap kategori memiliki beberapa sub-kelas untuk berbagai level.</p>"
+            content: "<p>Kami menyediakan 5 kategori utama kelas: Strength Class (fokus pada kekuatan otot), Cardio Class (meningkatkan daya tahan jantung), Dance Class (kombinasi gerakan dan musik), Mind & Body Class (relaksasi dan keseimbangan). Setiap kategori memiliki beberapa sub-kelas untuk berbagai level.</p>"
         },
         {
             title: "Bagaimana cara mendaftar kelas?",
@@ -59,17 +59,19 @@ const FAQClass: React.FC = () => {
     const rightItems: FAQItem[] = faqItems.slice(5, 10);
 
     return (
-        <div style={{ 
+        <div style={{
             padding: '60px 20px',
-            backgroundColor: '#fff'
         }}>
             <div style={{ maxWidth: '1400px', margin: '0 auto' }}>
-                <h2 style={{ 
-                    fontSize: '2.5rem', 
-                    textAlign: 'center', 
-                    marginBottom: '40px', 
-                    color: '#000' 
-                }}>
+                <h2
+                    data-aos="fade-down"
+                    data-aos-duration="700"
+                    style={{
+                        fontSize: '2.5rem',
+                        textAlign: 'center',
+                        marginBottom: '40px',
+                        color: '#000'
+                    }}>
                     FAQ Kelas di FitHza Indonesia
                 </h2>
                 <div style={{ marginBottom: '40px' }}>
@@ -77,13 +79,16 @@ const FAQClass: React.FC = () => {
                 <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '20px' }}>
                     <div>
                         {leftItems.map((item: FAQItem, index: number) => (
-                            <div key={index} style={{ marginBottom: '10px', border: '1px solid #ddd', borderRadius: '8px' }}>
-                                <div 
-                                    style={{ 
-                                        padding: '20px', 
-                                        cursor: 'pointer', 
-                                        display: 'flex', 
-                                        justifyContent: 'space-between', 
+                            <div
+                                data-aos="fade-up"
+                                data-aos-duration="700"
+                                key={index} style={{ marginBottom: '10px', border: '1px solid #ddd', borderRadius: '8px' }}>
+                                <div
+                                    style={{
+                                        padding: '20px',
+                                        cursor: 'pointer',
+                                        display: 'flex',
+                                        justifyContent: 'space-between',
                                         alignItems: 'center',
                                         backgroundColor: '#f9f9f9'
                                     }}
@@ -93,9 +98,9 @@ const FAQClass: React.FC = () => {
                                     <span style={{ fontSize: '1.5rem' }}>{openIndex === index ? '-' : '+'}</span>
                                 </div>
                                 {openIndex === index && (
-                                    <div 
-                                        style={{ 
-                                            padding: '20px', 
+                                    <div
+                                        style={{
+                                            padding: '20px',
                                             borderTop: '1px solid #ddd',
                                             backgroundColor: '#fff'
                                         }}
@@ -107,13 +112,16 @@ const FAQClass: React.FC = () => {
                     </div>
                     <div>
                         {rightItems.map((item: FAQItem, index: number) => (
-                            <div key={index + 5} style={{ marginBottom: '10px', border: '1px solid #ddd', borderRadius: '8px' }}>
-                                <div 
-                                    style={{ 
-                                        padding: '20px', 
-                                        cursor: 'pointer', 
-                                        display: 'flex', 
-                                        justifyContent: 'space-between', 
+                            <div
+                                data-aos="fade-up"
+                                data-aos-duration="700"
+                                key={index + 5} style={{ marginBottom: '10px', border: '1px solid #ddd', borderRadius: '8px' }}>
+                                <div
+                                    style={{
+                                        padding: '20px',
+                                        cursor: 'pointer',
+                                        display: 'flex',
+                                        justifyContent: 'space-between',
                                         alignItems: 'center',
                                         backgroundColor: '#f9f9f9'
                                     }}
@@ -123,9 +131,9 @@ const FAQClass: React.FC = () => {
                                     <span style={{ fontSize: '1.5rem' }}>{openIndex === index + 5 ? '-' : '+'}</span>
                                 </div>
                                 {openIndex === index + 5 && (
-                                    <div 
-                                        style={{ 
-                                            padding: '20px', 
+                                    <div
+                                        style={{
+                                            padding: '20px',
                                             borderTop: '1px solid #ddd',
                                             backgroundColor: '#fff'
                                         }}

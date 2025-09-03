@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 
-const CardHome: React.FC = () => {
+const CardHome = () => {
     const cards = [
         {
             title: "Tentang Kami",
@@ -23,18 +23,21 @@ const CardHome: React.FC = () => {
     ];
 
     return (
-        <div style={{ 
-            margin: '50px 0',
-            display: 'flex',
-            justifyContent: 'center',
-            flexWrap: 'wrap',
-            gap: '25px',
-            padding: '20px',
-         }}>
+        <div
+            data-aos="fade-up"
+            data-aos-duration="1000"
+            style={{
+                margin: '50px 0',
+                display: 'flex',
+                justifyContent: 'center',
+                flexWrap: 'wrap',
+                gap: '25px',
+                padding: '20px',
+            }}>
             {cards.map((card, index) => (
                 <Link key={index} to={card.link} style={{ textDecoration: 'none', color: 'inherit' }}>
                     <div style={{
-                        width: 'min(350px, 90vw)', // Responsif: max 350px atau 90% viewport width
+                        width: 'min(350px, 90vw)',
                         height: '300px',
                         backgroundImage: `url(${card.image})`,
                         backgroundSize: 'cover',
@@ -46,10 +49,10 @@ const CardHome: React.FC = () => {
                         justifyContent: 'flex-end',
                         padding: '20px',
                         boxShadow: '0 4px 8px rgba(0,0,0,0.1)',
-                        transition: 'transform 0.3s',
+                        transition: 'transform 0.5s',
                     }}
-                    onMouseEnter={(e) => e.currentTarget.style.transform = 'scale(1.05)'}
-                    onMouseLeave={(e) => e.currentTarget.style.transform = 'scale(1)'}
+                        onMouseEnter={(e) => e.currentTarget.style.transform = 'scale(1.05)'}
+                        onMouseLeave={(e) => e.currentTarget.style.transform = 'scale(1)'}
                     >
                         <h3 style={{ margin: '0 0 10px 0', color: '#fff', textShadow: '1px 1px 2px rgba(0,0,0,0.7)' }}>{card.title}</h3>
                         <p style={{ margin: '0', color: '#fff', textShadow: '1px 1px 2px rgba(0,0,0,0.7)' }}>{card.description}</p>
