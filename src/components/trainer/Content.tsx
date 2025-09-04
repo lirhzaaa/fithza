@@ -39,7 +39,7 @@ const Content = () => {
                     justifyContent: 'center',
                     alignItems: 'center',
                 }}>
-                <img src="/img/about.jpg" alt="Personal Trainer" style={{
+                <img src="/img/trainer/content.jpg" alt="Personal Trainer" style={{
                     width: '80%',
                     height: 'auto',
                     borderRadius: '10px',

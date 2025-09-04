@@ -11,7 +11,7 @@ interface CustomDropdownProps {
     required?: boolean;
 }
 
-const CustomDropdown: React.FC<CustomDropdownProps> = ({
+const CustomDropdown = ({
     label,
     value,
     options,
@@ -19,7 +19,7 @@ const CustomDropdown: React.FC<CustomDropdownProps> = ({
     placeholder = "Pilih opsi",
     disabled = false,
     required = false
-}) => {
+}: CustomDropdownProps) => {
     const [isOpen, setIsOpen] = useState(false);
     const dropdownRef = useRef<HTMLDivElement>(null);
 
@@ -132,7 +132,7 @@ interface RegistrationModalProps {
   onShowNotification?: (type: 'success' | 'error' | 'info', message: string) => void;
 }
 
-const RegistrationModal: React.FC<RegistrationModalProps> = ({ isOpen, onClose, onShowNotification }) => {
+const RegistrationModal = ({ isOpen, onClose, onShowNotification }: RegistrationModalProps) => {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [formData, setFormData] = useState({
     kota: '',

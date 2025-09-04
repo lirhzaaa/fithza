@@ -11,7 +11,7 @@ interface CustomDropdownProps {
     required?: boolean;
 }
 
-const CustomDropdown: React.FC<CustomDropdownProps> = ({
+const CustomDropdown = ({
     label,
     value,
     options,
@@ -19,7 +19,7 @@ const CustomDropdown: React.FC<CustomDropdownProps> = ({
     placeholder = "Pilih opsi",
     disabled = false,
     required = false
-}) => {
+}: CustomDropdownProps) => {
     const [isOpen, setIsOpen] = useState(false);
     const dropdownRef = useRef<HTMLDivElement>(null);
 

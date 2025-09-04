@@ -1,7 +1,7 @@
 const HeroSection = () => {
     return (
         <section style={{ position: 'relative', width: '100%', height: '70vh', overflow: 'hidden', display: 'flex', alignItems: 'center', justifyContent: 'flex-start', marginTop: '4rem' }}>
-            <div style={{ position: 'absolute', top: '0', left: '0', width: '100%', height: '100%', backgroundImage: 'url(/img/about.jpg)', backgroundSize: 'cover', backgroundPosition: 'center' }}></div>
+            <div style={{ position: 'absolute', top: '0', left: '0', width: '100%', height: '100%', backgroundImage: 'url(/img/trainer/banner.jpg)', backgroundSize: 'cover', backgroundPosition: 'center' }}></div>
             <div style={{ position: 'absolute', top: '0', left: '0', width: '100%', height: '100%', backgroundColor: 'rgba(0, 0, 0, 0.4)', zIndex: '1' }}></div>
             <div
                 data-aos="fade-right"

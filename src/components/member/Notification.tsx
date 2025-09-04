@@ -8,7 +8,7 @@ interface NotificationProps {
   onClose: () => void;
 }
 
-const Notification: React.FC<NotificationProps> = ({ isVisible, type, message, duration, onClose }) => {
+const Notification = ({ isVisible, type, message, duration, onClose }: NotificationProps) => {
   const [internalVisible, setInternalVisible] = useState(isVisible);
 
   useEffect(() => {

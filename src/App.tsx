@@ -17,7 +17,7 @@ import DanceClass from './pages/DanceClass';
 import MindBodyClass from './pages/MindBodyClass';
 import FreeTrail from './components/FreeTrail';
 
-const App: React.FC = () => {
+const App = () => {
   useEffect(() => {
     AOS.init();
   }, []);

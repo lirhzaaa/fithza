@@ -14,7 +14,7 @@ const AboutContent = () => {
                     data-aos="zoom-out-up"
                     data-aos-duration="1000"
                     style={{ flex: 1 }}>
-                    <img src="./img/about.jpg" alt="Tentang Fithza - Gym dan Fitness" style={{ width: '100%', height: 'auto', borderRadius: '8px' }} />
+                    <img src="./img/about/content1.jpg" alt="Tentang Fithza - Gym dan Fitness" style={{ width: '100%', height: '500px', borderRadius: '5px' }} />
                 </div>
                 <div
                     data-aos="fade-left"
@@ -48,7 +48,7 @@ const AboutContent = () => {
                     data-aos="zoom-out-up"
                     data-aos-duration="1000"
                     style={{ flex: 1 }}>
-                    <img src="./img/about.jpg" alt="Tentang Fithza - Gym dan Fitness" style={{ width: '100%', height: 'auto', borderRadius: '8px' }} />
+                    <img src="./img/about/content2.jpg" alt="Tentang Fithza - Gym dan Fitness" style={{ width: '100%', height: '500px', borderRadius: '5px' }} />
                 </div>
             </div>
         </>

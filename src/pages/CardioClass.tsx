@@ -12,7 +12,7 @@ interface FAQItem {
     content: string;
 }
 
-const CardioClass: React.FC = () => {
+const CardioClass = () => {
     const [openIndex, setOpenIndex] = useState<number | null>(null);
 
     const toggleAccordion = (index: number): void => {
@@ -75,9 +75,9 @@ const CardioClass: React.FC = () => {
     ];
 
     const otherClasses = [
-        { name: 'Strength Class', image: 'https://photo-fhad-fithub.s3.ap-southeast-1.amazonaws.com/BOOTCAMP_afcff062bc.JPG', link: '/class/class-strength' },
-        { name: 'Dance Class', image: 'https://photo-fhad-fithub.s3.ap-southeast-1.amazonaws.com/K_POP_DANCE_8511b475b2.JPG', link: '/class/dance-class' },
-        { name: 'Mind & Body Class', image: 'https://photo-fhad-fithub.s3.ap-southeast-1.amazonaws.com/Mind_and_Body_Hatha_Yoga_c9bc329096.JPG', link: '/class/class-mind-body' },
+        { name: 'Strength Class', image: '/img/clas/Strength.jpg', link: '/class/class-strength' },
+        { name: 'Dance Class', image: '/img/clas/Dance.jpg', link: '/class/dance-class' },
+        { name: 'Mind & Body Class', image: '/img/clas/Mind&Body.jpg', link: '/class/class-mind-body' },
     ];
 
     const faqItems: FAQItem[] = [
@@ -109,7 +109,7 @@ const CardioClass: React.FC = () => {
 
     return (
         <div>
-            <div style={{...styles.banner, backgroundImage: 'url(https://photo-fhad-fithub.s3.ap-southeast-1.amazonaws.com/BODYCOMBAT_2089700eff.JPG)'}}>
+            <div style={{...styles.banner, backgroundImage: 'url(/img/clas/Cardio.jpg)'}}>
                 <div style={styles.bannerOverlay}>
                     <h1 style={styles.bannerTitle}>Cardio Class</h1>
                 </div>
@@ -128,7 +128,7 @@ const CardioClass: React.FC = () => {
                     </div>
                     <div>
                         <img
-                            src="https://photo-fhad-fithub-staging.s3.ap-southeast-1.amazonaws.com/imgonline_com_ua_resize_nl_AW_3_YM_Ii_Wb3m9_20e2afae1e.jpg"
+                            src="/img/clas/Cardio.jpg"
                             alt="Cardio Class"
                             style={styles.descImage}
                         />
@@ -142,7 +142,7 @@ const CardioClass: React.FC = () => {
                     <div style={styles.classCategoryWrapper}>
                         {cardioClasses.map((classItem: ClassItem, index: number) => (
                             <div key={index} style={styles.cardClassWrapper}>
-                                <div style={{...styles.cardClassBg, backgroundImage: `url(https://photo-fhad-fithub-staging.s3.ap-southeast-1.amazonaws.com/imgonline_com_ua_resize_nl_AW_3_YM_Ii_Wb3m9_20e2afae1e.jpg)`}}></div>
+                                <div style={{...styles.cardClassBg, backgroundImage: `url(/img/clas/Cardio.jpg)`}}></div>
                                 <div style={styles.cardClassContent}>
                                     <h2 style={styles.classTitle}>{classItem.title}</h2>
                                     <div style={styles.cardClassDetail}>

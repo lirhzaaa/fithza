@@ -17,7 +17,6 @@ const AllClass = () => {
         cardClassBg: { height: '100%', backgroundSize: 'cover', backgroundPosition: 'center', filter: 'brightness(0.8)' },
         cardClassContent: { position: 'absolute', bottom: '0', left: '0', right: '0', background: 'linear-gradient(to top, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.6))', color: 'white', padding: '20px' },
         cardCategoryWrapper: { display: 'flex', alignItems: 'center', gap: '10px', marginBottom: '10px' },
-        categoryIcon: { width: '30px', height: '30px', borderRadius: '50%', objectFit: 'cover' },
         categoryText: { fontSize: '0.9rem', color: '#ccc' },
         classTitle: { fontSize: '1.5rem', margin: '10px 0', fontWeight: 'bold' },
         cardClassDetail: { display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginTop: '15px' },
@@ -28,18 +27,11 @@ const AllClass = () => {
         caloriesText: { fontSize: '0.8rem', color: '#fff', marginTop: '5px' }
     };
 
-    const categoryIcons: { [key: string]: string } = {
-        'Strength Class': 'https://photo-fhad-fithub-staging.s3.ap-southeast-1.amazonaws.com/Icon_strength_c86aee5a33.png',
-        'Cardio Class': 'https://photo-fhad-fithub-staging.s3.ap-southeast-1.amazonaws.com/Icon_eebc303247.png',
-        'Dance Class': 'https://photo-fhad-fithub.s3.ap-southeast-1.amazonaws.com/Frame_252_dc33dc6dd4.png',
-        'Mind & Body Class': 'https://photo-fhad-fithub-staging.s3.ap-southeast-1.amazonaws.com/Screen_Shot_2023_06_20_at_17_38_13_be45f4e188.png',
-    };
-
     const categoryBackgrounds: { [key: string]: string } = {
-        'Strength Class': 'https://photo-fhad-fithub-staging.s3.ap-southeast-1.amazonaws.com/strength_d4143c6ca2.jpeg',
-        'Cardio Class': 'https://photo-fhad-fithub-staging.s3.ap-southeast-1.amazonaws.com/imgonline_com_ua_resize_nl_AW_3_YM_Ii_Wb3m9_20e2afae1e.jpg',
-        'Dance Class': 'https://photo-fhad-fithub-staging.s3.ap-southeast-1.amazonaws.com/imgonline_com_ua_resize_KU_8_Nvn0li4_27a3176199.jpg',
-        'Mind & Body Class': 'https://photo-fhad-fithub-staging.s3.ap-southeast-1.amazonaws.com/imgonline_com_ua_resize_2_T_Ue22_EWPLG_Ce_I_c8f42f08ae.jpg',
+        'Strength Class': '/img/clas/Strength.jpg',
+        'Cardio Class': '/img/clas/Cardio.jpg',
+        'Dance Class': '/img/clas/Dance.jpg',
+        'Mind & Body Class': '/img/clas/Mind&Body.jpg',
     };
 
     const classes: ClassItem[] = [
@@ -103,16 +95,6 @@ const AllClass = () => {
                             <div style={{ ...styles.cardClassBg, backgroundImage: `url(${categoryBackgrounds[classItem.category]})` }}></div>
                             <div style={styles.cardClassContent}>
                                 <div style={styles.cardCategoryWrapper}>
-                                    <img
-                                        alt="Class Category Icon"
-                                        loading="lazy"
-                                        width="30"
-                                        height="30"
-                                        decoding="async"
-                                        style={styles.categoryIcon}
-                                        srcSet={`${categoryIcons[classItem.category]}&w=32&q=75 1x, ${categoryIcons[classItem.category]}&w=64&q=75 2x`}
-                                        src={`${categoryIcons[classItem.category]}&w=64&q=75`}
-                                    />
                                     <p style={styles.categoryText}>{classItem.category}</p>
                                 </div>
                                 <h2 style={styles.classTitle}>{classItem.title}</h2>

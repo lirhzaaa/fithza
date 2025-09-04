@@ -1,4 +1,4 @@
-const Footer: React.FC = () => {
+const Footer = () => {
     return (
         <footer style={{
             backgroundColor: '#2b4593ff',

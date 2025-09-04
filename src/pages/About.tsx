@@ -4,7 +4,7 @@ import AboutHero from '../components/about/HeroSection';
 import WhyChooseSection from '../components/about/WhySection';
 import CTAAbout from '../components/CTA';
 
-const About: React.FC = () => {
+const About = () => {
   return (
     <>
       <AboutHero />

@@ -4,7 +4,7 @@ import CardClass from '../components/class/CardClass';
 import CTAClass from '../components/class/CTAClass';
 import FAQClass from '../components/class/FAQClass';
 
-const Class: React.FC = () => {
+const Class = () => {
     return (
         <div>
             <BannerClass />

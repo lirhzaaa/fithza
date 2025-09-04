@@ -2,7 +2,7 @@ import { useState } from 'react';
 import RegistrationModal from './RegistrationModal';
 import Notification from './Notification';
 
-const MemberPackages: React.FC = () => {
+const MemberPackages = () => {
   const [showRegistrationModal, setShowRegistrationModal] = useState(false);
   const [notification, setNotification] = useState<{
     show: boolean;
@@ -151,12 +151,10 @@ const MemberPackages: React.FC = () => {
                   cursor: 'pointer'
                 }}
                 onMouseEnter={(e) => {
-                  e.currentTarget.style.transform = 'translateY(-4px)';
                   e.currentTarget.style.boxShadow = '0 12px 40px rgba(0,0,0,0.15)';
                   e.currentTarget.style.borderColor = '#4D55CC';
                 }}
                 onMouseLeave={(e) => {
-                  e.currentTarget.style.transform = 'translateY(0)';
                   e.currentTarget.style.boxShadow = '0 4px 20px rgba(0,0,0,0.08)';
                   e.currentTarget.style.borderColor = '#eeeeee';
                 }}
@@ -307,12 +305,10 @@ const MemberPackages: React.FC = () => {
                     }}
                     onMouseEnter={(e) => {
                       e.currentTarget.style.background = '#363c92';
-                      e.currentTarget.style.transform = 'translateY(-2px)';
                       e.currentTarget.style.boxShadow = '0 4px 15px rgba(77, 85, 204, 0.3)';
                     }}
                     onMouseLeave={(e) => {
                       e.currentTarget.style.background = '#4D55CC';
-                      e.currentTarget.style.transform = 'translateY(0)';
                       e.currentTarget.style.boxShadow = '0 2px 8px rgba(77, 85, 204, 0.2)';
                     }}
                     onClick={openRegistrationModal}

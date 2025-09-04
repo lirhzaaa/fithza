@@ -1,4 +1,4 @@
-const PrivacyPolicy: React.FC = () => {
+const PrivacyPolicy = () => {
     return (
         <section style={{
             padding: '80px 0',

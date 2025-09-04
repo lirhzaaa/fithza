@@ -1,6 +1,6 @@
 import type { CSSProperties } from 'react';
 
-const CardClass: React.FC = () => {
+const CardClass = () => {
     const styles: { [key: string]: CSSProperties } = {
         section: { padding: '60px 0'},
         container: { maxWidth: '1400px', margin: '0 auto', padding: '0 20px' },
@@ -29,25 +29,25 @@ const CardClass: React.FC = () => {
                     data-aos-duration="1000"
                     style={styles.classCategoryWrapper}>
                     <a style={styles.cardCategoryWrapper} href="/class/class-mind-body">
-                        <div style={{ ...styles.cardBgCategory, backgroundImage: 'url(https://photo-fhad-fithub.s3.ap-southeast-1.amazonaws.com/Mind_and_Body_Hatha_Yoga_c9bc329096.JPG)' }}></div>
+                        <div style={{ ...styles.cardBgCategory, backgroundImage: 'url(/img/clas/Mind&Body.jpg)' }}></div>
                         <div style={styles.cardCategoryContent}>
                             <h2 style={styles.cardCategoryName}>Mind &amp; Body Class</h2>
                         </div>
                     </a>
                     <a style={styles.cardCategoryWrapper} href="/class/class-cardio">
-                        <div style={{ ...styles.cardBgCategory, backgroundImage: 'url(https://photo-fhad-fithub.s3.ap-southeast-1.amazonaws.com/BODYCOMBAT_2089700eff.JPG)' }}></div>
+                        <div style={{ ...styles.cardBgCategory, backgroundImage: 'url(/img/clas/Cardio.jpg)' }}></div>
                         <div style={styles.cardCategoryContent}>
                             <h2 style={styles.cardCategoryName}>Cardio Class</h2>
                         </div>
                     </a>
                     <a style={styles.cardCategoryWrapper} href="/class/class-strength">
-                        <div style={{ ...styles.cardBgCategory, backgroundImage: 'url(https://photo-fhad-fithub.s3.ap-southeast-1.amazonaws.com/BOOTCAMP_afcff062bc.JPG)' }}></div>
+                        <div style={{ ...styles.cardBgCategory, backgroundImage: 'url(/img/clas/Strength.jpg)' }}></div>
                         <div style={styles.cardCategoryContent}>
                             <h2 style={styles.cardCategoryName}>Strength Class</h2>
                         </div>
                     </a>
                     <a style={styles.cardCategoryWrapper} href="/class/dance-class">
-                        <div style={{ ...styles.cardBgCategory, backgroundImage: 'url(https://photo-fhad-fithub.s3.ap-southeast-1.amazonaws.com/K_POP_DANCE_8511b475b2.JPG)' }}></div>
+                        <div style={{ ...styles.cardBgCategory, backgroundImage: 'url(/img/clas/Dance.jpg)' }}></div>
                         <div style={styles.cardCategoryContent}>
                             <h2 style={styles.cardCategoryName}>Dance Class</h2>
                         </div>

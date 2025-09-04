@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 
-const Navbar: React.FC = () => {
+const Navbar = () => {
   const navigate = useNavigate();
   const currentPath = window.location.pathname;
   const [isMenuOpen, setIsMenuOpen] = useState(false);

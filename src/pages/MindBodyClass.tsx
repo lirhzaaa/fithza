@@ -12,7 +12,7 @@ interface FAQItem {
     content: string;
 }
 
-const MindBodyClass: React.FC = () => {
+const MindBodyClass = () => {
     const [openIndex, setOpenIndex] = useState<number | null>(null);
 
     const toggleAccordion = (index: number): void => {
@@ -74,9 +74,9 @@ const MindBodyClass: React.FC = () => {
     ];
 
     const otherClasses = [
-        { name: 'Strength Class', image: 'https://photo-fhad-fithub.s3.ap-southeast-1.amazonaws.com/BOOTCAMP_afcff062bc.JPG', link: '/class/class-strength' },
-        { name: 'Cardio Class', image: 'https://photo-fhad-fithub.s3.ap-southeast-1.amazonaws.com/BODYCOMBAT_2089700eff.JPG', link: '/class/class-cardio' },
-        { name: 'Dance Class', image: 'https://photo-fhad-fithub.s3.ap-southeast-1.amazonaws.com/K_POP_DANCE_8511b475b2.JPG', link: '/class/dance-class' },
+        { name: 'Strength Class', image: '/img/clas/Strength.jpg', link: '/class/class-strength' },
+        { name: 'Cardio Class', image: '/img/clas/Cardio.jpg', link: '/class/class-cardio' },
+        { name: 'Dance Class', image: '/img/clas/Dance.jpg', link: '/class/dance-class' },
     ];
 
     const faqItems: FAQItem[] = [
@@ -108,7 +108,7 @@ const MindBodyClass: React.FC = () => {
 
     return (
         <div>
-            <div style={{...styles.banner, backgroundImage: 'url(https://photo-fhad-fithub.s3.ap-southeast-1.amazonaws.com/Mind_and_Body_Hatha_Yoga_c9bc329096.JPG)'}}>
+            <div style={{...styles.banner, backgroundImage: 'url(/img/clas/Mind&Body.jpg)'}}>
                 <div style={styles.bannerOverlay}>
                     <h1 style={styles.bannerTitle}>Mind & Body Class</h1>
                 </div>
@@ -127,7 +127,7 @@ const MindBodyClass: React.FC = () => {
                     </div>
                     <div>
                         <img
-                            src="https://photo-fhad-fithub-staging.s3.ap-southeast-1.amazonaws.com/imgonline_com_ua_resize_2_T_Ue22_EWPLG_Ce_I_c8f42f08ae.jpg"
+                            src="/img/clas/Mind&Body.jpg"
                             alt="Mind & Body Class"
                             style={styles.descImage}
                         />
@@ -141,7 +141,7 @@ const MindBodyClass: React.FC = () => {
                     <div style={styles.classCategoryWrapper}>
                         {mindBodyClasses.map((classItem: ClassItem, index: number) => (
                             <div key={index} style={styles.cardClassWrapper}>
-                                <div style={{...styles.cardClassBg, backgroundImage: `url(https://photo-fhad-fithub-staging.s3.ap-southeast-1.amazonaws.com/imgonline_com_ua_resize_2_T_Ue22_EWPLG_Ce_I_c8f42f08ae.jpg)`}}></div>
+                                <div style={{...styles.cardClassBg, backgroundImage: `url(/img/clas/Mind&Body.jpg)`}}></div>
                                 <div style={styles.cardClassContent}>
                                     <h2 style={styles.classTitle}>{classItem.title}</h2>
                                     <div style={styles.cardClassDetail}>

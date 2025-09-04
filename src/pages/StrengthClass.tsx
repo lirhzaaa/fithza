@@ -12,7 +12,7 @@ interface FAQItem {
     content: string;
 }
 
-const StrengthClass: React.FC = () => {
+const StrengthClass = () => {
     const [openIndex, setOpenIndex] = useState<number | null>(null);
 
     const toggleAccordion = (index: number): void => {
@@ -76,9 +76,9 @@ const StrengthClass: React.FC = () => {
     ];
 
     const otherClasses = [
-        { name: 'Cardio Class', image: 'https://photo-fhad-fithub.s3.ap-southeast-1.amazonaws.com/BODYCOMBAT_2089700eff.JPG', link: '/class/class-cardio' },
-        { name: 'Dance Class', image: 'https://photo-fhad-fithub.s3.ap-southeast-1.amazonaws.com/K_POP_DANCE_8511b475b2.JPG', link: '/class/dance-class' },
-        { name: 'Mind & Body Class', image: 'https://photo-fhad-fithub.s3.ap-southeast-1.amazonaws.com/Mind_and_Body_Hatha_Yoga_c9bc329096.JPG', link: '/class/class-mind-body' },
+        { name: 'Cardio Class', image: '/img/clas/Cardio.jpg', link: '/class/class-cardio' },
+        { name: 'Dance Class', image: '/img/clas/Dance.jpg', link: '/class/dance-class' },
+        { name: 'Mind & Body Class', image: '/img/clas/Mind&Body.jpg', link: '/class/class-mind-body' },
     ];
 
     const faqItems: FAQItem[] = [
@@ -110,7 +110,7 @@ const StrengthClass: React.FC = () => {
 
     return (
         <div>
-            <div style={{...styles.banner, backgroundImage: 'url(https://photo-fhad-fithub.s3.ap-southeast-1.amazonaws.com/BOOTCAMP_afcff062bc.JPG)'}}>
+            <div style={{...styles.banner, backgroundImage: 'url(/img/clas/Strength.jpg)'}}>
                 <div style={styles.bannerOverlay}>
                     <h1 style={styles.bannerTitle}>Strength Class</h1>
                 </div>
@@ -129,7 +129,7 @@ const StrengthClass: React.FC = () => {
                     </div>
                     <div>
                         <img
-                            src="https://photo-fhad-fithub-staging.s3.ap-southeast-1.amazonaws.com/strength_d4143c6ca2.jpeg"
+                            src="/img/clas/Strength.jpg"
                             alt="Strength Class"
                             style={styles.descImage}
                         />
@@ -143,7 +143,7 @@ const StrengthClass: React.FC = () => {
                     <div style={styles.classCategoryWrapper}>
                         {strengthClasses.map((classItem: ClassItem, index: number) => (
                             <div key={index} style={styles.cardClassWrapper}>
-                                <div style={{...styles.cardClassBg, backgroundImage: `url(https://photo-fhad-fithub-staging.s3.ap-southeast-1.amazonaws.com/strength_d4143c6ca2.jpeg)`}}></div>
+                                <div style={{...styles.cardClassBg, backgroundImage: `url(/img/clas/Strength.jpg)`}}></div>
                                 <div style={styles.cardClassContent}>
                                     <h2 style={styles.classTitle}>{classItem.title}</h2>
                                     <div style={styles.cardClassDetail}>

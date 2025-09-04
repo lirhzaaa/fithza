@@ -1,32 +1,26 @@
 const MemberBenefits = () => {
   const benefits = [
     {
-      icon: "/id/id/-/media/project/evolution-wellness/fitness-first/indonesia/personal-training/icon/yoga_red-(1).png?extension=webp",
       title: "Bebas Akses Ke Semua Fasilitas Kami",
       description: "Postur yang baik dapat mengurangi beban tubuh, bikin gerak lebih bebas, dan tubuh terasa lebih segar."
     },
     {
-      icon: "/id/id/-/media/project/evolution-wellness/fitness-first/shared/base/5-key-pillars-icon/mobility.svg?extension=webp",
       title: "Memiliki banyak Kelas Eksklusif",
       description: "Mobilitas yang baik membuat sendi dan otot bisa bergerak dengan efisien dalam rentang geraknya secara penuh."
     },
     {
-      icon: "/id/id/-/media/project/evolution-wellness/fitness-first/shared/base/5-key-pillars-icon/core.svg?extension=webp",
       title: "Fasilitas Lengkap & Modern",
       description: "Otot core berperan di hampir setiap gerakan tubuh. Core yang kuat bantu jaga stabilitas, lindungi tulang belakang, dan bikin gerakan jadi lebih terkendali, lebih kuat, dan lebih efisien."
     },
     {
-      icon: "/id/id/-/media/project/evolution-wellness/fitness-first/shared/base/5-key-pillars-icon/strength.svg?extension=webp",
       title: "Akses 24 Jam Setiap Hari",
       description: "Latihan kekuatan bantu tulang jadi lebih kuat, berat badan lebih terkontrol, dan aktivitas sehari-hari terasa lebih ringan."
     },
     {
-      icon: "/id/id/-/media/project/evolution-wellness/fitness-first/shared/base/5-key-pillars-icon/cardio.svg?extension=webp",
       title: "Tersedia Personal Trainer Profesional",
       description: "Latihan kardio yang konsisten bikin stamina makin kuat dan daya tahan meningkat. Hasilnya? Bisa latihan lebih lama dan bakar lebih banyak kalori."
     },
     {
-      icon: "/id/id/-/media/project/evolution-wellness/fitness-first/shared/base/5-key-pillars-icon/cardio.svg?extension=webp",
       title: "Tersedia Peminjaman Handuk Gratis",
       description: "Latihan kardio yang konsisten bikin stamina makin kuat dan daya tahan meningkat. Hasilnya? Bisa latihan lebih lama dan bakar lebih banyak kalori."
     }
@@ -107,11 +101,6 @@ const MemberBenefits = () => {
                   textAlign: 'left',
                 }}
               >
-                <img src={benefit.icon} alt={benefit.title} style={{
-                  width: '48px',
-                  height: '48px',
-                  flexShrink: 0,
-                }} />
                 <div style={{
                   flex: 1,
                   paddingTop: 0,
@@ -119,9 +108,9 @@ const MemberBenefits = () => {
                   width: '100%'
                 }}>
                   <p style={{
-                    fontSize: '1.1rem',
+                    fontSize: '1.3rem',
                     color: '#333',
-                    fontWeight: 500,
+                    fontWeight: 700,
                     margin: 0,
                     lineHeight: '1.3'
                   }}>{benefit.title}</p>
