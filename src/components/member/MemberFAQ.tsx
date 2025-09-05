@@ -1,160 +1,166 @@
 import { useState } from 'react';
 
+type FAQItem = {
+    title: string;
+    content: string;
+}
+
 const MemberFAQ = () => {
-  const [openItems, setOpenItems] = useState<number[]>([]);
+    const [openIndex, setOpenIndex] = useState<number | null>(null);
 
-  const toggleItem = (index: number) => {
-    setOpenItems(prev =>
-      prev.includes(index)
-        ? prev.filter(item => item !== index)
-        : [...prev, index]
-    );
-  };
+    const toggleAccordion = (index: number): void => {
+        setOpenIndex(openIndex === index ? null : index);
+    };
 
-  const faqData = [
-    {
-      question: "Apakah saya bisa mengakses semua lokasi FitHza Indonesia dengan satu membership?",
-      answer: "Ya, dengan membership FitHza Indonesia Anda dapat mengakses semua lokasi gym kami di Jakarta, Bogor, dan Bandung tanpa biaya tambahan."
-    },
-    {
-      question: "Apakah ada biaya pendaftaran atau biaya lainnya?",
-      answer: "Tidak ada biaya pendaftaran! Harga yang tertera sudah termasuk semua biaya termasuk pajak. Anda hanya perlu membayar biaya membership sesuai paket yang dipilih."
-    },
-    {
-      question: "Apakah tersedia layanan personal trainer?",
-      answer: "Ya, kami menyediakan layanan personal trainer profesional. Beberapa paket membership sudah termasuk sesi personal trainer gratis sebagai bonus."
-    },
-    {
-      question: "Apakah gym buka 24 jam?",
-      answer: "Ya, semua lokasi FitHza Indonesia buka 24 jam setiap hari, sehingga Anda dapat berolahraga sesuai jadwal yang paling nyaman untuk Anda."
-    }
-  ];
+    const faqItems: FAQItem[] = [
+        {
+            title: "Apa itu membership di FitHza Indonesia?",
+            content: "<p>Membership di FitHza Indonesia adalah program keanggotaan yang memberikan akses penuh ke semua fasilitas gym, kelas, dan layanan kami. Dengan membership, Anda dapat menikmati latihan tanpa batas, konsultasi personal, dan berbagai manfaat eksklusif mulai dari Rp 149.000 per bulan.</p>"
+        },
+        {
+            title: "Berapa jenis membership yang tersedia?",
+            content: "<p>Kami menawarkan paket membership berdasarkan durasi: 3 bulan (Rp 149.000/bulan), 6 bulan (Rp 139.000/bulan), 12 bulan (Rp 129.000/bulan), 18 bulan (Rp 119.000/bulan), 24 bulan (Rp 109.000/bulan), dan Corporate Membership untuk perusahaan. Setiap paket memberikan akses penuh ke fasilitas.</p>"
+        },
+        {
+            title: "Bagaimana cara mendaftar membership?",
+            content: "<p>Pendaftaran dapat dilakukan melalui website kami atau langsung di resepsionis gym. Pilih paket membership, isi formulir, dan lakukan pembayaran. Anda akan menerima kartu member dan akses segera setelah konfirmasi.</p>"
+        },
+        {
+            title: "Apa manfaat membership?",
+            content: "<p>Manfaat membership meliputi akses 24/7 ke gym, kelas eksklusif gratis, personal trainer profesional, peminjaman handuk gratis, fasilitas lengkap dan modern, serta bonus sesi personal trainer untuk paket jangka panjang. Member juga mendapatkan prioritas dalam layanan.</p>"
+        },
+        {
+            title: "Berapa biaya membership?",
+            content: "<p>Biaya membership mulai dari Rp 149.000 per bulan untuk paket 3 bulan (total Rp 447.000). Paket 6 bulan Rp 139.000/bulan (Rp 834.000), 12 bulan Rp 129.000/bulan (Rp 1.548.000), 18 bulan Rp 119.000/bulan (Rp 2.142.000), 24 bulan Rp 109.000/bulan (Rp 2.616.000). Ada bonus sesi personal trainer untuk paket panjang.</p>"
+        },
+        {
+            title: "Apakah ada periode trial?",
+            content: "<p>Ya, kami menawarkan periode trial 7 hari gratis untuk membership baru. Selama trial, Anda dapat mengakses semua fasilitas. Jika puas, lanjutkan dengan pembayaran; jika tidak, batalkan tanpa biaya.</p>"
+        },
+        {
+            title: "Bagaimana cara membatalkan membership?",
+            content: "<p>Pembatalan dapat dilakukan melalui website atau resepsionis minimal 30 hari sebelum akhir periode. Biaya pembatalan mungkin dikenakan tergantung kebijakan. Pastikan untuk mengembalikan kartu member.</p>"
+        },
+        {
+            title: "Dapatkah saya upgrade membership?",
+            content: "<p>Ya, Anda dapat upgrade atau memperpanjang membership kapan saja melalui website atau resepsionis. Biaya akan disesuaikan dengan paket baru dan sisa periode Anda. Upgrade akan aktif segera setelah pembayaran.</p>"
+        },
+        {
+            title: "Apa syarat untuk menjadi member?",
+            content: "<p>Syarat utama adalah berusia minimal 16 tahun dan dalam kondisi kesehatan yang baik. Semua calon member harus mengisi formulir kesehatan. Untuk Corporate Membership, hubungi sales kami.</p>"
+        },
+        {
+            title: "Bagaimana cara mengakses fasilitas sebagai member?",
+            content: "<p>Sebagai member, gunakan kartu member untuk scan masuk. Akses gym 24/7, daftar kelas melalui website, dan nikmati semua fasilitas. Jika ada masalah, hubungi resepsionis.</p>"
+        }
+    ];
 
-  const isMobile = typeof window !== 'undefined' && window.innerWidth <= 768;
+    const leftItems: FAQItem[] = faqItems.slice(0, 5);
+    const rightItems: FAQItem[] = faqItems.slice(5, 10);
 
-  return (
-    <section
-      data-aos="fade-up"
-      data-aos-delay="300"
-      data-section="faq"
-      style={{
-        padding: '20px 0 80px 0',
-        background: '#f8f9fa',
-        maxWidth: 'none',
-        margin: 0
-      }}
-    >
-      <div style={{
-        maxWidth: '800px',
-        margin: '0 auto',
-        padding: '0 20px'
-      }}>
+    return (
         <div style={{
-          textAlign: 'center',
-          marginBottom: '48px'
+            padding: '60px 20px',
         }}>
-          <h2 style={{
-            fontSize: isMobile ? '2rem' : '2.5rem',
-            fontWeight: 700,
-            color: '#1f2937',
-            margin: '0 0 16px 0',
-            lineHeight: 1.2
-          }}>
-            Pertanyaan yang Sering Ditanyakan
-          </h2>
-          <p style={{
-            fontSize: '1.1rem',
-            color: '#6b7280',
-            margin: 0,
-            lineHeight: 1.5
-          }}>
-            Temukan jawaban untuk pertanyaan umum tentang membership FitHza Indonesia
-          </p>
-        </div>
-
-        <div
-          style={{
-            display: 'flex',
-            flexDirection: 'column',
-            gap: '16px'
-          }}>
-          {faqData.map((faq, index) => (
-            <div
-              data-aos="fade-up"
-              data-aos-delay="500"
-              key={index}
-              style={{
-                background: 'white',
-                borderRadius: '12px',
-                border: '1px solid #e5e7eb',
-                overflow: 'hidden',
-                transition: 'all 0.3s ease',
-                boxShadow: '0 1px 3px rgba(0, 0, 0, 0.1)'
-              }}
-            >
-              <button
-                onClick={() => toggleItem(index)}
-                style={{
-                  width: '100%',
-                  padding: isMobile ? '20px 16px' : '24px 20px',
-                  background: 'none',
-                  border: 'none',
-                  textAlign: 'left',
-                  cursor: 'pointer',
-                  display: 'flex',
-                  alignItems: 'center',
-                  justifyContent: 'space-between',
-                  fontSize: isMobile ? '1rem' : '1.1rem',
-                  fontWeight: 600,
-                  color: '#1f2937',
-                  transition: 'all 0.3s ease'
-                }}
-                onMouseEnter={(e) => {
-                  e.currentTarget.style.background = '#f9fafb';
-                }}
-                onMouseLeave={(e) => {
-                  e.currentTarget.style.background = 'none';
-                }}
-              >
-                <span style={{
-                  flex: 1,
-                  marginRight: '16px',
-                  lineHeight: 1.4
-                }}>
-                  {faq.question}
-                </span>
-                <span style={{
-                  fontSize: '1.5rem',
-                  color: '#6b7280',
-                  transition: 'transform 0.3s ease',
-                  transform: openItems.includes(index) ? 'rotate(45deg)' : 'rotate(0deg)',
-                  flexShrink: 0
-                }}>
-                  +
-                </span>
-              </button>
-
-              <div style={{
-                maxHeight: openItems.includes(index) ? '500px' : '0',
-                overflow: 'hidden',
-                transition: 'max-height 0.4s ease',
-                background: '#f9fafb'
-              }}>
-                <div style={{
-                  padding: isMobile ? '0 16px 20px 16px' : '0 20px 24px 20px',
-                  color: '#4b5563',
-                  lineHeight: 1.6,
-                  fontSize: '1rem'
-                }}>
-                  {faq.answer}
+            <div style={{ maxWidth: '1400px', margin: '0 auto' }}>
+                <h2
+                    data-aos="fade-down"
+                    data-aos-duration="700"
+                    style={{
+                        fontSize: '2.5rem',
+                        textAlign: 'center',
+                        marginBottom: '40px',
+                        color: '#000'
+                    }}>
+                    FAQ Membership di FitHza Indonesia
+                </h2>
+                <div style={{ marginBottom: '40px' }}>
                 </div>
-              </div>
+                <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '20px' }}>
+                    <div>
+                        {leftItems.map((item: FAQItem, index: number) => (
+                            <div
+                                data-aos="fade-up"
+                                data-aos-duration="700"
+                                key={index} style={{ marginBottom: '10px', border: '1px solid #ddd', borderRadius: '8px' }}>
+                                <div
+                                    style={{
+                                        padding: '20px',
+                                        cursor: 'pointer',
+                                        display: 'flex',
+                                        justifyContent: 'space-between',
+                                        alignItems: 'center',
+                                        backgroundColor: '#f9f9f9'
+                                    }}
+                                    onClick={() => toggleAccordion(index)}
+                                >
+                                    <span style={{ fontWeight: 'bold' }}>{item.title}</span>
+                                    <span style={{ fontSize: '1.5rem' }}>{openIndex === index ? '-' : '+'}</span>
+                                </div>
+                                <div
+                                    style={{
+                                        maxHeight: openIndex === index ? '200px' : '0',
+                                        overflow: 'hidden',
+                                        transition: 'max-height 0.3s ease-in-out',
+                                        borderTop: openIndex === index ? '1px solid #ddd' : 'none',
+                                        backgroundColor: '#fff'
+                                    }}
+                                >
+                                    <div
+                                        style={{
+                                            padding: openIndex === index ? '20px' : '0 20px',
+                                            transition: 'padding 0.3s ease-in-out'
+                                        }}
+                                        dangerouslySetInnerHTML={{ __html: item.content }}
+                                    />
+                                </div>
+                            </div>
+                        ))}
+                    </div>
+                    <div>
+                        {rightItems.map((item: FAQItem, index: number) => (
+                            <div
+                                data-aos="fade-up"
+                                data-aos-duration="700"
+                                key={index + 5} style={{ marginBottom: '10px', border: '1px solid #ddd', borderRadius: '8px' }}>
+                                <div
+                                    style={{
+                                        padding: '20px',
+                                        cursor: 'pointer',
+                                        display: 'flex',
+                                        justifyContent: 'space-between',
+                                        alignItems: 'center',
+                                        backgroundColor: '#f9f9f9'
+                                    }}
+                                    onClick={() => toggleAccordion(index + 5)}
+                                >
+                                    <span style={{ fontWeight: 'bold' }}>{item.title}</span>
+                                    <span style={{ fontSize: '1.5rem' }}>{openIndex === index + 5 ? '-' : '+'}</span>
+                                </div>
+                                <div
+                                    style={{
+                                        maxHeight: openIndex === index + 5 ? '200px' : '0',
+                                        overflow: 'hidden',
+                                        transition: 'max-height 0.3s ease-in-out',
+                                        borderTop: openIndex === index + 5 ? '1px solid #ddd' : 'none',
+                                        backgroundColor: '#fff'
+                                    }}
+                                >
+                                    <div
+                                        style={{
+                                            padding: openIndex === index + 5 ? '20px' : '0 20px',
+                                            transition: 'padding 0.3s ease-in-out'
+                                        }}
+                                        dangerouslySetInnerHTML={{ __html: item.content }}
+                                    />
+                                </div>
+                            </div>
+                        ))}
+                    </div>
+                </div>
             </div>
-          ))}
         </div>
-      </div>
-    </section>
-  );
+    );
 };
 
 export default MemberFAQ;

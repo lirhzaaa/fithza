@@ -3,7 +3,7 @@ import HeroSection from "../components/trainer/Hero";
 import Focus from "../components/trainer/Focus";
 import SessionPrice from "../components/trainer/SessionPrice";
 import CTAAbout from "../components/CTA";
-import Faq from "../components/trainer/Faq";
+import TrainerFAQ from "../components/trainer/Faq";
 
 const PersonalTrainer = () => {
   return (
@@ -12,7 +12,7 @@ const PersonalTrainer = () => {
       <Content />
       <Focus />
       <SessionPrice />
-      <Faq />
+      <TrainerFAQ />
       <CTAAbout />
     </section>
   );

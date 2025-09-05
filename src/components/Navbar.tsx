@@ -81,7 +81,6 @@ const Navbar = () => {
             </ul>
           </div>
           
-          {/* Mobile Menu Button */}
           <div style={{display: isMobile ? 'flex' : 'none', alignItems: 'center', gap: '1rem'}}>
             <button
               onClick={toggleMenu}

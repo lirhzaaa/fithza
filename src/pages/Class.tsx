@@ -1,7 +1,6 @@
 import AllClass from '../components/class/AllClass';
 import BannerClass from '../components/class/BannerClass';
 import CardClass from '../components/class/CardClass';
-import CTAClass from '../components/class/CTAClass';
 import FAQClass from '../components/class/FAQClass';
 
 const Class = () => {
@@ -10,7 +9,6 @@ const Class = () => {
             <BannerClass />
             <CardClass />
             <AllClass />
-            <CTAClass />
             <FAQClass />
         </div>
     );

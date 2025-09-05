@@ -26,10 +26,10 @@ const ClassSection = () => {
   };
 
   const categoryBackgrounds: { [key: string]: string } = {
-    'Strength Class': 'https://photo-fhad-fithub-staging.s3.ap-southeast-1.amazonaws.com/strength_d4143c6ca2.jpeg',
-    'Cardio Class': 'https://photo-fhad-fithub-staging.s3.ap-southeast-1.amazonaws.com/imgonline_com_ua_resize_nl_AW_3_YM_Ii_Wb3m9_20e2afae1e.jpg',
-    'Dance Class': 'https://photo-fhad-fithub-staging.s3.ap-southeast-1.amazonaws.com/imgonline_com_ua_resize_KU_8_Nvn0li4_27a3176199.jpg',
-    'Mind & Body Class': 'https://photo-fhad-fithub-staging.s3.ap-southeast-1.amazonaws.com/imgonline_com_ua_resize_2_T_Ue22_EWPLG_Ce_I_c8f42f08ae.jpg',
+    'Strength Class': '/img/clas/Strength.jpg',
+    'Cardio Class': '/img/clas/Cardio.jpg',
+    'Dance Class': '/img/clas/Dance.jpg',
+    'Mind & Body Class': '/img/clas/Mind&Body.jpg',
   };
 
   const classes: ClassItem[] = [

@@ -143,12 +143,23 @@ const MindBodyClass = () => {
                                 <span style={{ fontWeight: 'bold' }}>{item.title}</span>
                                 <span style={{ fontSize: '1.5rem' }}>{openIndex === index ? '-' : '+'}</span>
                             </div>
-                            {openIndex === index && (
+                            <div
+                                style={{
+                                    maxHeight: openIndex === index ? '200px' : '0',
+                                    overflow: 'hidden',
+                                    transition: 'max-height 0.3s ease-in-out',
+                                    borderTop: openIndex === index ? '1px solid #ddd' : 'none',
+                                    backgroundColor: '#fff'
+                                }}
+                            >
                                 <div
-                                    style={{ padding: '20px', borderTop: '1px solid #ddd', backgroundColor: '#fff' }}
+                                    style={{
+                                        padding: openIndex === index ? '20px' : '0 20px',
+                                        transition: 'padding 0.3s ease-in-out'
+                                    }}
                                     dangerouslySetInnerHTML={{ __html: item.content }}
                                 />
-                            )}
+                            </div>
                         </div>
                     ))}
                 </div>
