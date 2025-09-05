@@ -1,6 +1,6 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 
-interface NotificationProps {
+type NotificationProps = {
   isVisible: boolean;
   type: 'success' | 'error' | 'info';
   message: string;
@@ -71,90 +71,18 @@ const Notification = ({ isVisible, type, message, duration, onClose }: Notificat
 
   const config = getNotificationConfig();
 
-  const notificationStyle: React.CSSProperties = {
-    position: 'fixed',
-    top: '20px',
-    right: '20px',
-    zIndex: 1000,
-    maxWidth: '500px',
-    width: '100%',
-    animation: 'slideInUp 0.4s ease-out'
-  };
-
-  const alertStyle: React.CSSProperties = {
-    display: 'flex',
-    alignItems: 'flex-start',
-    padding: '16px',
-    borderRadius: '8px',
-    boxShadow: '0 4px 12px rgba(0, 0, 0, 0.15)',
-    border: `1px solid ${config.borderColor}`,
-    backgroundColor: config.bgColor,
-    color: config.textColor
-  };
-
-  const iconStyle: React.CSSProperties = {
-    display: 'flex',
-    alignItems: 'center',
-    justifyContent: 'center',
-    width: '20px',
-    height: '20px',
-    marginRight: '12px',
-    fontSize: '1.1rem',
-    color: config.iconColor,
-    flexShrink: 0
-  };
-
-  const contentStyle: React.CSSProperties = {
-    flex: 1,
-    minWidth: 0
-  };
-
-  const titleStyle: React.CSSProperties = {
-    display: 'block',
-    fontWeight: 600,
-    fontSize: '0.95rem',
-    color: config.textColor,
-    marginBottom: '4px'
-  };
-
-  const messageStyle: React.CSSProperties = {
-    margin: 0,
-    fontSize: '0.9rem',
-    color: config.textColor,
-    lineHeight: 1.4,
-    opacity: 0.9
-  };
-
-  const closeButtonStyle: React.CSSProperties = {
-    background: 'none',
-    border: 'none',
-    color: config.iconColor,
-    fontSize: '1.25rem',
-    cursor: 'pointer',
-    padding: '0',
-    marginLeft: '12px',
-    opacity: 0.7,
-    transition: 'opacity 0.2s ease',
-    flexShrink: 0,
-    width: '20px',
-    height: '20px',
-    display: 'flex',
-    alignItems: 'center',
-    justifyContent: 'center'
-  };
-
   return (
-    <div style={notificationStyle}>
-      <div style={alertStyle}>
-        <div style={iconStyle}>
+    <div style={{ position: 'fixed', top: '20px', right: '20px', zIndex: 1000, maxWidth: '500px', width: '100%', animation: 'slideInUp 0.4s ease-out' }}>
+      <div style={{ display: 'flex', alignItems: 'flex-start', padding: '16px', borderRadius: '8px', boxShadow: '0 4px 12px rgba(0, 0, 0, 0.15)', border: `1px solid ${config.borderColor}`, backgroundColor: config.bgColor, color: config.textColor }}>
+        <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', width: '20px', height: '20px', marginRight: '12px', fontSize: '1.1rem', color: config.iconColor, flexShrink: 0 }}>
           {config.icon}
         </div>
 
-        <div style={contentStyle}>
-          <span style={titleStyle}>
+        <div style={{ flex: 1, minWidth: 0 }}>
+          <span style={{ display: 'block', fontWeight: 600, fontSize: '0.95rem', color: config.textColor, marginBottom: '4px' }}>
             {config.title}
           </span>
-          <p style={messageStyle}>
+          <p style={{ margin: 0, fontSize: '0.9rem', color: config.textColor, lineHeight: 1.4, opacity: 0.9 }}>
             {message}
           </p>
         </div>
@@ -164,7 +92,7 @@ const Notification = ({ isVisible, type, message, duration, onClose }: Notificat
             setInternalVisible(false);
             onClose();
           }}
-          style={closeButtonStyle}
+          style={{ background: 'none', border: 'none', color: config.iconColor, fontSize: '1.25rem', cursor: 'pointer', padding: '0', marginLeft: '12px', opacity: 0.7, transition: 'opacity 0.2s ease', flexShrink: 0, width: '20px', height: '20px', display: 'flex', alignItems: 'center', justifyContent: 'center' }}
           onMouseEnter={(e) => {
             e.currentTarget.style.opacity = '1';
           }}

@@ -1,12 +1,12 @@
 import Notification from './member/Notification';
 
-interface NotificationData {
+type NotificationData = {
     isVisible: boolean;
     type: 'success' | 'error' | 'info';
     message: string;
 }
 
-interface NotificationTrailProps {
+type NotificationTrailProps = {
     notification: NotificationData;
     onClose: () => void;
 }

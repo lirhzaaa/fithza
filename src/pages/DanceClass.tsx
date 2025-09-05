@@ -1,13 +1,12 @@
 import { useState } from 'react';
-import type { CSSProperties } from 'react';
 
-interface ClassItem {
+type ClassItem = {
     title: string;
     duration: string;
     calories?: string;
 }
 
-interface FAQItem {
+type FAQItem = {
     title: string;
     content: string;
 }
@@ -17,47 +16,6 @@ const DanceClass = () => {
 
     const toggleAccordion = (index: number): void => {
         setOpenIndex(openIndex === index ? null : index);
-    };
-
-    const styles: { [key: string]: CSSProperties } = {
-        banner: { height: '400px', backgroundSize: 'cover', backgroundPosition: 'center', display: 'flex', alignItems: 'center', justifyContent: 'center', color: 'white', textAlign: 'center' },
-        bannerOverlay: { backgroundColor: 'rgba(0, 0, 0, 0.5)', width: '100%', height: '100%', display: 'flex', alignItems: 'center', justifyContent: 'center' },
-        bannerTitle: { fontSize: '3rem', fontWeight: 'bold', margin: '0' },
-
-        descSection: { padding: '60px 0', backgroundColor: '#fff' },
-        descContainer: { maxWidth: '1400px', margin: '0 auto', padding: '0 20px', display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '40px', alignItems: 'center' },
-        descTitle: { fontSize: '2.5rem', color: '#000', marginBottom: '20px' },
-        descText: { fontSize: '1.1rem', color: '#666', lineHeight: '1.6' },
-        descImage: { width: '100%', height: '400px', objectFit: 'cover', borderRadius: '15px' },
-
-        section: { padding: '60px 0', backgroundColor: '#2b4593ff' },
-        container: { maxWidth: '1400px', margin: '0 auto', padding: '0 20px' },
-        title: { textAlign: 'left', fontSize: '2.5rem', marginBottom: '40px', color: 'white' },
-        classCategoryWrapper: { display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '30px' },
-        cardClassWrapper: { position: 'relative', borderRadius: '15px', overflow: 'hidden', boxShadow: '0 8px 16px rgba(0, 0, 0, 0.15)', height: '350px' },
-        cardClassBg: { height: '100%', backgroundSize: 'cover', backgroundPosition: 'center', filter: 'brightness(0.8)' },
-        cardClassContent: { position: 'absolute', bottom: '0', left: '0', right: '0', background: 'linear-gradient(to top, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.6))', color: 'white', padding: '20px' },
-        classTitle: { fontSize: '1.5rem', margin: '10px 0', fontWeight: 'bold' },
-        cardClassDetail: { display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginTop: '15px' },
-        durationText: { fontSize: '0.8rem', color: '#fff' },
-        caloriesText: { fontSize: '0.8rem', color: '#fff', marginTop: '5px' },
-
-        otherSection: { padding: '60px 0', backgroundColor: '#2b4593ff' },
-        otherTitle: { textAlign: 'center', fontSize: '2.5rem', marginBottom: '40px', color: 'white' },
-        otherWrapper: { display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '30px' },
-        otherCard: { position: 'relative', borderRadius: '15px', overflow: 'hidden', boxShadow: '0 8px 16px rgba(0, 0, 0, 0.15)', height: '300px', textDecoration: 'none', color: 'inherit' },
-        otherCardBg: { height: '100%', backgroundSize: 'cover', backgroundPosition: 'center', filter: 'brightness(0.8)' },
-        otherCardContent: { position: 'absolute', bottom: '0', left: '0', right: '0', background: 'linear-gradient(to top, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.6))', color: 'white', padding: '20px', textAlign: 'center' },
-        otherCardTitle: { fontSize: '1.4rem', margin: '0', fontWeight: 'bold' },
-
-        faqSection: { padding: '60px 20px', backgroundColor: '#fff' },
-        faqContainer: { maxWidth: '1400px', margin: '0 auto' },
-        faqTitle: { fontSize: '2.5rem', textAlign: 'center', marginBottom: '40px', color: '#000' },
-        faqItem: { marginBottom: '10px', border: '1px solid #ddd', borderRadius: '8px' },
-        faqHeader: { padding: '20px', cursor: 'pointer', display: 'flex', justifyContent: 'space-between', alignItems: 'center', backgroundColor: '#f9f9f9' },
-        faqQuestion: { fontWeight: 'bold' },
-        faqToggle: { fontSize: '1.5rem' },
-        faqContent: { padding: '20px', borderTop: '1px solid #ddd', backgroundColor: '#fff' }
     };
 
     const danceClasses: ClassItem[] = [
@@ -108,17 +66,17 @@ const DanceClass = () => {
 
     return (
         <div>
-            <div style={{...styles.banner, backgroundImage: 'url(/img/clas/Dance.jpg)'}}>
-                <div style={styles.bannerOverlay}>
-                    <h1 style={styles.bannerTitle}>Dance Class</h1>
+            <div style={{ height: '400px', backgroundSize: 'cover', backgroundPosition: 'center', display: 'flex', alignItems: 'center', justifyContent: 'center', color: 'white', textAlign: 'center', backgroundImage: 'url(/img/clas/Dance.jpg)' }}>
+                <div style={{ backgroundColor: 'rgba(0, 0, 0, 0.5)', width: '100%', height: '100%', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+                    <h1 style={{ fontSize: '3rem', fontWeight: 'bold', margin: '0' }}>Dance Class</h1>
                 </div>
             </div>
 
-            <div style={styles.descSection}>
-                <div style={styles.descContainer}>
+            <div style={{ padding: '60px 0', backgroundColor: '#fff' }}>
+                <div style={{ maxWidth: '1400px', margin: '0 auto', padding: '0 20px', display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '40px', alignItems: 'center' }}>
                     <div>
-                        <h2 style={styles.descTitle}>Gerakkan Tubuhmu dengan Dance Class</h2>
-                        <p style={styles.descText}>
+                        <h2 style={{ fontSize: '2.5rem', color: '#000', marginBottom: '20px' }}>Gerakkan Tubuhmu dengan Dance Class</h2>
+                        <p style={{ fontSize: '1.1rem', color: '#666', lineHeight: '1.6' }}>
                             Dance Class di FitHza Indonesia menghadirkan pengalaman menari yang menyenangkan dan penuh energi.
                             Dari hip hop yang dinamis hingga ballet yang elegan, setiap kelas dirancang untuk meningkatkan
                             koordinasi, ritme, dan kebugaran secara keseluruhan. Bergabunglah dengan komunitas penari kami
@@ -129,26 +87,26 @@ const DanceClass = () => {
                         <img
                             src="/img/clas/Dance.jpg"
                             alt="Dance Class"
-                            style={styles.descImage}
+                            style={{ width: '100%', height: '400px', objectFit: 'cover', borderRadius: '15px' }}
                         />
                     </div>
                 </div>
             </div>
 
-            <div style={styles.section}>
-                <div style={styles.container}>
-                    <h2 style={styles.title}>Eksplor Kelas Dance</h2>
-                    <div style={styles.classCategoryWrapper}>
+            <div style={{ padding: '60px 0', backgroundColor: '#2b4593ff' }}>
+                <div style={{ maxWidth: '1400px', margin: '0 auto', padding: '0 20px' }}>
+                    <h2 style={{ textAlign: 'left', fontSize: '2.5rem', marginBottom: '40px', color: 'white' }}>Eksplor Kelas Dance</h2>
+                    <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '30px' }}>
                         {danceClasses.map((classItem: ClassItem, index: number) => (
-                            <div key={index} style={styles.cardClassWrapper}>
-                                <div style={{...styles.cardClassBg, backgroundImage: `url(/img/clas/Dance.jpg)`}}></div>
-                                <div style={styles.cardClassContent}>
-                                    <h2 style={styles.classTitle}>{classItem.title}</h2>
-                                    <div style={styles.cardClassDetail}>
-                                        <div style={styles.durationText}>{classItem.duration}</div>
+                            <div key={index} style={{ position: 'relative', borderRadius: '15px', overflow: 'hidden', boxShadow: '0 8px 16px rgba(0, 0, 0, 0.15)', height: '350px' }}>
+                                <div style={{ height: '100%', backgroundSize: 'cover', backgroundPosition: 'center', filter: 'brightness(0.8)', backgroundImage: `url(/img/clas/Dance.jpg)` }}></div>
+                                <div style={{ position: 'absolute', bottom: '0', left: '0', right: '0', background: 'linear-gradient(to top, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.6))', color: 'white', padding: '20px' }}>
+                                    <h2 style={{ fontSize: '1.5rem', margin: '10px 0', fontWeight: 'bold' }}>{classItem.title}</h2>
+                                    <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginTop: '15px' }}>
+                                        <div style={{ fontSize: '0.8rem', color: '#fff' }}>{classItem.duration}</div>
                                     </div>
                                     {classItem.calories && (
-                                        <div style={styles.caloriesText}>{classItem.calories}</div>
+                                        <div style={{ fontSize: '0.8rem', color: '#fff', marginTop: '5px' }}>{classItem.calories}</div>
                                     )}
                                 </div>
                             </div>
@@ -157,15 +115,15 @@ const DanceClass = () => {
                 </div>
             </div>
 
-            <div style={styles.otherSection}>
-                <div style={styles.container}>
-                    <h2 style={styles.otherTitle}>Jelajahi Kelas Lain</h2>
-                    <div style={styles.otherWrapper}>
+            <div style={{ padding: '60px 0', backgroundColor: '#2b4593ff' }}>
+                <div style={{ maxWidth: '1400px', margin: '0 auto', padding: '0 20px' }}>
+                    <h2 style={{ textAlign: 'center', fontSize: '2.5rem', marginBottom: '40px', color: 'white' }}>Jelajahi Kelas Lain</h2>
+                    <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '30px' }}>
                         {otherClasses.map((otherClass, index) => (
-                            <a key={index} href={otherClass.link} style={styles.otherCard}>
-                                <div style={{...styles.otherCardBg, backgroundImage: `url(${otherClass.image})`}}></div>
-                                <div style={styles.otherCardContent}>
-                                    <h3 style={styles.otherCardTitle}>{otherClass.name}</h3>
+                            <a key={index} href={otherClass.link} style={{ position: 'relative', borderRadius: '15px', overflow: 'hidden', boxShadow: '0 8px 16px rgba(0, 0, 0, 0.15)', height: '300px', textDecoration: 'none', color: 'inherit' }}>
+                                <div style={{ height: '100%', backgroundSize: 'cover', backgroundPosition: 'center', filter: 'brightness(0.8)', backgroundImage: `url(${otherClass.image})` }}></div>
+                                <div style={{ position: 'absolute', bottom: '0', left: '0', right: '0', background: 'linear-gradient(to top, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.6))', color: 'white', padding: '20px', textAlign: 'center' }}>
+                                    <h3 style={{ fontSize: '1.4rem', margin: '0', fontWeight: 'bold' }}>{otherClass.name}</h3>
                                 </div>
                             </a>
                         ))}
@@ -173,21 +131,21 @@ const DanceClass = () => {
                 </div>
             </div>
 
-            <div style={styles.faqSection}>
-                <div style={styles.faqContainer}>
-                    <h2 style={styles.faqTitle}>FAQ Dance Class</h2>
+            <div style={{ padding: '60px 20px', backgroundColor: '#fff' }}>
+                <div style={{ maxWidth: '1400px', margin: '0 auto' }}>
+                    <h2 style={{ fontSize: '2.5rem', textAlign: 'center', marginBottom: '40px', color: '#000' }}>FAQ Dance Class</h2>
                     {faqItems.map((item: FAQItem, index: number) => (
-                        <div key={index} style={styles.faqItem}>
+                        <div key={index} style={{ marginBottom: '10px', border: '1px solid #ddd', borderRadius: '8px' }}>
                             <div
-                                style={styles.faqHeader}
+                                style={{ padding: '20px', cursor: 'pointer', display: 'flex', justifyContent: 'space-between', alignItems: 'center', backgroundColor: '#f9f9f9' }}
                                 onClick={() => toggleAccordion(index)}
                             >
-                                <span style={styles.faqQuestion}>{item.title}</span>
-                                <span style={styles.faqToggle}>{openIndex === index ? '-' : '+'}</span>
+                                <span style={{ fontWeight: 'bold' }}>{item.title}</span>
+                                <span style={{ fontSize: '1.5rem' }}>{openIndex === index ? '-' : '+'}</span>
                             </div>
                             {openIndex === index && (
                                 <div
-                                    style={styles.faqContent}
+                                    style={{ padding: '20px', borderTop: '1px solid #ddd', backgroundColor: '#fff' }}
                                     dangerouslySetInnerHTML={{ __html: item.content }}
                                 />
                             )}

@@ -1,7 +1,7 @@
 import React, { useState, useCallback, useRef, useEffect } from 'react';
 import NotificationTrail from './NotificationTrail';
 
-interface CustomDropdownProps {
+type CustomDropdownProps = {
     label: string;
     value: string;
     options: { value: string; label: string }[];
@@ -127,7 +127,7 @@ const CustomDropdown = ({
     );
 };
 
-interface FormData {
+type FormData = {
     city: string;
     club: string;
     gender: string;

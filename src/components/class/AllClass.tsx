@@ -1,5 +1,3 @@
-import type { CSSProperties } from 'react';
-
 type ClassItem = {
     title: string;
     category: string;
@@ -8,25 +6,6 @@ type ClassItem = {
 }
 
 const AllClass = () => {
-    const styles: { [key: string]: CSSProperties } = {
-        section: { padding: '70px 0', backgroundColor: '#2b4593ff' },
-        container: { maxWidth: '1400px', margin: '0 auto', padding: '0 20px' },
-        title: { textAlign: 'left', fontSize: '2.5rem', margin: '0 50px 40px', color: 'white' },
-        classCategoryWrapper: { display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '30px', margin: '0 50px' },
-        cardClassWrapper: { position: 'relative', borderRadius: '15px', overflow: 'hidden', boxShadow: '0 8px 16px rgba(0, 0, 0, 0.15)', height: '350px' },
-        cardClassBg: { height: '100%', backgroundSize: 'cover', backgroundPosition: 'center', filter: 'brightness(0.8)' },
-        cardClassContent: { position: 'absolute', bottom: '0', left: '0', right: '0', background: 'linear-gradient(to top, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.6))', color: 'white', padding: '20px' },
-        cardCategoryWrapper: { display: 'flex', alignItems: 'center', gap: '10px', marginBottom: '10px' },
-        categoryText: { fontSize: '0.9rem', color: '#ccc' },
-        classTitle: { fontSize: '1.5rem', margin: '10px 0', fontWeight: 'bold' },
-        cardClassDetail: { display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginTop: '15px' },
-        difficultyWrapper: { display: 'flex', alignItems: 'center', gap: '8px' },
-        difficultyIcon: { width: '16px', height: '16px', color: '#fff' },
-        difficultyText: { fontSize: '0.8rem', color: '#fff' },
-        durationText: { fontSize: '0.8rem', color: '#fff' },
-        caloriesText: { fontSize: '0.8rem', color: '#fff', marginTop: '5px' }
-    };
-
     const categoryBackgrounds: { [key: string]: string } = {
         'Strength Class': '/img/clas/Strength.jpg',
         'Cardio Class': '/img/clas/Cardio.jpg',
@@ -80,30 +59,30 @@ const AllClass = () => {
     ];
 
     return (
-        <div style={styles.section}>
-            <div style={styles.container}>
+        <div style={{ padding: '70px 0', backgroundColor: '#2b4593ff' }}>
+            <div style={{ maxWidth: '1400px', margin: '0 auto', padding: '0 20px' }}>
                 <h2
                     data-aos="fade-right"
                     data-aos-duration="1000"
-                    style={styles.title}>Eksplor semua kelas</h2>
-                <div style={styles.classCategoryWrapper}>
+                    style={{ textAlign: 'left', fontSize: '2.5rem', margin: '0 50px 40px', color: 'white' }}>Eksplor semua kelas</h2>
+                <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '30px', margin: '0 50px' }}>
                     {classes.map((classItem: ClassItem, index: number) => (
                         <div
                             data-aos="fade-up"
                             data-aos-duration="1000"
-                            key={index} style={styles.cardClassWrapper}>
-                            <div style={{ ...styles.cardClassBg, backgroundImage: `url(${categoryBackgrounds[classItem.category]})` }}></div>
-                            <div style={styles.cardClassContent}>
-                                <div style={styles.cardCategoryWrapper}>
-                                    <p style={styles.categoryText}>{classItem.category}</p>
+                            key={index} style={{ position: 'relative', borderRadius: '15px', overflow: 'hidden', boxShadow: '0 8px 16px rgba(0, 0, 0, 0.15)', height: '350px' }}>
+                            <div style={{ height: '100%', backgroundSize: 'cover', backgroundPosition: 'center', filter: 'brightness(0.8)', backgroundImage: `url(${categoryBackgrounds[classItem.category]})` }}></div>
+                            <div style={{ position: 'absolute', bottom: '0', left: '0', right: '0', background: 'linear-gradient(to top, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.6))', color: 'white', padding: '20px' }}>
+                                <div style={{ display: 'flex', alignItems: 'center', gap: '10px', marginBottom: '10px' }}>
+                                    <p style={{ fontSize: '0.9rem', color: '#ccc' }}>{classItem.category}</p>
                                 </div>
-                                <h2 style={styles.classTitle}>{classItem.title}</h2>
+                                <h2 style={{ fontSize: '1.5rem', margin: '10px 0', fontWeight: 'bold' }}>{classItem.title}</h2>
                                 {classItem.calories && (
-                                    <div style={styles.caloriesText}>{classItem.calories}</div>
+                                    <div style={{ fontSize: '0.8rem', color: '#fff', marginTop: '5px' }}>{classItem.calories}</div>
                                 )}
-                                <div style={styles.cardClassDetail}>
+                                <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginTop: '15px' }}>
                                     {classItem.duration && (
-                                        <div style={styles.durationText}>{classItem.duration}</div>
+                                        <div style={{ fontSize: '0.8rem', color: '#fff' }}>{classItem.duration}</div>
                                     )}
                                 </div>
                             </div>

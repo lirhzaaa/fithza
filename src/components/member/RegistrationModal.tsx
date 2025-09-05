@@ -1,7 +1,6 @@
 import { useState, useRef, useEffect } from 'react';
 
-// Custom Dropdown Component
-interface CustomDropdownProps {
+type CustomDropdownProps = {
     label: string;
     value: string;
     options: { value: string; label: string }[];
@@ -126,7 +125,7 @@ const CustomDropdown = ({
     );
 };
 
-interface RegistrationModalProps {
+type RegistrationModalProps = {
   isOpen: boolean;
   onClose: () => void;
   onShowNotification?: (type: 'success' | 'error' | 'info', message: string) => void;
