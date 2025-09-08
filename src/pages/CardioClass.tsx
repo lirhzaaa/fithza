@@ -78,7 +78,7 @@ const CardioClass = () => {
                     <div>
                         <h2 style={{ fontSize: 'clamp(1.5rem, 5vw, 2.5rem)', color: '#000', marginBottom: 'clamp(1rem, 3vw, 1.25rem)' }}>Tingkatkan Daya Tahan Jantung dengan Cardio Class</h2>
                         <p style={{ fontSize: 'clamp(0.9rem, 2.5vw, 1.1rem)', color: '#666', lineHeight: '1.6' }}>
-                            Cardio Class di FitHza Indonesia dirancang untuk meningkatkan kesehatan jantung dan membakar kalori secara maksimal.
+                            Cardio Class di Fithza Indonesia dirancang untuk meningkatkan kesehatan jantung dan membakar kalori secara maksimal.
                             Dengan berbagai variasi latihan seperti BodyCombat, aerobics, dan step, Anda akan merasakan peningkatan
                             stamina dan kebugaran kardiovaskular. Program ini cocok untuk semua level dan memberikan hasil yang
                             terukur dalam pembakaran lemak dan peningkatan energi.

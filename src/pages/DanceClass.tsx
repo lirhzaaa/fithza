@@ -77,7 +77,7 @@ const DanceClass = () => {
                     <div>
                         <h2 style={{ fontSize: 'clamp(1.5rem, 5vw, 2.5rem)', color: '#000', marginBottom: 'clamp(1rem, 3vw, 1.25rem)' }}>Gerakkan Tubuhmu dengan Dance Class</h2>
                         <p style={{ fontSize: 'clamp(0.9rem, 2.5vw, 1.1rem)', color: '#666', lineHeight: '1.6' }}>
-                            Dance Class di FitHza Indonesia menghadirkan pengalaman menari yang menyenangkan dan penuh energi.
+                            Dance Class di Fithza Indonesia menghadirkan pengalaman menari yang menyenangkan dan penuh energi.
                             Dari hip hop yang dinamis hingga ballet yang elegan, setiap kelas dirancang untuk meningkatkan
                             koordinasi, ritme, dan kebugaran secara keseluruhan. Bergabunglah dengan komunitas penari kami
                             dan rasakan kegembiraan bergerak mengikuti musik.

@@ -77,7 +77,7 @@ const MindBodyClass = () => {
                     <div>
                         <h2 style={{ fontSize: 'clamp(1.5rem, 5vw, 2.5rem)', color: '#000', marginBottom: 'clamp(1rem, 3vw, 1.25rem)' }}>Temukan Keseimbangan dengan Mind & Body Class</h2>
                         <p style={{ fontSize: 'clamp(0.9rem, 2.5vw, 1.1rem)', color: '#666', lineHeight: '1.6' }}>
-                            Mind & Body Class di FitHza Indonesia menghadirkan pengalaman holistik yang menyatukan gerakan fisik
+                            Mind & Body Class di Fithza Indonesia menghadirkan pengalaman holistik yang menyatukan gerakan fisik
                             dengan kesadaran mental. Dari yoga yang menenangkan hingga pilates yang memperkuat, setiap kelas
                             dirancang untuk membawa Anda menuju keseimbangan sempurna antara tubuh dan pikiran. Rasakan
                             kedamaian batin dan kekuatan fisik yang seimbang.

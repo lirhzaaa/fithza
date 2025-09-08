@@ -14,8 +14,8 @@ const TrainerFAQ = () => {
 
     const faqItems: FAQItem[] = [
         {
-            title: "Apa itu personal trainer di FitHza Indonesia?",
-            content: "<p>Personal trainer di FitHza Indonesia adalah instruktur kebugaran profesional yang memberikan bimbingan pribadi untuk membantu Anda mencapai tujuan kebugaran. Mereka merancang program latihan yang disesuaikan dengan kebutuhan, tingkat kebugaran, dan jadwal Anda.</p>"
+            title: "Apa itu personal trainer di Fithza Indonesia?",
+            content: "<p>Personal trainer di Fithza Indonesia adalah instruktur kebugaran profesional yang memberikan bimbingan pribadi untuk membantu Anda mencapai tujuan kebugaran. Mereka merancang program latihan yang disesuaikan dengan kebutuhan, tingkat kebugaran, dan jadwal Anda.</p>"
         },
         {
             title: "Bagaimana cara memesan sesi personal trainer?",
@@ -72,7 +72,7 @@ const TrainerFAQ = () => {
                         marginBottom: '40px',
                         color: '#000'
                     }}>
-                    FAQ Personal Trainer di FitHza Indonesia
+                    FAQ Personal Trainer di Fithza Indonesia
                 </h2>
                 <div style={{ marginBottom: '40px' }}>
                 </div>

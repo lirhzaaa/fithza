@@ -234,9 +234,10 @@ const FreeTrail = () => {
     }, []);
 
     const clubOptions: { [key: string]: string[] } = {
-        Bogor: ['Bogor 1', 'Bogor 2'],
-        Jakarta: ['Jakarta 1', 'Jakarta 2'],
-        Bandung: ['Bandung 1', 'Bandung 2'],
+        Bogor: ['Fithza Indonesia Bogor Center', 'Fithza Indonesia Bogor Mall'],
+        Jakarta: ['Fithza Indonesia Jakarta Central', 'Fithza Indonesia Jakarta Selatan'],
+        Bandung: ['Fithza Indonesia Bandung Center', 'Fithza Indonesia Bandung Utara'],
+
     };
 
     const features = [

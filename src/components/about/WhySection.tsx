@@ -12,7 +12,7 @@ const WhyChooseSection = () => {
         },
         {
             title: 'Bebas Akses ke Semua Club FTL',
-            description: 'Nikmati akses bebas ke semua cabang FitHza di seluruh Indonesia tanpa biaya tambahan.'
+            description: 'Nikmati akses bebas ke semua cabang Fithza di seluruh Indonesia tanpa biaya tambahan.'
         },
         {
             title: 'Kelas Terbesar & Terlengkap di Indonesia',
@@ -55,7 +55,7 @@ const WhyChooseSection = () => {
                     color: '#333',
                     fontWeight: 'bold'
                 }}>
-                    Kenapa FitHza Indonesia Terbaik Untuk Kamu?
+                    Kenapa Fithza Indonesia Terbaik Untuk Kamu?
                 </h2>
                 <p style={{
                     textAlign: 'center',

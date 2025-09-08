@@ -14,8 +14,8 @@ const FAQClass = () => {
 
     const faqItems: FAQItem[] = [
         {
-            title: "Apa itu kelas di FitHza Indonesia?",
-            content: "<p>Kelas di FitHza Indonesia adalah program latihan terstruktur yang dirancang untuk membantu anggota mencapai tujuan kebugaran mereka. Kami menawarkan berbagai jenis kelas seperti Strength, Cardio, Dance, dan Mind & Body, masing-masing dengan fokus yang berbeda untuk memenuhi kebutuhan individu.</p>"
+            title: "Apa itu kelas di Fithza Indonesia?",
+            content: "<p>Kelas di Fithza Indonesia adalah program latihan terstruktur yang dirancang untuk membantu anggota mencapai tujuan kebugaran mereka. Kami menawarkan berbagai jenis kelas seperti Strength, Cardio, Dance, dan Mind & Body, masing-masing dengan fokus yang berbeda untuk memenuhi kebutuhan individu.</p>"
         },
         {
             title: "Berapa jenis kelas yang tersedia?",
@@ -23,7 +23,7 @@ const FAQClass = () => {
         },
         {
             title: "Bagaimana cara mendaftar kelas?",
-            content: "<p>Pendaftaran kelas dapat dilakukan melalui aplikasi FitHza Indonesia atau langsung di resepsionis gym. Pilih kelas yang diinginkan berdasarkan jadwal, lalu konfirmasi pendaftaran. Untuk anggota baru, pastikan telah memiliki membership aktif.</p>"
+            content: "<p>Pendaftaran kelas dapat dilakukan melalui aplikasi Fithza Indonesia atau langsung di resepsionis gym. Pilih kelas yang diinginkan berdasarkan jadwal, lalu konfirmasi pendaftaran. Untuk anggota baru, pastikan telah memiliki membership aktif.</p>"
         },
         {
             title: "Apakah ada kelas untuk pemula?",
@@ -43,7 +43,7 @@ const FAQClass = () => {
         },
         {
             title: "Apakah ada jadwal kelas?",
-            content: "<p>Ya, jadwal kelas tersedia di aplikasi FitHza Indonesia dan website kami. Jadwal dapat berubah, jadi pastikan untuk memeriksa update terbaru. Kami menawarkan kelas pagi, siang, sore, dan malam untuk mengakomodasi berbagai jadwal.</p>"
+            content: "<p>Ya, jadwal kelas tersedia di aplikasi Fithza Indonesia dan website kami. Jadwal dapat berubah, jadi pastikan untuk memeriksa update terbaru. Kami menawarkan kelas pagi, siang, sore, dan malam untuk mengakomodasi berbagai jadwal.</p>"
         },
         {
             title: "Berapa biaya mengikuti kelas?",
@@ -72,7 +72,7 @@ const FAQClass = () => {
                         marginBottom: '40px',
                         color: '#000'
                     }}>
-                    FAQ Kelas di FitHza Indonesia
+                    FAQ Kelas di Fithza Indonesia
                 </h2>
                 <div style={{ marginBottom: '40px' }}>
                 </div>

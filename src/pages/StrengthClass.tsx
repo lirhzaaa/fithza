@@ -79,7 +79,7 @@ const StrengthClass = () => {
                     <div>
                         <h2 style={{ fontSize: 'clamp(1.5rem, 5vw, 2.5rem)', color: '#000', marginBottom: 'clamp(1rem, 3vw, 1.25rem)' }}>Tingkatkan Kekuatan Tubuhmu dengan Strength Class</h2>
                         <p style={{ fontSize: 'clamp(0.9rem, 2.5vw, 1.1rem)', color: '#666', lineHeight: '1.6' }}>
-                            Strength Class di FitHza Indonesia dirancang untuk membangun kekuatan otot dan daya tahan fisik.
+                            Strength Class di Fithza Indonesia dirancang untuk membangun kekuatan otot dan daya tahan fisik.
                             Dengan instruktur profesional dan program latihan yang terstruktur, Anda akan merasakan perubahan
                             signifikan dalam kekuatan dan bentuk tubuh Anda. Dari HIIT hingga weight training, temukan
                             rutinitas yang tepat untuk mencapai tujuan kebugaran Anda.

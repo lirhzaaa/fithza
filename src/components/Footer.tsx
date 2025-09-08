@@ -32,7 +32,7 @@ const Footer = () => {
                             }}>
                                 <img
                                     src="/logo.png"
-                                    alt="FitHza Indonesia"
+                                    alt="Fithza Indonesia"
                                     style={{
                                         height: '45px',
                                         marginRight: '12px'
@@ -44,7 +44,7 @@ const Footer = () => {
                                     color: '#1f2937',
                                     fontWeight: '700'
                                 }}>
-                                    FitHza Indonesia
+                                    Fithza Indonesia
                                 </h2>
                             </div>
                             <p style={{
@@ -84,7 +84,7 @@ const Footer = () => {
                                 }}>
                                     <FontAwesomeIcon icon={faEnvelope} style={{ color: '#2b4593ff', marginRight: '12px', flexShrink: '0' }} />
                                     <span style={{ color: '#4b5563', fontSize: '0.95rem' }}>
-                                        info@fithzaindonesia.com
+                                        info@Fithzaindonesia.com
                                     </span>
                                 </div>
                             </div>
@@ -411,7 +411,7 @@ const Footer = () => {
                             margin: '0',
                             textAlign: 'center'
                         }}>
-                            © 2025 FitHza Indonesia. All rights reserved.
+                            © 2025 Fithza Indonesia. All rights reserved.
                         </p>
                     </div>
                 </div>

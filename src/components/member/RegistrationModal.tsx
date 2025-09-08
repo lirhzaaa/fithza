@@ -210,9 +210,9 @@ const RegistrationModal = ({ isOpen, onClose, onShowNotification }: Registration
         id: Date.now()
       };
 
-      const existingData = JSON.parse(localStorage.getItem('FitHza Indonesia_registrations') || '[]');
+      const existingData = JSON.parse(localStorage.getItem('Fithza Indonesia_registrations') || '[]');
       existingData.push(registrationData);
-      localStorage.setItem('FitHza Indonesia_registrations', JSON.stringify(existingData));
+      localStorage.setItem('Fithza Indonesia_registrations', JSON.stringify(existingData));
 
       setFormData({
         kota: '',
@@ -289,7 +289,7 @@ const RegistrationModal = ({ isOpen, onClose, onShowNotification }: Registration
               margin: 0,
               textAlign: 'center',
               textShadow: 'none'
-            }}>Bergabung dengan FitHza Indonesia</h2>
+            }}>Bergabung dengan Fithza Indonesia</h2>
             <button
               style={{
                 position: 'absolute',
@@ -358,15 +358,14 @@ const RegistrationModal = ({ isOpen, onClose, onShowNotification }: Registration
                 required
                 options={
                   formData.kota === "Bogor" ? [
-                    { value: "FitHza Indonesia Bogor Center", label: "FitHza Indonesia Bogor Center" },
-                    { value: "FitHza Indonesia Bogor Mall", label: "FitHza Indonesia Bogor Mall" }
+                    { value: "Fithza Indonesia Bogor Center", label: "Fithza Indonesia Bogor Center" },
+                    { value: "Fithza Indonesia Bogor Mall", label: "Fithza Indonesia Bogor Mall" }
                   ] : formData.kota === "Jakarta" ? [
-                    { value: "FitHza Indonesia Jakarta Central", label: "FitHza Indonesia Jakarta Central" },
-                    { value: "FitHza Indonesia Jakarta Barat", label: "FitHza Indonesia Jakarta Barat" },
-                    { value: "FitHza Indonesia Jakarta Selatan", label: "FitHza Indonesia Jakarta Selatan" }
+                    { value: "Fithza Indonesia Jakarta Central", label: "Fithza Indonesia Jakarta Central" },
+                    { value: "Fithza Indonesia Jakarta Selatan", label: "Fithza Indonesia Jakarta Selatan" }
                   ] : formData.kota === "Bandung" ? [
-                    { value: "FitHza Indonesia Bandung Center", label: "FitHza Indonesia Bandung Center" },
-                    { value: "FitHza Indonesia Bandung Utara", label: "FitHza Indonesia Bandung Utara" }
+                    { value: "Fithza Indonesia Bandung Center", label: "Fithza Indonesia Bandung Center" },
+                    { value: "Fithza Indonesia Bandung Utara", label: "Fithza Indonesia Bandung Utara" }
                   ] : []
                 }
               />
@@ -565,7 +564,7 @@ const RegistrationModal = ({ isOpen, onClose, onShowNotification }: Registration
                     >
                       kebijakan data privasi
                     </a>
-                    {' '}FitHza Indonesia
+                    {' '}Fithza Indonesia
                   </span>
                 </label>
               </div>

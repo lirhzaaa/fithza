@@ -12,7 +12,7 @@ const MemberBanner = () => {
                 <p style={{ fontSize: 'clamp(1rem, 3vw, 1.2rem)', fontWeight: '700', color: '#ffffffff', marginBottom: '0px' }}>MEMBERSHIP</p>
                 <h1 style={{ fontSize: 'clamp(2rem, 8vw, 4rem)', fontWeight: '700', marginBottom: '0px', marginTop: '0px', color: '#ffffffff', lineHeight: '1.2' }}>CAPAI TUJUANMU BERSAMA KAMI</h1>
                 <p style={{ fontSize: 'clamp(0.8rem, 2vw, 1rem)', color: '#ffffffff', textShadow: '0 1px 4px rgba(0,0,0,0.18)', lineHeight: '1.4' }}>
-                    Bergabunglah dengan FitHza Indonesia hanya dari Rp 149.000 per bulan.
+                    Bergabunglah dengan Fithza Indonesia hanya dari Rp 149.000 per bulan.
                 </p>
             </div>
         </section>

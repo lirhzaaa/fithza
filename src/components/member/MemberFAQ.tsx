@@ -14,8 +14,8 @@ const MemberFAQ = () => {
 
     const faqItems: FAQItem[] = [
         {
-            title: "Apa itu membership di FitHza Indonesia?",
-            content: "<p>Membership di FitHza Indonesia adalah program keanggotaan yang memberikan akses penuh ke semua fasilitas gym, kelas, dan layanan kami. Dengan membership, Anda dapat menikmati latihan tanpa batas, konsultasi personal, dan berbagai manfaat eksklusif mulai dari Rp 149.000 per bulan.</p>"
+            title: "Apa itu membership di Fithza Indonesia?",
+            content: "<p>Membership di Fithza Indonesia adalah program keanggotaan yang memberikan akses penuh ke semua fasilitas gym, kelas, dan layanan kami. Dengan membership, Anda dapat menikmati latihan tanpa batas, konsultasi personal, dan berbagai manfaat eksklusif mulai dari Rp 149.000 per bulan.</p>"
         },
         {
             title: "Berapa jenis membership yang tersedia?",
@@ -72,7 +72,7 @@ const MemberFAQ = () => {
                         marginBottom: '40px',
                         color: '#000'
                     }}>
-                    FAQ Membership di FitHza Indonesia
+                    FAQ Membership di Fithza Indonesia
                 </h2>
                 <div style={{ marginBottom: '40px' }}>
                 </div>

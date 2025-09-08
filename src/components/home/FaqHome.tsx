@@ -57,7 +57,7 @@ const FaqHome = () => {
                     color: '#666',
                     fontSize: 'clamp(0.9rem, 2.5vw, 1.1rem)'
                 }}>
-                    Temukan jawaban untuk pertanyaan yang sering ditanyakan tentang FitHza Indonesia
+                    Temukan jawaban untuk pertanyaan yang sering ditanyakan tentang Fithza Indonesia
                 </p>
                 <div style={{ marginBottom: '40px' }}>
                     {faqItems.map((item: FAQItem, index: number) => (

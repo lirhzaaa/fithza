@@ -21,7 +21,7 @@ const Banner = () => {
                     data-aos="fade-up"
                     data-aos-duration="1000"
                     style={{ fontSize: 'clamp(1rem, 3vw, 1.5rem)', color: '#ffffffff', lineHeight: '1.4' }}>
-                    Mulai Gaya Hidup Sehat Dengan Berbagai Olahraga Yang Bisa Kamu Lakukan Di FitHza Indonesia
+                    Mulai Gaya Hidup Sehat Dengan Berbagai Olahraga Yang Bisa Kamu Lakukan Di Fithza Indonesia
                 </p>
                 <button
                     data-aos="zoom-in"

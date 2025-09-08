@@ -100,7 +100,7 @@ const PrivacyPolicy = () => {
                         Jika Anda memiliki pertanyaan tentang kebijakan privasi ini atau ingin menggunakan hak Anda terkait data pribadi, silakan hubungi kami di:
                     </p>
                     <p style={{marginTop: '10px'}}>
-                        Email: privacy@fithza.id<br/>
+                        Email: privacy@Fithza.id<br/>
                         Telepon: +62 812-3456-7890<br/>
                         Alamat: Jakarta, Indonesia
                     </p>
