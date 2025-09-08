@@ -29,7 +29,7 @@ const Content = () => {
                     lineHeight: '1.6',
                     color: '#666',
                     textAlign: 'justify'
-                }}>Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati dolorem, tempora, nisi quos suscipit porro possimus modi nihil architecto ratione minus hic quaerat alias! Quisquam reiciendis ipsum ipsa sequi molestias.</p>
+                }}>Dengan bantuan Personal Trainer, Anda dapat mencapai tujuan kebugaran Anda lebih cepat dan aman. Mereka akan merancang program latihan yang disesuaikan dengan kebutuhan Anda, memotivasi Anda selama sesi, dan memastikan teknik latihan yang benar untuk menghindari cedera.</p>
             </div>
             <div
                 data-aos="zoom-out-up"
