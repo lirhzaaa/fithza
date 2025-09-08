@@ -60,14 +60,14 @@ const FAQClass = () => {
 
     return (
         <div style={{
-            padding: '60px 20px',
+            padding: 'clamp(3rem, 6vw, 3.75rem) clamp(1rem, 5vw, 1.25rem)',
         }}>
             <div style={{ maxWidth: '1400px', margin: '0 auto' }}>
                 <h2
                     data-aos="fade-down"
                     data-aos-duration="700"
                     style={{
-                        fontSize: '2.5rem',
+                        fontSize: 'clamp(1.5rem, 5vw, 2.5rem)',
                         textAlign: 'center',
                         marginBottom: '40px',
                         color: '#000'
@@ -76,7 +76,7 @@ const FAQClass = () => {
                 </h2>
                 <div style={{ marginBottom: '40px' }}>
                 </div>
-                <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '20px' }}>
+                <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '20px' }}>
                     <div>
                         {leftItems.map((item: FAQItem, index: number) => (
                             <div
@@ -85,7 +85,7 @@ const FAQClass = () => {
                                 key={index} style={{ marginBottom: '10px', border: '1px solid #ddd', borderRadius: '8px' }}>
                                 <div
                                     style={{
-                                        padding: '20px',
+                                        padding: 'clamp(1rem, 3vw, 1.25rem)',
                                         cursor: 'pointer',
                                         display: 'flex',
                                         justifyContent: 'space-between',
@@ -94,8 +94,8 @@ const FAQClass = () => {
                                     }}
                                     onClick={() => toggleAccordion(index)}
                                 >
-                                    <span style={{ fontWeight: 'bold' }}>{item.title}</span>
-                                    <span style={{ fontSize: '1.5rem' }}>{openIndex === index ? '-' : '+'}</span>
+                                    <span style={{ fontWeight: 'bold', fontSize: 'clamp(0.9rem, 2.5vw, 1rem)' }}>{item.title}</span>
+                                    <span style={{ fontSize: 'clamp(1.2rem, 3vw, 1.5rem)' }}>{openIndex === index ? '-' : '+'}</span>
                                 </div>
                                 <div
                                     style={{
@@ -108,7 +108,7 @@ const FAQClass = () => {
                                 >
                                     <div
                                         style={{
-                                            padding: openIndex === index ? '20px' : '0 20px',
+                                            padding: openIndex === index ? 'clamp(1rem, 3vw, 1.25rem)' : '0 clamp(1rem, 3vw, 1.25rem)',
                                             transition: 'padding 0.3s ease-in-out'
                                         }}
                                         dangerouslySetInnerHTML={{ __html: item.content }}
@@ -125,7 +125,7 @@ const FAQClass = () => {
                                 key={index + 5} style={{ marginBottom: '10px', border: '1px solid #ddd', borderRadius: '8px' }}>
                                 <div
                                     style={{
-                                        padding: '20px',
+                                        padding: 'clamp(1rem, 3vw, 1.25rem)',
                                         cursor: 'pointer',
                                         display: 'flex',
                                         justifyContent: 'space-between',
@@ -134,8 +134,8 @@ const FAQClass = () => {
                                     }}
                                     onClick={() => toggleAccordion(index + 5)}
                                 >
-                                    <span style={{ fontWeight: 'bold' }}>{item.title}</span>
-                                    <span style={{ fontSize: '1.5rem' }}>{openIndex === index + 5 ? '-' : '+'}</span>
+                                    <span style={{ fontWeight: 'bold', fontSize: 'clamp(0.9rem, 2.5vw, 1rem)' }}>{item.title}</span>
+                                    <span style={{ fontSize: 'clamp(1.2rem, 3vw, 1.5rem)' }}>{openIndex === index + 5 ? '-' : '+'}</span>
                                 </div>
                                 <div
                                     style={{
@@ -148,7 +148,7 @@ const FAQClass = () => {
                                 >
                                     <div
                                         style={{
-                                            padding: openIndex === index + 5 ? '20px' : '0 20px',
+                                            padding: openIndex === index + 5 ? 'clamp(1rem, 3vw, 1.25rem)' : '0 clamp(1rem, 3vw, 1.25rem)',
                                             transition: 'padding 0.3s ease-in-out'
                                         }}
                                         dangerouslySetInnerHTML={{ __html: item.content }}

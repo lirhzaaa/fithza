@@ -40,23 +40,22 @@ const FaqHome = () => {
             data-aos="fade-up"
             data-aos-duration="1000"
             style={{
-                padding: '80px 40px',
+                padding: 'clamp(3rem, 6vw, 5rem) clamp(1rem, 5vw, 2.5rem)',
             }}>
-            <div style={{ maxWidth: '1400px', margin: '0 auto', padding: '0 clamp(1rem, 5vw, 2rem)' }}>
+            <div style={{ maxWidth: '1400px', margin: '0 auto' }}>
                 <h2 style={{
                     fontSize: 'clamp(2rem, 5vw, 2.5rem)',
                     textAlign: 'center',
                     marginBottom: '20px',
-                    color: '#2b4593ff',
                     fontWeight: 'bold'
                 }}>
                     Selamat Datang Di Fithza Indonesia
                 </h2>
                 <p style={{
                     textAlign: 'center',
-                    marginBottom: '50px',
+                    marginBottom: 'clamp(2rem, 4vw, 3.125rem)',
                     color: '#666',
-                    fontSize: '1.1rem'
+                    fontSize: 'clamp(0.9rem, 2.5vw, 1.1rem)'
                 }}>
                     Temukan jawaban untuk pertanyaan yang sering ditanyakan tentang FitHza Indonesia
                 </p>
@@ -65,10 +64,10 @@ const FaqHome = () => {
                         <div
                             data-aos="fade-up"
                             data-aos-duration="500"
-                            key={index} style={{ marginBottom: '20px', border: '1px solid #ddd', borderRadius: '8px' }}>
+                            key={index} style={{ marginBottom: 'clamp(0.5rem, 1.5vw, 1.25rem)', border: '1px solid #ddd', borderRadius: '8px' }}>
                             <div
                                 style={{
-                                    padding: '20px',
+                                    padding: 'clamp(1rem, 3vw, 1.25rem)',
                                     cursor: 'pointer',
                                     display: 'flex',
                                     justifyContent: 'space-between',
@@ -77,8 +76,8 @@ const FaqHome = () => {
                                 }}
                                 onClick={() => toggleAccordion(index)}
                             >
-                                <span style={{ fontWeight: 'bold' }}>{item.title}</span>
-                                <span style={{ fontSize: '1.5rem' }}>{openIndex === index ? '-' : '+'}</span>
+                                <span style={{ fontWeight: 'bold', fontSize: 'clamp(0.9rem, 2.5vw, 1rem)' }}>{item.title}</span>
+                                <span style={{ fontSize: 'clamp(1.2rem, 3vw, 1.5rem)' }}>{openIndex === index ? '-' : '+'}</span>
                             </div>
                             <div
                                 style={{
@@ -91,7 +90,7 @@ const FaqHome = () => {
                             >
                                 <div
                                     style={{
-                                        padding: openIndex === index ? '20px' : '0 20px',
+                                        padding: openIndex === index ? 'clamp(1rem, 3vw, 1.25rem)' : '0 clamp(1rem, 3vw, 1.25rem)',
                                         transition: 'padding 0.3s ease-in-out'
                                     }}
                                     dangerouslySetInnerHTML={{ __html: item.content }}
@@ -105,23 +104,23 @@ const FaqHome = () => {
                     data-aos-duration="1000"
                     style={{
                         textAlign: 'center',
-                        padding: '30px',
+                        padding: 'clamp(1.5rem, 4vw, 1.875rem)',
                         border: '1px solid #ddd',
                         backgroundColor: '#ffffffff',
                         borderRadius: '10px',
-                        marginTop: '40px'
+                        marginTop: 'clamp(2rem, 4vw, 2.5rem)'
                     }}>
                     <h3 style={{
-                        fontSize: '1.5rem',
-                        marginBottom: '15px',
+                        fontSize: 'clamp(1.2rem, 3vw, 1.5rem)',
+                        marginBottom: 'clamp(0.75rem, 2vw, 0.9375rem)',
                         color: '#2b4593ff'
                     }}>
                         Masih ada pertanyaan?
                     </h3>
                     <p style={{
                         color: '#666',
-                        marginBottom: '20px',
-                        fontSize: '1rem'
+                        marginBottom: 'clamp(1rem, 3vw, 1.25rem)',
+                        fontSize: 'clamp(0.9rem, 2.5vw, 1rem)'
                     }}>
                         Tim kami siap membantu Anda dengan pertanyaan apa pun tentang membership atau layanan kami.
                     </p>
@@ -129,9 +128,9 @@ const FaqHome = () => {
                         backgroundColor: '#2b4593ff',
                         color: 'white',
                         border: 'none',
-                        padding: '12px 25px',
+                        padding: 'clamp(0.75rem, 2vw, 0.75rem) clamp(1.5rem, 4vw, 1.5625rem)',
                         borderRadius: '5px',
-                        fontSize: '1rem',
+                        fontSize: 'clamp(0.9rem, 2vw, 1rem)',
                         fontWeight: 'bold',
                         cursor: 'pointer',
                         transition: 'background-color 0.3s'

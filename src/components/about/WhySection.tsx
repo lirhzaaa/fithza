@@ -47,9 +47,9 @@ const WhyChooseSection = () => {
                 padding: '5px 0 50PX',
                 backgroundColor: 'white'
             }}>
-            <div style={{ maxWidth: '100%', margin: '0 6rem', padding: '0 20px' }}>
+            <div style={{ maxWidth: '100%', margin: '0 clamp(1rem, 5vw, 6rem)', padding: '0 20px' }}>
                 <h2 style={{
-                    fontSize: '2.5rem',
+                    fontSize: 'clamp(1.5rem, 5vw, 2.5rem)',
                     textAlign: 'center',
                     marginBottom: '20px',
                     color: '#333',
@@ -61,16 +61,17 @@ const WhyChooseSection = () => {
                     textAlign: 'center',
                     marginBottom: '50px',
                     color: '#666',
-                    fontSize: '1.1rem',
+                    fontSize: 'clamp(0.9rem, 2.2vw, 1.1rem)',
                     margin: '0 auto 25px'
                 }}>
                     Alasan kuat untuk memulai perjalanan kebugaran Anda bersama kami
                 </p>
                 <div style={{
-                    display: 'grid',
-                    gridTemplateColumns: 'repeat(3, 1fr)',
+                    display: 'flex',
+                    flexWrap: 'wrap',
                     gap: '30px',
-                    marginBottom: '20px'
+                    marginBottom: '20px',
+                    justifyContent: 'center'
                 }}
                     data-aos="fade-up"
                     data-aos-duration="1000"
@@ -82,11 +83,13 @@ const WhyChooseSection = () => {
                             borderRadius: '15px',
                             textAlign: 'left',
                             cursor: 'pointer',
-                            border: '1px solid #e9ecef'
+                            border: '1px solid #e9ecef',
+                            flex: '1 1 300px',
+                            maxWidth: '400px'
                         }}
                         >
                             <h3 style={{
-                                fontSize: '1.8rem',
+                                fontSize: 'clamp(1.2rem, 3vw, 1.8rem)',
                                 marginBottom: '10px',
                                 color: '#333',
                                 fontWeight: 'bold'
@@ -95,7 +98,8 @@ const WhyChooseSection = () => {
                             </h3>
                             <p style={{
                                 color: '#666',
-                                lineHeight: '1.6'
+                                lineHeight: '1.6',
+                                fontSize: 'clamp(0.9rem, 2vw, 1rem)'
                             }}>
                                 {reason.description}
                             </p>
@@ -103,9 +107,10 @@ const WhyChooseSection = () => {
                     ))}
                 </div>
                 <div style={{
-                    display: 'grid',
-                    gridTemplateColumns: 'repeat(4, 1fr)',
-                    gap: '30px'
+                    display: 'flex',
+                    flexWrap: 'wrap',
+                    gap: '30px',
+                    justifyContent: 'center'
                 }}
                     data-aos="fade-down"
                     data-aos-duration="1000"
@@ -117,11 +122,13 @@ const WhyChooseSection = () => {
                             borderRadius: '15px',
                             textAlign: 'left',
                             cursor: 'pointer',
-                            border: '1px solid #e9ecef'
+                            border: '1px solid #e9ecef',
+                            flex: '1 1 250px',
+                            maxWidth: '300px'
                         }}
                         >
                             <h3 style={{
-                                fontSize: '1.8rem',
+                                fontSize: 'clamp(1.2rem, 3vw, 1.8rem)',
                                 marginBottom: '10px',
                                 color: '#333',
                                 fontWeight: 'bold'
@@ -130,7 +137,8 @@ const WhyChooseSection = () => {
                             </h3>
                             <p style={{
                                 color: '#666',
-                                lineHeight: '1.6'
+                                lineHeight: '1.6',
+                                fontSize: 'clamp(0.9rem, 2vw, 1rem)'
                             }}>
                                 {reason.description}
                             </p>

@@ -12,7 +12,7 @@ const Banner = () => {
                 <h1
                     data-aos="fade-down"
                     data-aos-duration="1000"
-                    style={{ fontSize: 'clamp(2rem, 5vw, 3rem)', fontWeight: '500', marginBottom: '12px', color: '#ffffffff', lineHeight: '1.2' }}>Dari Bisa Olahraga</h1>
+                    style={{ fontSize: 'clamp(2rem, 5vw, 3rem)', fontWeight: '500', color: '#ffffffff', lineHeight: '1.2' }}>Dari Bisa Olahraga</h1>
                 <h1
                     data-aos="fade-down"
                     data-aos-duration="1000"

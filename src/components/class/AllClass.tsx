@@ -59,30 +59,30 @@ const AllClass = () => {
     ];
 
     return (
-        <div style={{ padding: '70px 0', backgroundColor: '#2b4593ff' }}>
-            <div style={{ maxWidth: '1400px', margin: '0 auto', padding: '0 20px' }}>
+        <div style={{ padding: 'clamp(4rem, 8vw, 4.375rem) 0', backgroundColor: '#2b4593ff' }}>
+            <div style={{ maxWidth: '1400px', margin: '0 auto', padding: '0 clamp(1rem, 5vw, 1.25rem)' }}>
                 <h2
                     data-aos="fade-right"
                     data-aos-duration="1000"
-                    style={{ textAlign: 'left', fontSize: '2.5rem', margin: '0 50px 40px', color: 'white' }}>Eksplor semua kelas</h2>
-                <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '30px', margin: '0 50px' }}>
+                    style={{ textAlign: 'left', fontSize: 'clamp(1.5rem, 5vw, 2.5rem)', margin: '0 clamp(1rem, 5vw, 3.125rem) 40px', color: 'white' }}>Eksplor semua kelas</h2>
+                <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: 'clamp(1.5rem, 4vw, 1.875rem)', margin: '0 clamp(1rem, 5vw, 3.125rem)' }}>
                     {classes.map((classItem: ClassItem, index: number) => (
                         <div
                             data-aos="fade-up"
                             data-aos-duration="1000"
-                            key={index} style={{ position: 'relative', borderRadius: '15px', overflow: 'hidden', boxShadow: '0 8px 16px rgba(0, 0, 0, 0.15)', height: '350px' }}>
+                            key={index} style={{ position: 'relative', borderRadius: '15px', overflow: 'hidden', boxShadow: '0 8px 16px rgba(0, 0, 0, 0.15)', height: 'clamp(280px, 35vw, 350px)' }}>
                             <div style={{ height: '100%', backgroundSize: 'cover', backgroundPosition: 'center', filter: 'brightness(0.8)', backgroundImage: `url(${categoryBackgrounds[classItem.category]})` }}></div>
-                            <div style={{ position: 'absolute', bottom: '0', left: '0', right: '0', background: 'linear-gradient(to top, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.6))', color: 'white', padding: '20px' }}>
+                            <div style={{ position: 'absolute', bottom: '0', left: '0', right: '0', background: 'linear-gradient(to top, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.6))', color: 'white', padding: 'clamp(1rem, 3vw, 1.25rem)' }}>
                                 <div style={{ display: 'flex', alignItems: 'center', gap: '10px', marginBottom: '10px' }}>
-                                    <p style={{ fontSize: '0.9rem', color: '#ccc' }}>{classItem.category}</p>
+                                    <p style={{ fontSize: 'clamp(0.8rem, 2vw, 0.9rem)', color: '#ccc' }}>{classItem.category}</p>
                                 </div>
-                                <h2 style={{ fontSize: '1.5rem', margin: '10px 0', fontWeight: 'bold' }}>{classItem.title}</h2>
+                                <h2 style={{ fontSize: 'clamp(1.2rem, 3vw, 1.5rem)', margin: '10px 0', fontWeight: 'bold' }}>{classItem.title}</h2>
                                 {classItem.calories && (
-                                    <div style={{ fontSize: '0.8rem', color: '#fff', marginTop: '5px' }}>{classItem.calories}</div>
+                                    <div style={{ fontSize: 'clamp(0.7rem, 2vw, 0.8rem)', color: '#fff', marginTop: '5px' }}>{classItem.calories}</div>
                                 )}
                                 <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginTop: '15px' }}>
                                     {classItem.duration && (
-                                        <div style={{ fontSize: '0.8rem', color: '#fff' }}>{classItem.duration}</div>
+                                        <div style={{ fontSize: 'clamp(0.7rem, 2vw, 0.8rem)', color: '#fff' }}>{classItem.duration}</div>
                                     )}
                                 </div>
                             </div>

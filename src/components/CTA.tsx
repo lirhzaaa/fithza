@@ -1,4 +1,6 @@
 import { useNavigate } from "react-router-dom";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faArrowRightFromBracket } from '@fortawesome/free-solid-svg-icons';
 
 const CTAAbout = () => {
     const navigate = useNavigate();
@@ -10,7 +12,7 @@ const CTAAbout = () => {
                 <div style={{
                     maxWidth: '1200px',
                     margin: '0 auto',
-                    padding: '0 20px',
+                    padding: '0 clamp(1rem, 5vw, 2rem)',
                     backgroundImage: 'url(/img/about.jpg)',
                     backgroundSize: 'cover',
                     backgroundPosition: 'center',
@@ -41,7 +43,7 @@ const CTAAbout = () => {
                             <h2 style={{
                                 color: 'white',
                                 marginBottom: '20px',
-                                fontSize: '2rem',
+                                fontSize: 'clamp(1.2rem, 4vw, 2rem)',
                                 fontWeight: '650',
                             }}
                                 data-aos="fade-down"
@@ -53,39 +55,21 @@ const CTAAbout = () => {
                                 role="button"
                                 aria-label="button start"
                                 style={{
-                                    display: 'inline-flex',
                                     alignItems: 'center',
-                                    padding: '7px 15px',
+                                    padding: 'clamp(0.5rem, 2vw, 0.7rem) clamp(1rem, 3vw, 1.5rem)',
                                     backgroundColor: 'white',
                                     color: '#4D55CC',
                                     borderRadius: '7px',
                                     textDecoration: 'none',
-                                    fontWeight: 'bold'
+                                    fontWeight: 'bold',
+                                    border: 'none',
+                                    cursor: 'pointer',
+                                    fontSize: 'clamp(0.9rem, 2vw, 1rem)'
                                 }}
                                 onClick={() => navigate('/membership')}
                             >
                                 Daftar Sekarang
-                                <span data-testid="icon-button">
-                                    <svg
-                                        aria-hidden="true"
-                                        focusable="false"
-                                        data-prefix="fas"
-                                        data-icon="chevron-right"
-                                        style={{
-                                            marginLeft: '10px',
-                                            width: '16px',
-                                            height: '16px',
-                                        }}
-                                        role="img"
-                                        xmlns="http://www.w3.org/2000/svg"
-                                        viewBox="0 0 320 512"
-                                    >
-                                        <path
-                                            fill="currentColor"
-                                            d="M310.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-192 192c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L242.7 256 73.4 86.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l192 192z"
-                                        />
-                                    </svg>
-                                </span>
+                                <FontAwesomeIcon icon={faArrowRightFromBracket} style={{ marginLeft: '8px', verticalAlign: 'middle' }} />
                             </button>
                         </div>
                     </div>

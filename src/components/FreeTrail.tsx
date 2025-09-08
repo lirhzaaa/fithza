@@ -1,4 +1,6 @@
 import React, { useState, useCallback, useRef, useEffect } from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faDumbbell, faHeartbeat, faChalkboardTeacher, faHandshake, faBuilding } from '@fortawesome/free-solid-svg-icons';
 import NotificationTrail from './NotificationTrail';
 
 type CustomDropdownProps = {
@@ -239,30 +241,30 @@ const FreeTrail = () => {
 
     const features = [
         {
-            icon: '💪',
+            icon: <FontAwesomeIcon icon={faDumbbell} style={{ color: '#2b4593ff', fontSize: '1.5rem' }} />,
             text: 'Peralatan premium dan kelas kebugaran kelompok'
         },
         {
-            icon: '🏥',
+            icon: <FontAwesomeIcon icon={faHeartbeat} style={{ color: '#2b4593ff', fontSize: '1.5rem' }} />,
             text: 'Penilaian kesehatan dan kebugaran gratis'
         },
         {
-            icon: '👨‍🏫',
+            icon: <FontAwesomeIcon icon={faChalkboardTeacher} style={{ color: '#2b4593ff', fontSize: '1.5rem' }} />,
             text: 'Pelatih kebugaran bersertifikat untuk membimbing Anda'
         },
         {
-            icon: '🤝',
+            icon: <FontAwesomeIcon icon={faHandshake} style={{ color: '#2b4593ff', fontSize: '1.5rem' }} />,
             text: 'Komunitas yang mendukung dan menginspirasi'
         },
         {
-            icon: '🏢',
+            icon: <FontAwesomeIcon icon={faBuilding} style={{ color: '#2b4593ff', fontSize: '1.5rem' }} />,
             text: '10 klub di seluruh Indonesia'
         }
     ];
 
     return (
         <section style={{
-            padding: '100px 0 50px',
+            padding: 'clamp(3rem, 6vw, 6.25rem) 0 clamp(3rem, 6vw, 3.125rem)',
             overflowX: 'hidden'
         }}>
             <div style={{ maxWidth: '1400px', margin: '0 auto', padding: '0 clamp(1rem, 5vw, 2rem)' }}>
@@ -286,8 +288,7 @@ const FreeTrail = () => {
                             <h2 style={{
                                 fontSize: 'clamp(2rem, 5vw, 3rem)',
                                 marginBottom: '20px',
-                                color: '#2b4593ff',
-                                fontWeight: 'bold'
+                                fontWeight: 'bold',
                             }}>
                                 COBA GRATIS DAN DAPATKAN PENAWARAN TERBAIK
                             </h2>
@@ -307,15 +308,13 @@ const FreeTrail = () => {
                                     {features.map((feature, index) => (
                                         <tr key={index}>
                                             <td style={{
-                                                width: '60px',
-                                                padding: '10px 0',
-                                                fontSize: '1.5rem'
+                                                padding: 'clamp(0.5rem, 2vw, 1.25rem) 0'
                                             }}>
                                                 {feature.icon}
                                             </td>
                                             <td style={{
-                                                padding: '10px 0',
-                                                fontSize: '1.1rem',
+                                                padding: 'clamp(0.5rem, 2vw, 0.625rem) 0',
+                                                fontSize: 'clamp(0.9rem, 2.5vw, 1.1rem)',
                                                 color: '#666'
                                             }}>
                                                 {feature.text}
@@ -345,7 +344,6 @@ const FreeTrail = () => {
                             <h2 style={{
                                 textAlign: 'left',
                                 margin: '0 0 24px 0',
-                                color: '#2b4593ff',
                                 fontSize: 'clamp(1.5rem, 3vw, 1.7rem)',
                                 fontWeight: '700'
                             }}>

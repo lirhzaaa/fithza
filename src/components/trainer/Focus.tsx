@@ -24,31 +24,33 @@ const TrainerBenefits = () => {
 
   return (
     <section style={{
-      padding: '80px 0',
+      padding: 'clamp(4rem, 8vw, 5rem) 0',
       margin: 0,
       backgroundColor: '#f8f9fa'
     }}>
       <div style={{
-        maxWidth: '155vh',
+        maxWidth: '1200px',
         margin: '0 auto',
+        padding: '0 clamp(1rem, 5vw, 2rem)',
       }}>
         <div style={{
           display: 'flex',
-          gap: '60px',
+          gap: 'clamp(2rem, 5vw, 3.75rem)',
           alignItems: 'flex-start',
           justifyContent: 'center',
-          maxWidth: '100%'
+          maxWidth: '100%',
+          flexWrap: 'wrap'
         }}>
           <div
             data-aos="fade-right"
             data-aos-duration="1000"
             style={{
-              flex: '0 0 40%',
-              maxWidth: '40%',
+              flex: '1 1 300px',
+              maxWidth: '500px',
               textAlign: 'left'
             }}>
             <h2 style={{
-              fontSize: '3.2rem',
+              fontSize: 'clamp(1.8rem, 6vw, 3.2rem)',
               fontWeight: 700,
               color: '#333',
               marginBottom: '24px',
@@ -57,7 +59,7 @@ const TrainerBenefits = () => {
               5 Fokus Utama Personal Trainer Kami
             </h2>
             <p style={{
-              fontSize: '1.3rem',
+              fontSize: 'clamp(1rem, 2.5vw, 1.3rem)',
               color: '#666',
               fontWeight: 400,
               marginBottom: 0,
@@ -71,12 +73,11 @@ const TrainerBenefits = () => {
             data-aos="fade-left"
             data-aos-duration="1000"
             style={{
-              flex: '0 0 50%',
-              display: 'grid',
-              gridTemplateColumns: '1fr 1fr',
-              gridTemplateRows: 'repeat(3, auto)',
+              flex: '1 1 300px',
+              display: 'flex',
+              flexWrap: 'wrap',
               gap: '24px',
-              maxWidth: '50%'
+              justifyContent: 'center'
             }}>
             {benefits.map((benefit, index) => (
               <div
@@ -94,6 +95,8 @@ const TrainerBenefits = () => {
                   boxShadow: '0 4px 20px rgba(0,0,0,0.08)',
                   minHeight: '150px',
                   textAlign: 'left',
+                  flex: '1 1 250px',
+                  maxWidth: '300px'
                 }}
               >
                 <div style={{
@@ -103,14 +106,14 @@ const TrainerBenefits = () => {
                   width: '100%'
                 }}>
                   <p style={{
-                    fontSize: '1.3rem',
+                    fontSize: 'clamp(1rem, 2.5vw, 1.3rem)',
                     color: '#333',
                     fontWeight: 700,
                     margin: 0,
                     lineHeight: '1.3'
                   }}>{benefit.title}</p>
                   <p style={{
-                    fontSize: '0.9rem',
+                    fontSize: 'clamp(0.8rem, 2vw, 0.9rem)',
                     color: '#666',
                     fontWeight: 400,
                     margin: '8px 0 0 0',

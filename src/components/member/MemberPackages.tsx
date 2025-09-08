@@ -99,7 +99,7 @@ const MemberPackages = () => {
     <>
       <section
         style={{
-          padding: '80px 0',
+          padding: 'clamp(4rem, 8vw, 5rem) 0',
           maxWidth: 'none',
           margin: 0,
           background: '#ffffff'
@@ -108,15 +108,14 @@ const MemberPackages = () => {
         <div style={{
           maxWidth: '1200px',
           margin: '0 auto',
-          padding: '0 20px'
+          padding: '0 clamp(1rem, 5vw, 2rem)'
         }}>
           <h1
             data-aos="fade-up"
             data-aos-duration="500"
             style={{
-              fontSize: isMobile ? '2rem' : '2.5rem',
+              fontSize: 'clamp(1.5rem, 5vw, 2.5rem)',
               fontWeight: 700,
-              color: '#2b4593ff',
               textAlign: 'center',
               marginBottom: '40px'
             }}>Member</h1>
@@ -126,8 +125,8 @@ const MemberPackages = () => {
             data-aos-delay="100"
             style={{
               display: 'grid',
-              gridTemplateColumns: isMobile ? 'repeat(auto-fit, minmax(280px, 320px))' : 'repeat(auto-fit, 350px)',
-              gap: isMobile ? '16px' : '24px',
+              gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))',
+              gap: 'clamp(1rem, 3vw, 1.5rem)',
               marginBottom: '32px',
               justifyContent: 'center'
             }}>
@@ -141,13 +140,10 @@ const MemberPackages = () => {
                   overflow: 'hidden',
                   transition: 'all 0.3s ease',
                   boxShadow: '0 4px 20px rgba(0,0,0,0.08)',
-                  width: isMobile ? '320px' : '350px',
-                  minWidth: isMobile ? '280px' : '320px',
-                  maxWidth: isMobile ? '320px' : '350px',
+                  width: '100%',
                   minHeight: '200px',
                   display: 'flex',
                   flexDirection: 'column',
-                  flexShrink: 0,
                   cursor: 'pointer'
                 }}
                 onMouseEnter={(e) => {
@@ -160,7 +156,7 @@ const MemberPackages = () => {
                 }}
               >
                 <div style={{
-                  padding: isMobile ? '20px 18px 14px 18px' : '20px 18px 14px 18px',
+                  padding: '20px 18px 14px 18px',
                   flex: 1,
                   background: 'white'
                 }}>
@@ -178,13 +174,13 @@ const MemberPackages = () => {
                         flex: '0 0 60px'
                       }}>
                         <span style={{
-                          fontSize: '1.5rem',
+                          fontSize: 'clamp(1.2rem, 3vw, 1.5rem)',
                           fontWeight: 700,
                           color: '#333',
                           lineHeight: 1
                         }}>{pkg.duration}</span>
                         <span style={{
-                          fontSize: '0.85rem',
+                          fontSize: 'clamp(0.7rem, 2vw, 0.85rem)',
                           color: '#666',
                           marginTop: '2px'
                         }}>bulan</span>
@@ -196,13 +192,13 @@ const MemberPackages = () => {
                         flex: 1
                       }}>
                         <span style={{
-                          fontSize: '1.1rem',
+                          fontSize: 'clamp(0.9rem, 2.2vw, 1.1rem)',
                           fontWeight: 700,
                           color: '#333',
                           lineHeight: 1
                         }}>{pkg.pricePerMonth}</span>
                         <span style={{
-                          fontSize: '0.85rem',
+                          fontSize: 'clamp(0.7rem, 2vw, 0.85rem)',
                           color: '#666',
                           marginTop: '2px'
                         }}>per bulan</span>
@@ -217,13 +213,13 @@ const MemberPackages = () => {
                         {pkg.originalPrice && (
                           <>
                             <span style={{
-                              fontSize: '0.85rem',
+                              fontSize: 'clamp(0.7rem, 2vw, 0.85rem)',
                               color: '#999',
                               textDecoration: 'line-through',
                               lineHeight: 1
                             }}>{pkg.originalPrice}</span>
                             <span style={{
-                              fontSize: '1.1rem',
+                              fontSize: 'clamp(0.9rem, 2.2vw, 1.1rem)',
                               fontWeight: 700,
                               color: '#333',
                               marginTop: '2px'
@@ -242,7 +238,7 @@ const MemberPackages = () => {
                         textAlign: 'center'
                       }}>
                         <span style={{
-                          fontSize: '1.5rem',
+                          fontSize: 'clamp(1.2rem, 3vw, 1.5rem)',
                           fontWeight: 700,
                           color: '#333',
                           lineHeight: 1
@@ -268,7 +264,7 @@ const MemberPackages = () => {
                   }}>
                     {pkg.bonus && (
                       <p style={{
-                        fontSize: '0.9rem',
+                        fontSize: 'clamp(0.8rem, 2vw, 0.9rem)',
                         color: '#666',
                         margin: 0,
                         lineHeight: '1.4',
@@ -295,7 +291,7 @@ const MemberPackages = () => {
                       color: 'white',
                       border: 'none',
                       borderRadius: '10px',
-                      fontSize: '0.95rem',
+                      fontSize: 'clamp(0.8rem, 2vw, 0.95rem)',
                       fontWeight: 600,
                       cursor: 'pointer',
                       transition: 'all 0.3s ease',
@@ -321,7 +317,7 @@ const MemberPackages = () => {
           </div>
 
           <p style={{
-            fontSize: '0.9rem',
+            fontSize: 'clamp(0.8rem, 2vw, 0.9rem)',
             color: '#666',
             textAlign: 'left',
             marginTop: '24px',

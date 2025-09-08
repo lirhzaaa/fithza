@@ -72,17 +72,17 @@ const Notification = ({ isVisible, type, message, duration, onClose }: Notificat
   const config = getNotificationConfig();
 
   return (
-    <div style={{ position: 'fixed', top: '20px', right: '20px', zIndex: 1000, maxWidth: '500px', width: '100%', animation: 'slideInUp 0.4s ease-out' }}>
-      <div style={{ display: 'flex', alignItems: 'flex-start', padding: '16px', borderRadius: '8px', boxShadow: '0 4px 12px rgba(0, 0, 0, 0.15)', border: `1px solid ${config.borderColor}`, backgroundColor: config.bgColor, color: config.textColor }}>
-        <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', width: '20px', height: '20px', marginRight: '12px', fontSize: '1.1rem', color: config.iconColor, flexShrink: 0 }}>
+    <div style={{ position: 'fixed', top: 'clamp(1rem, 3vw, 1.25rem)', right: 'clamp(1rem, 3vw, 1.25rem)', zIndex: 1000, maxWidth: 'clamp(300px, 50vw, 500px)', width: '100%', animation: 'slideInUp 0.4s ease-out' }}>
+      <div style={{ display: 'flex', alignItems: 'flex-start', padding: 'clamp(0.75rem, 2vw, 1rem)', borderRadius: '8px', boxShadow: '0 4px 12px rgba(0, 0, 0, 0.15)', border: `1px solid ${config.borderColor}`, backgroundColor: config.bgColor, color: config.textColor }}>
+        <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', width: 'clamp(1.25rem, 3vw, 1.5rem)', height: 'clamp(1.25rem, 3vw, 1.5rem)', marginRight: 'clamp(0.5rem, 1.5vw, 0.75rem)', fontSize: 'clamp(1rem, 2.5vw, 1.25rem)', color: config.iconColor, flexShrink: 0 }}>
           {config.icon}
         </div>
 
         <div style={{ flex: 1, minWidth: 0 }}>
-          <span style={{ display: 'block', fontWeight: 600, fontSize: '0.95rem', color: config.textColor, marginBottom: '4px' }}>
+          <span style={{ display: 'block', fontWeight: 600, fontSize: 'clamp(0.85rem, 2vw, 0.95rem)', color: config.textColor, marginBottom: 'clamp(0.25rem, 0.5vw, 0.5rem)' }}>
             {config.title}
           </span>
-          <p style={{ margin: 0, fontSize: '0.9rem', color: config.textColor, lineHeight: 1.4, opacity: 0.9 }}>
+          <p style={{ margin: 0, fontSize: 'clamp(0.8rem, 1.8vw, 0.9rem)', color: config.textColor, lineHeight: 1.4, opacity: 0.9 }}>
             {message}
           </p>
         </div>
@@ -92,7 +92,7 @@ const Notification = ({ isVisible, type, message, duration, onClose }: Notificat
             setInternalVisible(false);
             onClose();
           }}
-          style={{ background: 'none', border: 'none', color: config.iconColor, fontSize: '1.25rem', cursor: 'pointer', padding: '0', marginLeft: '12px', opacity: 0.7, transition: 'opacity 0.2s ease', flexShrink: 0, width: '20px', height: '20px', display: 'flex', alignItems: 'center', justifyContent: 'center' }}
+          style={{ background: 'none', border: 'none', color: config.iconColor, fontSize: 'clamp(1rem, 2.5vw, 1.25rem)', cursor: 'pointer', padding: '0', marginLeft: 'clamp(0.5rem, 1.5vw, 0.75rem)', opacity: 0.7, transition: 'opacity 0.2s ease', flexShrink: 0, width: 'clamp(1.25rem, 3vw, 1.5rem)', height: 'clamp(1.25rem, 3vw, 1.5rem)', display: 'flex', alignItems: 'center', justifyContent: 'center' }}
           onMouseEnter={(e) => {
             e.currentTarget.style.opacity = '1';
           }}

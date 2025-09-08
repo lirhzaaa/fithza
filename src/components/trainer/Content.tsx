@@ -7,24 +7,25 @@ const Content = () => {
             justifyContent: 'space-between',
             alignItems: 'center',
             gap: '40px',
-            padding: '20px 7rem 0',
+            padding: '20px clamp(1rem, 5vw, 7rem) 0',
+            flexWrap: 'wrap',
         }}>
             <div
                 data-aos="fade-right"
                 data-aos-duration="1000"
                 style={{
-                    flex: 1,
+                    flex: '1 1 300px',
                     textAlign: 'left',
                     padding: '40px',
                     maxWidth: '600px',
                 }}>
                 <h1 style={{
-                    fontSize: '2.5rem',
+                    fontSize: 'clamp(1.5rem, 5vw, 2.5rem)',
                     marginBottom: '20px',
                     color: '#333',
                 }}>Nge-gym lebih efektif bareng Personal Trainer!</h1>
                 <p style={{
-                    fontSize: '1.1rem',
+                    fontSize: 'clamp(0.9rem, 2.2vw, 1.1rem)',
                     lineHeight: '1.6',
                     color: '#666',
                     textAlign: 'justify'
@@ -34,13 +35,14 @@ const Content = () => {
                 data-aos="zoom-out-up"
                 data-aos-duration="1000"
                 style={{
-                    flex: 1,
+                    flex: '1 1 300px',
                     display: 'flex',
                     justifyContent: 'center',
                     alignItems: 'center',
                 }}>
                 <img src="/img/trainer/content.jpg" alt="Personal Trainer" style={{
-                    width: '80%',
+                    width: '100%',
+                    maxWidth: '400px',
                     height: 'auto',
                     borderRadius: '10px',
                     boxShadow: '0 4px 8px rgba(0, 0, 0, 0.1)',

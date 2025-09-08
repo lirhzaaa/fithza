@@ -1,5 +1,7 @@
 import { useState, useRef } from 'react';
 import { useNavigate } from 'react-router-dom';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faChevronLeft, faChevronRight } from '@fortawesome/free-solid-svg-icons';
 
 type ClassItem = {
   name: string;
@@ -118,13 +120,13 @@ const ClassSection = () => {
     <div
       data-aos="fade-down"
       data-aos-duration="1000"
-      style={{ padding: '80px 0', maxWidth: 'none', margin: '0' }}>
-      <div style={{ textAlign: 'center', marginBottom: '60px', padding: '0 clamp(1rem, 5vw, 5rem)' }}>
-        <h2 style={{ fontSize: 'clamp(2rem, 5vw, 2.5rem)', fontWeight: '700', color: '#333', marginBottom: '16px', lineHeight: '1.2' }}>Ikuti 50+ variasi kelas sepuasnya</h2>
-        <p style={{ fontSize: 'clamp(1rem, 2.5vw, 1.1rem)', color: '#666', fontWeight: '400', marginBottom: '0' }}>Dibimbing oleh instruktur berpengalaman dan bersertifikasi internasional.</p>
+      style={{ padding: 'clamp(3rem, 6vw, 5rem) 0', maxWidth: 'none', margin: '0' }}>
+      <div style={{ textAlign: 'center', marginBottom: 'clamp(3rem, 6vw, 3.75rem)', padding: '0 clamp(1rem, 5vw, 1.25rem)' }}>
+        <h2 style={{ fontSize: 'clamp(1.5rem, 5vw, 2.5rem)', fontWeight: '700', color: '#333', marginBottom: 'clamp(1rem, 2vw, 1rem)', lineHeight: '1.2' }}>Ikuti 50+ variasi kelas sepuasnya</h2>
+        <p style={{ fontSize: 'clamp(0.9rem, 2.5vw, 1.1rem)', color: '#666', fontWeight: '400', marginBottom: '0' }}>Dibimbing oleh instruktur berpengalaman dan bersertifikasi internasional.</p>
       </div>
 
-      <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-end', padding: '0 clamp(1rem, 5vw, 5rem)', marginBottom: '40px', flexWrap: 'wrap', gap: '1rem' }}>
+      <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-end', padding: '0 clamp(1rem, 5vw, 1.25rem)', marginBottom: 'clamp(2rem, 4vw, 2.5rem)', flexWrap: 'wrap', gap: 'clamp(1rem, 3vw, 1.5rem)' }}>
         <div style={{ display: 'flex', gap: 'clamp(1rem, 3vw, 2rem)', background: 'none', padding: '0', borderRadius: '0', boxShadow: 'none', position: 'relative', borderBottom: '2px solid #e0e0e0', overflowX: 'auto', scrollbarWidth: 'none', msOverflowStyle: 'none' }}>
           {classCategories.map((category, index) => (
             <button
@@ -134,7 +136,7 @@ const ClassSection = () => {
                 background: 'none',
                 border: 'none',
                 borderRadius: '0',
-                fontSize: '1rem',
+                fontSize: 'clamp(0.9rem, 2.5vw, 1rem)',
                 fontWeight: activeClassTab === index ? '600' : '500',
                 color: activeClassTab === index ? '#4D55CC' : '#666',
                 cursor: 'pointer',
@@ -151,14 +153,18 @@ const ClassSection = () => {
           ))}
         </div>
 
-        <div style={{ display: 'flex', gap: '8px' }}>
-          <button style={{ width: '40px', height: '40px', border: '2px solid #e0e0e0', background: 'white', borderRadius: '50%', display: 'flex', alignItems: 'center', justifyContent: 'center', cursor: 'pointer', fontSize: '18px', color: '#666', transition: 'all 0.3s ease' }} aria-label="Previous" onClick={scrollLeft}>‹</button>
-          <button style={{ width: '40px', height: '40px', border: '2px solid #e0e0e0', background: 'white', borderRadius: '50%', display: 'flex', alignItems: 'center', justifyContent: 'center', cursor: 'pointer', fontSize: '18px', color: '#666', transition: 'all 0.3s ease' }} aria-label="Next" onClick={scrollRight}>›</button>
+        <div style={{ display: 'flex', gap: 'clamp(0.5rem, 1.5vw, 0.5rem)' }}>
+          <button style={{ width: 'clamp(35px, 8vw, 40px)', height: 'clamp(35px, 8vw, 40px)', border: '2px solid #e0e0e0', background: 'white', borderRadius: '50%', display: 'flex', alignItems: 'center', justifyContent: 'center', cursor: 'pointer', fontSize: 'clamp(1.2rem, 3vw, 1.125rem)', color: '#666', transition: 'all 0.3s ease' }} aria-label="Previous" onClick={scrollLeft}>
+            <FontAwesomeIcon icon={faChevronLeft} />
+          </button>
+          <button style={{ width: 'clamp(35px, 8vw, 40px)', height: 'clamp(35px, 8vw, 40px)', border: '2px solid #e0e0e0', background: 'white', borderRadius: '50%', display: 'flex', alignItems: 'center', justifyContent: 'center', cursor: 'pointer', fontSize: 'clamp(1.2rem, 3vw, 1.125rem)', color: '#666', transition: 'all 0.3s ease' }} aria-label="Next" onClick={scrollRight}>
+            <FontAwesomeIcon icon={faChevronRight} />
+          </button>
         </div>
       </div>
 
-      <div style={{ padding: '0 clamp(1rem, 5vw, 5rem)', marginBottom: '40px', overflow: 'hidden' }}>
-        <div style={{ display: 'flex', gap: '20px', overflowX: 'auto', scrollBehavior: 'smooth', paddingBottom: '10px', paddingRight: '20px', scrollbarWidth: 'none', msOverflowStyle: 'none', scrollSnapType: 'x mandatory' }} ref={carouselRef}>
+      <div style={{ padding: '0 clamp(1rem, 5vw, 1.25rem)', marginBottom: 'clamp(2rem, 4vw, 2.5rem)', overflow: 'hidden' }}>
+        <div style={{ display: 'flex', gap: 'clamp(1rem, 2vw, 1.25rem)', overflowX: 'auto', scrollBehavior: 'smooth', paddingBottom: '10px', paddingRight: 'clamp(1rem, 2vw, 1.25rem)', scrollbarWidth: 'none', msOverflowStyle: 'none', scrollSnapType: 'x mandatory' }} ref={carouselRef}>
           {isLoadingCards ? (
             Array.from({ length: window.innerWidth < 768 ? 1 : 4 }).map((_, index) => (
               <div key={`loading-${index}`} style={{ background: 'white', borderRadius: '16px', overflow: 'hidden', transition: 'transform 0.3s ease', flex: `0 0 ${window.innerWidth < 768 ? '90vw' : 'calc((100vw - 10vw - 80px) / 4)'}`, width: `${window.innerWidth < 768 ? '90vw' : 'calc((100vw - 10vw - 80px) / 4)'}`, minWidth: '280px', scrollSnapAlign: 'start', pointerEvents: 'none' }}>
@@ -173,16 +179,16 @@ const ClassSection = () => {
             ))
           ) : (
             classData[classCategories[activeClassTab] as keyof typeof classData]?.map((classItem: ClassItem, index: number) => (
-              <div key={index} style={{ background: 'white', borderRadius: '16px', overflow: 'hidden', transition: 'transform 0.3s ease', flex: `0 0 ${window.innerWidth < 768 ? '90vw' : 'calc((100vw - 10vw - 80px) / 4)'}`, width: `${window.innerWidth < 768 ? '90vw' : 'calc((100vw - 10vw - 80px) / 4)'}`, minWidth: '280px', scrollSnapAlign: 'start' }}>
+              <div key={index} style={{ background: 'white', borderRadius: '16px', overflow: 'hidden', transition: 'transform 0.3s ease', flex: `0 0 ${window.innerWidth < 768 ? '90vw' : 'calc((100vw - 2.5vw - 40px) / 4)'}`, width: `${window.innerWidth < 768 ? '90vw' : 'calc((100vw - 2.5vw - 40px) / 4)'}`, minWidth: 'clamp(250px, 25vw, 280px)', scrollSnapAlign: 'start' }}>
                 <div style={{ position: 'relative', height: '200px', overflow: 'hidden' }}>
                   <img src={classItem.image} alt={classItem.name} style={{ width: '100%', height: '100%', objectFit: 'cover', transition: 'transform 0.3s ease' }} onError={(e) => { e.currentTarget.src = 'https://via.placeholder.com/300x200?text=Image+Not+Available'; }} />
                   <div style={{ position: 'absolute', top: '16px', left: '16px', padding: '6px 12px', borderRadius: '20px', fontSize: '0.8rem', fontWeight: '600', color: 'white', display: 'flex', alignItems: 'center', gap: '6px', backgroundColor: classItem.color }}>
                     <span>{classItem.category}</span>
                   </div>
                 </div>
-                <div style={{ padding: '20px' }}>
-                  <p style={{ fontSize: '0.9rem', color: '#666', marginBottom: '8px', fontWeight: '400' }}>{classItem.difficulty} ∙ {classItem.duration}</p>
-                  <h3 style={{ fontSize: '1.25rem', fontWeight: '700', color: '#333', margin: '0' }}>{classItem.name}</h3>
+                <div style={{ padding: 'clamp(1rem, 3vw, 1.25rem)' }}>
+                  <p style={{ fontSize: 'clamp(0.8rem, 2vw, 0.9rem)', color: '#666', marginBottom: 'clamp(0.5rem, 1.5vw, 0.5rem)', fontWeight: '400' }}>{classItem.difficulty} ∙ {classItem.duration}</p>
+                  <h3 style={{ fontSize: 'clamp(1.1rem, 3vw, 1.25rem)', fontWeight: '700', color: '#333', margin: '0' }}>{classItem.name}</h3>
                 </div>
               </div>
             ))
@@ -190,7 +196,7 @@ const ClassSection = () => {
         </div>
       </div>
 
-      <button style={{ display: 'flex', alignItems: 'center', gap: '8px', margin: '0 auto', padding: '14px 28px', background: '#4D55CC', color: 'white', border: 'none', borderRadius: '8px', fontSize: 'clamp(1rem, 2vw, 1rem)', fontWeight: '600', cursor: 'pointer', transition: 'all 0.3s ease' }} onClick={() => navigate('/class')}>
+      <button style={{ display: 'flex', alignItems: 'center', gap: 'clamp(0.5rem, 1.5vw, 0.5rem)', margin: '0 auto', padding: 'clamp(0.875rem, 2vw, 0.875rem) clamp(1.75rem, 4vw, 1.75rem)', background: '#4D55CC', color: 'white', border: 'none', borderRadius: '8px', fontSize: 'clamp(0.9rem, 2vw, 1rem)', fontWeight: '600', cursor: 'pointer', transition: 'all 0.3s ease' }} onClick={() => navigate('/class')}>
         Lihat Semua Kelas
       </button>
     </div>
