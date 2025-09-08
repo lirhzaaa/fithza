@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faFacebook, faInstagram, faTwitter } from '@fortawesome/free-brands-svg-icons';
 import { faLocationDot, faPhone, faEnvelope } from '@fortawesome/free-solid-svg-icons';
@@ -30,14 +30,6 @@ const Footer = () => {
                                 alignItems: 'center',
                                 marginBottom: '20px'
                             }}>
-                                <img
-                                    src="/logo.png"
-                                    alt="Fithza Indonesia"
-                                    style={{
-                                        height: '45px',
-                                        marginRight: '12px'
-                                    }}
-                                />
                                 <h2 style={{
                                     fontSize: '1.8rem',
                                     margin: '0',
