@@ -65,7 +65,7 @@ const Footer = () => {
                                 }}>
                                     <FontAwesomeIcon icon={faLocationDot} style={{ color: '#2b4593ff', marginRight: '12px', marginTop: '2px', flexShrink: '0' }} />
                                     <span style={{ color: '#4b5563', fontSize: '0.95rem', lineHeight: '1.4' }}>
-                                        Jl. Pajajaran Raya No. 88, Bogor Tengah, Bogor 16121
+                                        Bogor, Indonesia
                                     </span>
                                 </div>
                                 <div style={{
@@ -75,7 +75,7 @@ const Footer = () => {
                                 }}>
                                     <FontAwesomeIcon icon={faPhone} style={{ color: '#2b4593ff', marginRight: '12px', flexShrink: '0' }} />
                                     <span style={{ color: '#4b5563', fontSize: '0.95rem' }}>
-                                        +62 251 888 9999
+                                        +62 838 XXX XXX
                                     </span>
                                 </div>
                                 <div style={{
@@ -84,7 +84,7 @@ const Footer = () => {
                                 }}>
                                     <FontAwesomeIcon icon={faEnvelope} style={{ color: '#2b4593ff', marginRight: '12px', flexShrink: '0' }} />
                                     <span style={{ color: '#4b5563', fontSize: '0.95rem' }}>
-                                        info@Fithzaindonesia.com
+                                        mazhrilnurmaulidan@gmail.com
                                     </span>
                                 </div>
                             </div>
@@ -225,7 +225,7 @@ const Footer = () => {
                                 </li>
                                 <li style={{ marginBottom: '10px' }}>
                                     <a
-                                        href="/personal-training"
+                                        href="/trainer"
                                         style={{
                                             color: '#4b5563',
                                             textDecoration: 'none',
@@ -248,7 +248,7 @@ const Footer = () => {
                                 </li>
                                 <li style={{ marginBottom: '10px' }}>
                                     <a
-                                        href="/classes"
+                                        href="/class"
                                         style={{
                                             color: '#4b5563',
                                             textDecoration: 'none',
@@ -343,7 +343,7 @@ const Footer = () => {
                                 </li>
                                 <li style={{ marginBottom: '10px' }}>
                                     <a
-                                        href="/trainer"
+                                        href="/free-trail"
                                         style={{
                                             color: '#4b5563',
                                             textDecoration: 'none',
@@ -361,12 +361,12 @@ const Footer = () => {
                                             e.currentTarget.style.transform = 'translateX(0)';
                                         }}
                                     >
-                                        Trainer
+                                        Free Trail
                                     </a>
                                 </li>
                                 <li style={{ marginBottom: '10px' }}>
                                     <a
-                                        href="/contact"
+                                        href="/"
                                         style={{
                                             color: '#4b5563',
                                             textDecoration: 'none',
